@@ -1,0 +1,284 @@
+<style>
+.contact-info-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0A0A0A 0%, #2B2B2B 100%);
+}
+
+.contact-info-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #F5EBDD;
+    margin-bottom: 1rem;
+}
+
+.contact-header p {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.contact-info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-card {
+    background: linear-gradient(135deg, #2B2B2B 0%, #1a1a1a 100%);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border-left: 4px solid #C1A874;
+}
+
+.contact-card:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 24px rgba(193, 168, 116, 0.25);
+}
+
+.contact-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-icon {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #C1A874 0%, #A08D5F 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(193, 168, 116, 0.3);
+}
+
+.contact-card-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #F5EBDD;
+}
+
+.contact-card-content {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+}
+
+.contact-card-content a {
+    color: #C1A874;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-card-content a:hover {
+    color: #F5EBDD;
+}
+
+.contact-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-btn {
+    flex: 1;
+    padding: 0.875rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.contact-btn-primary {
+    background: linear-gradient(135deg, #C1A874 0%, #A08D5F 100%);
+    color: white;
+}
+
+.contact-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(193, 168, 116, 0.4);
+}
+
+.contact-btn-whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.contact-btn-whatsapp:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+}
+
+.map-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    min-height: 500px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(10, 10, 10, 0.95);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 1px solid #C1A874;
+}
+
+.map-overlay h4 {
+    font-weight: 600;
+    color: #C1A874;
+    margin-bottom: 0.25rem;
+}
+
+.map-overlay p {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 1024px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .map-container {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-header h2 {
+        font-size: 2.25rem;
+    }
+    
+    .contact-actions {
+        flex-direction: column;
+    }
+    
+    .contact-btn {
+        width: 100%;
+    }
+}
+</style>
+
+<section id="contacto" class="contact-info-section">
+    <div class="contact-info-container">
+        <div class="contact-header">
+            <h2>Contáctanos</h2>
+            <p>Estamos aquí para hacer realidad tus ideas florales</p>
+        </div>
+        
+        <div class="contact-content">
+            <div class="contact-info-cards">
+                <div class="contact-card">
+                    <div class="contact-card-header">
+                        <div class="contact-icon">📍</div>
+                        <h3>Ubicación</h3>
+                    </div>
+                    <div class="contact-card-content">
+                        <p><strong>Cra. 83 #43-46</strong></p>
+                        <p>Comuna 17, Cali</p>
+                        <p>Valle del Cauca, Colombia</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-card-header">
+                        <div class="contact-icon">📞</div>
+                        <h3>Teléfono</h3>
+                    </div>
+                    <div class="contact-card-content">
+                        <p>
+                            <a href="tel:+573114701386">311 470 1386</a>
+                        </p>
+                        <p>Atención 24 Horas</p>
+                        <p>Todos los días del año</p>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="tel:+573114701386" class="contact-btn contact-btn-primary">
+                            📞 Llamar Ahora
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-card-header">
+                        <div class="contact-icon">💬</div>
+                        <h3>WhatsApp</h3>
+                    </div>
+                    <div class="contact-card-content">
+                        <p>Chatea con nosotros directamente</p>
+                        <p>Respuesta inmediata las 24 horas</p>
+                        <p>Envía fotos y cotiza al instante</p>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="https://wa.me/573114701386?text=Hola,%20necesito%20información%20sobre%20sus%20flores" 
+                           class="contact-btn contact-btn-whatsapp" 
+                           target="_blank"
+                           onclick="trackWhatsAppClick('contact-section')">
+                            💬 Abrir WhatsApp
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-card-header">
+                        <div class="contact-icon">🌐</div>
+                        <h3>Web & Redes</h3>
+                    </div>
+                    <div class="contact-card-content">
+                        <p>
+                            <strong>Web:</strong> 
+                            <a href="http://floristeriacali.dondeseria.com">floristeriacali.dondeseria.com</a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.8554820314844!2d-76.5192139!3d3.3854577999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a1d8047572f1%3A0x5120e4b670b6690!2sFloristeria%20Cali%20%7C%20Atelier%20Vergara!5e0!3m2!1ses-419!2sco!4v1770504591412!5m2!1ses-419!2sco"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Mapa de ubicación Atelier Vergara Cali">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
