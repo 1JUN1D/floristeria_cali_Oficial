@@ -6,6 +6,8 @@
 // --- DATOS DEL CATÁLOGO COMPLETO ---
 const products = [
 
+// ── FLORES NATURALES ─────────────────────────────────────────────────────────
+
 { id: 41, code: "041", category: "ramos", tags: ["flores"], name: "Jardín Clásico", description: "Arreglo tradicional con claveles frescos que representan amor duradero. Belleza atemporal y fragancia natural que nunca pasa de moda en cualquier ocasión especial.", price: 121250, image: "assets/images/ramo41.webp" },
 
 { id: 37, code: "037", category: "ramos", tags: ["girasoles"], name: "Sol Solitario", description: "Un girasol radiante que representa alegría, esperanza y amor sincero. Ideal para detalles sencillos pero significativos que alegran el día con luz natural pura.", price: 122500, image: "assets/images/ramo37.webp" },
@@ -62,11 +64,9 @@ const products = [
 
 { id: 10, code: "010", category: "ramos", tags: ["girasoles"], name: "Sol Abundante", description: "Ramo espectacular de 37 girasoles + ramas de eucalipto + 5 flores blancas + tarjeta en papel fotográfico + 2 fotos impresas estilo instantánea. Envuelto en papel coreano radiante.", price: 462500, image: "assets/images/ramo10.webp" },
 
+// ── ROSAS ETERNAS / PRESERVADOS ──────────────────────────────────────────────
+
 { id: 9, code: "009", category: "preservados", tags: ["rosas eternas"], name: "Velocidad Eterna", description: "Ramo único con 2 rosas eternas y un carrito Hotwheels con base. Envuelto en papel coreano con carta y foto personalizables. Ideal para amantes de la velocidad romántica.", price: 102500, image: "assets/images/ramo9.webp" },
-
-{ id: 8, code: "008", category: "regalos", tags: ["peluche"], name: "Ternura Disfrazada", description: "Adorable cerdito disfrazado de osito cariñosito azul de 22 cm. Detalle tierno que conquista con dulzura y originalidad única. Perfecto para sorpresas espontáneas llenas de amor.", price: 106250, image: "assets/images/ramo8.webp" },
-
-{ id: 18, code: "018", category: "regalos", tags: ["peluche"], name: "Kurumi Kawaii", description: "Adorable Kurumi de 22 cm. Personaje encantador perfecto para sorprender a fans del anime con detalle tierno y lleno de personalidad única especial.", price: 106250, image: "assets/images/ramo18.webp" },
 
 { id: 7, code: "007", category: "preservados", tags: ["rosas eternas"], name: "Sueño de Princesa", description: "Ramo mágico con 6 rosas eternas + decoración de Rapunzel en papel fotográfico + carta personalizada. Envuelto en papel coreano para fans de cuentos de hadas.", price: 125000, image: "assets/images/ramo7.webp" },
 
@@ -76,11 +76,25 @@ const products = [
 
 { id: 27, code: "027", category: "preservados", tags: ["rosas eternas"], name: "Mini Velocidad Eterna", description: "Ramo compacto con 6 rosas eternas + 2 Hotwheels + envuelto en papel coreano + carta personalizada. Perfecto para fanáticos del automovilismo con toque romántico.", price: 156250, image: "assets/images/ramo27.webp" },
 
+{ id: 2, code: "002", category: "preservados", tags: ["rosas eternas","hotwheels"], name: "Pasión sobre Ruedas", description: "Combinación perfecta entre romance eterno y diversión. Incluye 16 rosas eternas, 3 carros Hotwheels a elección personal y envuelto en elegante papel coreano. Ideal para sorprender con originalidad.", price: 228750, image: "assets/images/ramo2.webp" },
+
+{ id: 15, code: "015", category: "preservados", tags: ["rosas eternas","peluche"], name: "Ternura Gigante", description: "Arreglo especial con 20 rosas eternas + adorable peluche de vaquita de 50 cm. Envuelto en papel coreano para sorprender con ternura y amor desbordante.", price: 281250, image: "assets/images/ramo15.webp" },
+
+// ── REGALOS, PELUCHES, DULCES Y JUGUETES ─────────────────────────────────────
+
 { id: 42, code: "042", category: "ocasiones", tags: ["sorpresa"], name: "Sorpresa Efecto", description: "Ramo espectacular con mecanismo sorpresa de dinero que sale + tira personalizada 'Feliz Cumpleaños'. Diseñado para celebraciones inolvidables llenas de alegría y asombro total.", price: 181250, image: "assets/images/ramo42.webp" },
+
+{ id: 8, code: "008", category: "regalos", tags: ["peluche"], name: "Ternura Disfrazada", description: "Adorable cerdito disfrazado de osito cariñosito azul de 22 cm. Detalle tierno que conquista con dulzura y originalidad única. Perfecto para sorpresas espontáneas llenas de amor.", price: 106250, image: "assets/images/ramo8.webp" },
+
+{ id: 18, code: "018", category: "regalos", tags: ["peluche"], name: "Kurumi Kawaii", description: "Adorable Kurumi de 22 cm. Personaje encantador perfecto para sorprender a fans del anime con detalle tierno y lleno de personalidad única especial.", price: 106250, image: "assets/images/ramo18.webp" },
 
 { id: 20, code: "020", category: "regalos", tags: ["peluche","rosas eternas"], name: "Abrazo Cariñosito", description: "Incluye osito de 40 cm + 4 hermosas rosas eternas + moño en cinta satinada + papel coreano + base para que se pare solo. Ternura máxima garantizada.", price: 187500, image: "assets/images/ramo20.webp" },
 
 { id: 4, code: "004", category: "regalos", tags: ["oso de rosas"], name: "Abrazo Eterno Mini", description: "Adorable oso de 29 cm elaborado con rosas en el color de tu preferencia. Viene en elegante caja de acetato con cinta de encaje. Regalo tierno que permanece para siempre.", price: 205000, image: "assets/images/ramo4.webp" },
+
+{ id: 13, code: "013", category: "regalos", tags: ["oso de rosas"], name: "Abrazo Eterno Grande", description: "Majestuoso oso de 40 cm elaborado con rosas en el color de tu preferencia. Pregunta por modelos disponibles. Viene en caja de acetato con cinta de encaje elegante.", price: 337500, image: "assets/images/ramo13.webp" },
+
+{ id: 16, code: "016", category: "regalos", tags: ["peluche"], name: "Universo Tierno", description: "Hermoso conejo de 43 cm con diseño galaxia en caja de acetato con decoraciones especiales. Regalo único que fusiona ternura con misterio del cosmos.", price: 337500, image: "assets/images/ramo16.webp" },
 
 { id: 22, code: "022", category: "regalos", tags: ["belleza"], name: "Kit de Belleza", description: "Incluye: rubor Anika + tinta Anika + polvo de hadas + kit de brochas + sobre de colágeno facial + 6 pomos faciales + sobre de mascarilla para puntos negros. Regalo completo de belleza.", price: 212500, image: "assets/images/ramo22.webp" },
 
@@ -88,20 +102,11 @@ const products = [
 
 { id: 14, code: "014", category: "regalos", tags: ["snacks"], name: "Dulzura Motorizada", description: "Incluye Detodito mediano + papas pequeñas + chocolatina jumbo grande + maní + gomitas Trululu + 4 carros Hotwheels + carta en papel fotográfico + papel coreano + moño.", price: 218750, image: "assets/images/ramo14.webp" },
 
-{ id: 2, code: "002", category: "preservados", tags: ["rosas eternas","hotwheels"], name: "Pasión sobre Ruedas", description: "Combinación perfecta entre romance eterno y diversión. Incluye 16 rosas eternas, 3 carros Hotwheels a elección personal y envuelto en elegante papel coreano. Ideal para sorprender con originalidad.", price: 228750, image: "assets/images/ramo2.webp" },
-
-{ id: 15, code: "015", category: "preservados", tags: ["rosas eternas","peluche"], name: "Ternura Gigante", description: "Arreglo especial con 20 rosas eternas + adorable peluche de vaquita de 50 cm. Envuelto en papel coreano para sorprender con ternura y amor desbordante.", price: 281250, image: "assets/images/ramo15.webp" },
-
 { id: 24, code: "024", category: "regalos", tags: ["rosas","chocolates"], name: "Corazón Dulce", description: "Incluye 48 rosas + flores de encaje + 8 chocolates + caja decorada con cinta satinada + moño + carta opcional en papel fotográfico. Amor expresado completamente.", price: 332500, image: "assets/images/ramo24.webp" },
-
-{ id: 13, code: "013", category: "regalos", tags: ["oso de rosas"], name: "Abrazo Eterno Grande", description: "Majestuoso oso de 40 cm elaborado con rosas en el color de tu preferencia. Pregunta por modelos disponibles. Viene en caja de acetato con cinta de encaje elegante.", price: 337500, image: "assets/images/ramo13.webp" },
-
-{ id: 16, code: "016", category: "regalos", tags: ["peluche"], name: "Universo Tierno", description: "Hermoso conejo de 43 cm con diseño galaxia en caja de acetato con decoraciones especiales. Regalo único que fusiona ternura con misterio del cosmos.", price: 337500, image: "assets/images/ramo16.webp" },
 
 { id: 3, code: "003", category: "regalos", tags: ["rosas","fresas","baileys"], name: "Tentación Gourmet", description: "Rosas frescas + 15 fresas con cobertura de chocolate en caja de corazón + botella de Baileys. La fusión perfecta entre romance, sabor y celebración en un solo detalle irresistible.", price: 462500, image: "assets/images/ramo3.webp" }
 
 ];
-
 // --- VARIABLES GLOBALES ---
 let currentLandingFilter = 'priority'; // 'priority' = orden por defecto de la landing
 let LANDING_PRIORITY_TAG = ''; // Se establece por cada landing
