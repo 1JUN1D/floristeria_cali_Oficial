@@ -120,6 +120,7 @@ function formatCOP(price) {
 
 // --- ORDENAR PRODUCTOS: primero los de la categoría de la landing ---
 function getSortedProducts(priorityTag) {
+    if (!priorityTag) return [...products];
     const priority = [];
     const rest = [];
     products.forEach(p => {
@@ -129,9 +130,7 @@ function getSortedProducts(priorityTag) {
             rest.push(p);
         }
     });
-    // Dentro de cada grupo, ordenar por precio ascendente
-    priority.sort((a, b) => a.price - b.price);
-    rest.sort((a, b) => a.price - b.price);
+    // Respeta el orden definido en el array, sin reordenar por precio
     return [...priority, ...rest];
 }
 
@@ -140,9 +139,10 @@ function getFilteredProducts(filter, priorityTag) {
     if (filter === 'priority' || filter === 'all') {
         return getSortedProducts(priorityTag);
     }
+    // Al filtrar por tag/categoría también respeta el orden del array
     return products.filter(p => 
-        p.tags && p.tags.includes(filter) || p.category.toLowerCase().includes(filter)
-    ).sort((a, b) => a.price - b.price);
+        (p.tags && p.tags.includes(filter)) || p.category.toLowerCase().includes(filter)
+    );
 }
 
 // --- CREAR TARJETA DE PRODUCTO ---
