@@ -106,7 +106,7 @@ const products = [
 
 { id: 3, code: "003", category: "regalos", tags: ["rosas","fresas","baileys"], name: "Tentación Gourmet", description: "Rosas frescas + 15 fresas con cobertura de chocolate en caja de corazón + botella de Baileys. La fusión perfecta entre romance, sabor y celebración en un solo detalle irresistible.", price: 462500, image: "assets/images/ramo3.webp" },
 
-{ id: 48, code: "048", category: "regalos", tags: ["rosas","anchetas","baileys"], name: "Cesta Dulce Celebración", description: "Elegante cesta de rosas frescas acompañada de chocolates selectos y una botella de crema de whisky. Combinación perfecta de romance, dulzura y sofisticación para celebrar momentos especiales con estilo único e inolvidable.", price: 325000, image: "assets/images/ramo48.webp" },
+{ id: 48, code: "048", category: "regalos", tags: ["rosas","anchetas","baileys"], name: "Cesta Dulce Celebración", description: "Elegante cesta de rosas frescas acompañada de chocolates selectos y una botella de Vino. Combinación perfecta de romance, dulzura y sofisticación para celebrar momentos especiales con estilo único e inolvidable.", price: 325000, image: "assets/images/ramo48.webp" },
 
 { id: 49, code: "049", category: "ramos", tags: ["flores"], name: "Jardín Encantado", description: "Hermoso bouquet que combina hortensias, lirios y margaritas frescas en perfecta armonía. Mezcla de elegancia, pureza y frescura natural que transmite sentimientos sinceros con belleza desbordante en cada detalle.", price: 163000, image: "assets/images/ramo49.webp" }
 
