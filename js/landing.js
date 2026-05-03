@@ -6,6 +6,14 @@
 // --- DATOS DEL CATÁLOGO COMPLETO ---
 const products = [
 
+// ── NOVEDADES (DESTACADOS AL INICIO) ─────────────────────────────────────────
+
+{ id: 51, code: "051", category: "ramos", tags: ["tulipanes","flores","rosas"], name: "Vuelo Lila", description: "Elegante bouquet de tulipanes lilas y blancos combinados con gypsophila blanca, mariposas doradas decorativas y envoltura translúcida con moño rosado satinado. Sofisticación natural que enamora con dulzura primaveral inolvidable.", price: 250000, image: "assets/images/ramo51.webp" },
+
+{ id: 52, code: "052", category: "ocasiones", tags: ["tulipanes","cumpleaños","flores"], name: "Recuerdo en Tulipanes", description: "Bouquet de tulipanes multicolor (morado, rojo y naranja) + manzanilla + follaje verde fresco + mariposas doradas + 2 fotos personalizadas en papel fotográfico + moño rojo satinado. Celebra cumpleaños con recuerdos visuales memorables.", price: 156250, image: "assets/images/ramo52.webp" },
+
+{ id: 53, code: "053", category: "regalos", tags: ["tulipanes","chocolates","flores"], name: "Fresh Flower Gourmet", description: "Tulipanes morados frescos presentados en elegante bolsa negra premium 'Fresh Flower' + 2 chocolatinas Jet + moño bicolor blanco y negro. Diseño minimalista y sofisticado que combina elegancia floral con dulzura.", price: 152500, image: "assets/images/ramo53.webp" },
+
 // ── FLORES NATURALES ─────────────────────────────────────────────────────────
 
 { id: 41, code: "041", category: "ramos", tags: ["flores"], name: "Jardín Clásico", description: "Arreglo tradicional con claveles frescos que representan amor duradero. Belleza atemporal y fragancia natural que nunca pasa de moda en cualquier ocasión especial.", price: 121250, image: "assets/images/ramo41.webp" },
@@ -108,7 +116,9 @@ const products = [
 
 { id: 48, code: "048", category: "regalos", tags: ["rosas","anchetas","baileys"], name: "Cesta Dulce Celebración", description: "Elegante cesta de rosas frescas acompañada de chocolates selectos y una botella de Vino. Combinación perfecta de romance, dulzura y sofisticación para celebrar momentos especiales con estilo único e inolvidable.", price: 325000, image: "assets/images/ramo48.webp" },
 
-{ id: 49, code: "049", category: "ramos", tags: ["flores"], name: "Jardín Encantado", description: "Hermoso bouquet que combina hortensias, lirios y margaritas frescas en perfecta armonía. Mezcla de elegancia, pureza y frescura natural que transmite sentimientos sinceros con belleza desbordante en cada detalle.", price: 163000, image: "assets/images/ramo49.webp" }
+{ id: 49, code: "049", category: "ramos", tags: ["flores"], name: "Jardín Encantado", description: "Hermoso bouquet que combina hortensias, lirios y margaritas frescas en perfecta armonía. Mezcla de elegancia, pureza y frescura natural que transmite sentimientos sinceros con belleza desbordante en cada detalle.", price: 163000, image: "assets/images/ramo49.webp" },
+
+{ id: 50, code: "050", category: "ocasiones", tags: ["cumpleaños","sorpresa","peluche","girasoles"], name: "Princesa Hermosa", description: "Caja de madera decorada con globo burbuja personalizado 'Feliz Cumpleaños mi princesa hermosa' + 5 globos pequeños dentro + bouquet de 3 girasoles con follaje verde + peluche de Stitch + mini torta + jugo natural + rollos de huevo con rancheras + granola con fruta. Celebración completa inolvidable.", price: 275000, image: "assets/images/ramo50.webp" }
 
 ];
 // --- VARIABLES GLOBALES ---
