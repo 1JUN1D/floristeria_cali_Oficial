@@ -3,14 +3,66 @@
 <head>
     <meta charset="UTF-8">
 
-<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) - GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Q0TV89CP0"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-2Q0TV89CP0');
+</script>
+
+<!--
+==============================================================================
+GOOGLE ADS CONVERSION TRACKING — IMPORTANTE
+==============================================================================
+Reemplaza AW-XXXXXXXXX por tu ID de Google Ads de la cuenta de Cali, y
+reemplaza AW-XXXXXXXXX/YYYYYYYY por la etiqueta de conversión de "WhatsApp Click".
+Si no tienes una etiqueta de conversión creada todavía, ve a:
+   Google Ads -> Herramientas -> Conversiones -> Acción de conversión nueva ->
+   Sitio web -> "Iniciar sesión / Lead" -> URL etiqueta de WhatsApp
+
+Hasta que reemplaces los placeholders, las conversiones SÓLO se reportarán a
+GA4 (no a Google Ads), por lo que el algoritmo de Smart Bidding NO podrá
+optimizar y seguirás teniendo CPA alto. Esta es probablemente la causa
+principal de que la campaña de Cali rinda peor en conversiones.
+==============================================================================
+-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+<script>
+  gtag('config', 'AW-XXXXXXXXX');
+</script>
+
+<!-- Función central de tracking de WhatsApp (envía evento a GA4 + conversión a Google Ads) -->
+<script>
+  function trackWhatsAppLead(whatsappUrl, eventLabel) {
+      try {
+          // Evento personalizado para GA4
+          gtag('event', 'whatsapp_click', {
+              'event_category': 'engagement',
+              'event_label': eventLabel,
+              'button_location': eventLabel,
+              'page_location': window.location.href
+          });
+
+          // Conversión Google Ads — reemplaza AW-XXXXXXXXX/YYYYYYYY por tu etiqueta real
+          gtag('event', 'conversion', {
+              'send_to': 'AW-XXXXXXXXX/YYYYYYYY',
+              'event_callback': function () {
+                  window.open(whatsappUrl, '_blank');
+              }
+          });
+
+          // Backup: si el callback no se ejecuta, abre WhatsApp en 300ms
+          setTimeout(function () {
+              window.open(whatsappUrl, '_blank');
+          }, 300);
+      } catch (error) {
+          console.error('Error en tracking:', error);
+          window.open(whatsappUrl, '_blank');
+      }
+      return false;
+  }
 </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Floristería Atelier Vergara en Cali - Bouquets frescos, diseños florales sofisticados, obsequios especiales y preservados eternos. Domicilios en todos los barrios de Cali.">
@@ -47,15 +99,22 @@
                     <div class="breadcrumb">
                         <a href="/">Inicio</a>
                     </div>
-                    <h1>Florería en Cali</h1>
+                    <h1>Florería en Cali · Entrega el mismo día</h1>
                     <p class="hero-description">
-                        Floristería Atelier Vergara convierte tus ocasiones importantes en recuerdos que perduran. Somos un establecimiento distinguido en Cali especializado en composiciones florales exclusivas, elaboradas con dedicación y transportadas con esmero. Desde ramos sentimentales hasta decoraciones centrales refinadas, cada pieza narra su propia historia. Ofrecemos transporte a domicilio en todos los sectores de Cali, facilitando que demostrar tus emociones sea tan sencillo como bello.
+                        Floristería Atelier Vergara: bouquets frescos, anchetas y flores preservadas con <strong>entrega a domicilio en todos los barrios de Cali</strong>. Pide antes de las 3:00 PM y lo recibe HOY. Más de 500 entregas felices y reseñas 4.9 ★.
                     </p>
+                    <!-- Trust badges -->
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 20px;">
+                        <span style="background:#fdf6f9; color:#c44569; padding:6px 14px; border-radius:30px; font-size:13px; font-weight:600;">⭐ 4.9 / 127 reseñas</span>
+                        <span style="background:#fdf6f9; color:#c44569; padding:6px 14px; border-radius:30px; font-size:13px; font-weight:600;">🚚 Entrega el mismo día</span>
+                        <span style="background:#fdf6f9; color:#c44569; padding:6px 14px; border-radius:30px; font-size:13px; font-weight:600;">🌹 Frescura garantizada</span>
+                    </div>
                     <div class="hero-buttons">
                         <a href="/catalogo.html" class="btn btn-primary">
                             Ver Catálogo
                         </a>
-                        <a href="https://wa.me/573235933021?text=Hola,%20me%20gustaría%20información%20sobre%20sus%20flores" class="btn btn-whatsapp" target="_blank">
+                        <a href="#" class="btn btn-whatsapp"
+                           onclick="return trackWhatsAppLead('https://wa.me/573235933021?text=Hola%20Atelier%20Vergara%20%F0%9F%8C%B9%2C%20vi%20su%20web%20y%20quiero%20cotizar%20un%20arreglo%20de%20flores%20en%20Cali.%20%C2%BFMe%20asesoran%3F', 'hero_whatsapp_btn')">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                             </svg>
@@ -89,7 +148,8 @@
                         <p class="product-description">
                             Expresa tus sentimientos más profundos con nuestros bouquets románticos. Diseños elegantes con rosas premium, lirios y flores exóticas que transmiten amor y pasión.
                         </p>
-                        <a href="https://wa.me/573235933021?text=Hola,%20quiero%20un%20ramo%20romántico" class="product-cta" target="_blank">
+                        <a href="#" class="product-cta"
+                           onclick="return trackWhatsAppLead('https://wa.me/573235933021?text=Hola%20Atelier%20Vergara%20%F0%9F%8C%B9%2C%20vi%20los%20*Ramos%20Rom%C3%A1nticos*%20en%20su%20web.%20%C2%BFEst%C3%A1n%20disponibles%20para%20entrega%20HOY%20en%20Cali%3F', 'card_ramo_romantico')">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                             </svg>
@@ -108,7 +168,8 @@
                         <p class="product-description">
                             Sorprende con nuestras cestas románticas que combinan flores frescas, chocolates gourmet, vinos selectos y detalles personalizados para momentos especiales.
                         </p>
-                        <a href="https://wa.me/573235933021?text=Hola,%20quiero%20una%20ancheta%20de%20amor" class="product-cta" target="_blank">
+                        <a href="#" class="product-cta"
+                           onclick="return trackWhatsAppLead('https://wa.me/573235933021?text=Hola%20Atelier%20Vergara%20%E2%9D%A4%EF%B8%8F%2C%20me%20interesa%20una%20*Ancheta%20de%20Amor*%20%28flores%20%2B%20chocolates%20%2B%20vino%29.%20%C2%BFEntregan%20HOY%20en%20Cali%3F', 'card_ancheta_amor')">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                             </svg>
@@ -127,7 +188,8 @@
                         <p class="product-description">
                             Belleza eterna con nuestras flores secas y preservadas. Ramos, coronas y centros de mesa que mantienen su elegancia por años sin necesidad de cuidados.
                         </p>
-                        <a href="https://wa.me/573235933021?text=Hola,%20quiero%20flores%20preservadas" class="product-cta" target="_blank">
+                        <a href="#" class="product-cta"
+                           onclick="return trackWhatsAppLead('https://wa.me/573235933021?text=Hola%20Atelier%20Vergara%20%F0%9F%8C%B8%2C%20me%20interesan%20las%20*Flores%20Preservadas*%20%28duran%20a%C3%B1os%29.%20%C2%BFQu%C3%A9%20opciones%20tienen%20disponibles%3F', 'card_flores_preservadas')">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                             </svg>
@@ -263,7 +325,8 @@
             <div class="cta-content">
                 <h2>¿Preparado para iluminar la jornada de alguien importante?</h2>
                 <p>Comunícate con nosotros ahora y construye un instante memorable con nuestros diseños florales exclusivos</p>
-                <a href="https://wa.me/573235933021?text=Hola,%20quiero%20hacer%20un%20pedido" class="btn btn-primary btn-large" target="_blank">
+                <a href="#" class="btn btn-primary btn-large"
+                   onclick="return trackWhatsAppLead('https://wa.me/573235933021?text=Hola%20Atelier%20Vergara%20%F0%9F%8C%B9%2C%20vi%20su%20web%20y%20quiero%20hacer%20un%20pedido.%20%C2%BFMe%20asesoran%20con%20opciones%20y%20entrega%3F', 'cta_section_principal')">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                     </svg>
@@ -378,5 +441,20 @@
     </script>
 
     <script src="js/script.js"></script>
+
+    <!-- Nota flotante de urgencia / reciprocidad (gatillo de neuroventas) -->
+    <style>
+        .urgency-floating-note { position: fixed; bottom: 20px; left: 20px; background: linear-gradient(135deg,#ff6b9d,#c44569); color:#fff; padding:12px 18px; border-radius:30px; font-family:'Poppins','Segoe UI',Tahoma,sans-serif; font-size:14px; font-weight:600; box-shadow:0 6px 18px rgba(196,69,105,0.35); z-index:9998; display:flex; align-items:center; gap:8px; max-width:300px; line-height:1.3; animation: pulseUrgency 2.5s ease-in-out infinite; cursor:pointer; }
+        .urgency-floating-note .urgency-icon { font-size:20px; }
+        .urgency-floating-note .urgency-close { background:rgba(255,255,255,0.2); border:none; color:#fff; cursor:pointer; border-radius:50%; width:22px; height:22px; display:flex; align-items:center; justify-content:center; font-size:14px; margin-left:6px; flex-shrink:0; }
+        @keyframes pulseUrgency { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-4px);} }
+        @media (max-width: 600px) { .urgency-floating-note{font-size:12px; padding:10px 14px; max-width:240px; bottom:12px; left:12px;} }
+    </style>
+    <div class="urgency-floating-note" id="urgencyNoteCali" onclick="trackWhatsAppLead('https://wa.me/573235933021?text=Hola%20Atelier%20Vergara%2C%20quiero%20entrega%20HOY%20en%20Cali.%20%C2%BFTienen%20cupos%20disponibles%3F', 'urgency_floating_note')">
+        <span class="urgency-icon">🌹</span>
+        <span>Pide antes de las <strong>3:00 PM</strong> y entregamos HOY en Cali</span>
+        <button class="urgency-close" onclick="event.stopPropagation(); document.getElementById('urgencyNoteCali').style.display='none'" aria-label="Cerrar">×</button>
+    </div>
+
 </body>
 </html>

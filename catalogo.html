@@ -3,13 +3,40 @@
 <head>
     <meta charset="UTF-8">
     
-<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) - GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Q0TV89CP0"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-2Q0TV89CP0');
+</script>
+
+<!-- Google Ads conversion tracking — REEMPLAZA AW-XXXXXXXXX por tu ID real -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+<script>
+  gtag('config', 'AW-XXXXXXXXX');
+</script>
+
+<!-- Función central de tracking WhatsApp -->
+<script>
+  function trackWhatsAppLead(whatsappUrl, eventLabel) {
+      try {
+          gtag('event', 'whatsapp_click', {
+              'event_category': 'engagement',
+              'event_label': eventLabel,
+              'page_location': window.location.href
+          });
+          gtag('event', 'conversion', {
+              'send_to': 'AW-XXXXXXXXX/YYYYYYYY',
+              'event_callback': function () { window.open(whatsappUrl, '_blank'); }
+          });
+          setTimeout(function() { window.open(whatsappUrl, '_blank'); }, 300);
+      } catch (error) {
+          window.open(whatsappUrl, '_blank');
+      }
+      return false;
+  }
 </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

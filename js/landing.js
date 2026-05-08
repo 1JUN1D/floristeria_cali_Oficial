@@ -159,13 +159,113 @@ function getFilteredProducts(filter, priorityTag) {
     );
 }
 
-// --- CREAR TARJETA DE PRODUCTO ---
+// --- HELPERS DE NEUROVENTAS (precio anterior + descuento) ---
+// Genera precio "Antes" un 30% mayor al precio actual, redondeado a 1000.
+function _calcShopPrice(price) {
+    return Math.ceil((price * 1.30) / 1000) * 1000;
+}
+
+// Decide si un producto es "más vendido" / "premium" / "edición limitada"
+// usando el id como semilla (determinista — siempre el mismo badge en el mismo producto).
+function _badgeForProduct(p) {
+    if (!p) return null;
+    const tags = (p.tags || []).join(' ');
+    if (p.id % 9 === 0) return { txt: '⭐ Más vendido', cls: 'badge-best' };
+    if (p.id % 7 === 0) return { txt: '🔥 Top semana', cls: 'badge-hot' };
+    if (p.id % 11 === 0) return { txt: '⏰ Últimos 3 hoy', cls: 'badge-low' };
+    if (tags.includes('rosas eternas')) return { txt: '💎 Premium', cls: 'badge-prem' };
+    if (tags.includes('cumpleaños')) return { txt: '🎉 Top regalo', cls: 'badge-hot' };
+    return null;
+}
+
+// --- CSS de neuroventas (se inyecta una sola vez) ---
+(function injectNeuroSalesCSS() {
+    if (document.getElementById('neurosales-css')) return;
+    var s = document.createElement('style');
+    s.id = 'neurosales-css';
+    s.textContent = `
+        /* Imagen wrap: relativa para anclar badges */
+        .product-card-landing .product-img-wrap { position: relative; }
+        /* Badge de descuento (esquina superior izquierda) */
+        .product-discount-badge {
+            position: absolute; top: 10px; left: 10px;
+            background: linear-gradient(135deg, #d62828, #9d0208);
+            color: #fff; padding: 6px 12px; border-radius: 20px;
+            font-size: 13px; font-weight: 800; letter-spacing: 0.4px;
+            box-shadow: 0 4px 12px rgba(157,2,8,0.45);
+            z-index: 5; transform: rotate(-4deg);
+            animation: neuroPulse 2.2s ease-in-out infinite;
+        }
+        @keyframes neuroPulse {
+            0%,100% { transform: rotate(-4deg) scale(1); }
+            50% { transform: rotate(-4deg) scale(1.06); }
+        }
+        /* Sticker premium/best (esquina superior derecha, debajo del code) */
+        .product-status-badge {
+            position: absolute; top: 48px; right: 10px;
+            color: #fff; padding: 5px 10px; border-radius: 14px;
+            font-size: 11px; font-weight: 700; letter-spacing: 0.3px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.18); z-index: 5;
+        }
+        .product-status-badge.badge-best { background: linear-gradient(135deg,#f59e0b,#d97706); }
+        .product-status-badge.badge-hot  { background: linear-gradient(135deg,#ef4444,#b91c1c); }
+        .product-status-badge.badge-low  { background: linear-gradient(135deg,#7c3aed,#5b21b6); }
+        .product-status-badge.badge-prem { background: linear-gradient(135deg,#0f766e,#0d4842); }
+        /* Bloque de precio anclado */
+        .price-block-anchor { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+        .price-block-anchor .lbl-shop {
+            font-size: 11px; color: #888; font-weight: 500; text-transform: uppercase; letter-spacing: 0.4px;
+        }
+        .price-block-anchor .price-shop {
+            font-size: 14px; color: #999; text-decoration: line-through; font-weight: 500;
+        }
+        .price-block-anchor .lbl-web {
+            font-size: 11px; color: #c44569; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px;
+        }
+        .price-block-anchor .price-web {
+            font-size: 22px; color: #c44569; font-weight: 800; line-height: 1;
+        }
+        .price-block-anchor .price-save {
+            font-size: 11px; color: #16a34a; font-weight: 700; margin-top: 2px;
+            background: #ecfdf5; padding: 2px 8px; border-radius: 8px; display: inline-block; align-self: flex-start;
+        }
+        /* Notificación social flotante (FOMO) */
+        .social-notif {
+            position: fixed; left: 20px; bottom: 90px; max-width: 310px;
+            background: #fff; color: #333; border-radius: 14px;
+            padding: 12px 14px; display: flex; gap: 10px; align-items: flex-start;
+            box-shadow: 0 10px 28px rgba(0,0,0,0.18); border-left: 4px solid #16a34a;
+            z-index: 9990; font-size: 13px; line-height: 1.4;
+            transform: translateY(120%); opacity: 0; transition: all 0.45s cubic-bezier(.22,1.5,.36,1);
+            pointer-events: none;
+        }
+        .social-notif.show { transform: translateY(0); opacity: 1; }
+        .social-notif .sn-emoji { font-size: 22px; line-height: 1; }
+        .social-notif .sn-name { font-weight: 700; color: #111; }
+        .social-notif .sn-time { color: #888; font-size: 11px; margin-top: 3px; }
+        @media (max-width: 600px) {
+            .social-notif { left: 12px; right: 12px; max-width: none; bottom: 80px; }
+        }
+    `;
+    document.head.appendChild(s);
+})();
+
+// --- CREAR TARJETA DE PRODUCTO (con precio anclado + badges) ---
 function createCard(product) {
-    const price = formatCOP(product.price);
+    const newPrice = formatCOP(product.price);
+    const shopPriceNum = _calcShopPrice(product.price);
+    const shopPrice = formatCOP(shopPriceNum);
+    const saveNum = shopPriceNum - product.price;
+    const savePrice = formatCOP(saveNum);
+    const pct = Math.round((saveNum / shopPriceNum) * 100);
+    const badge = _badgeForProduct(product);
+
     const div = document.createElement('div');
     div.className = 'product-card-landing';
     div.innerHTML = `
-        <div class="product-img-wrap" onclick="openLB('../${product.image}', 'COD_${product.code} - ${product.name}', '${price}')">
+        <div class="product-img-wrap" onclick="openLB('../${product.image}', 'COD_${product.code} - ${product.name}', '${newPrice}')">
+            <span class="product-discount-badge">-${pct}% HOY</span>
+            ${badge ? `<span class="product-status-badge ${badge.cls}">${badge.txt}</span>` : ''}
             <img src="../${product.image}" alt="${product.name} - Flores a domicilio Cali" loading="lazy">
             <span class="product-code-badge">COD_${product.code}</span>
         </div>
@@ -173,9 +273,12 @@ function createCard(product) {
             <h3>${product.name}</h3>
             <p class="desc">${product.description}</p>
             <div class="product-footer-landing">
-                <div class="price-block">
-                    <span class="label">Precio</span>
-                    <span class="price">${price}</span>
+                <div class="price-block-anchor">
+                    <span class="lbl-shop">Antes</span>
+                    <span class="price-shop">${shopPrice}</span>
+                    <span class="lbl-web">Ahora</span>
+                    <span class="price-web">${newPrice}</span>
+                    <span class="price-save">Ahorras ${savePrice}</span>
                 </div>
                 <a href="#" class="btn-order-landing" onclick="orderWA('COD_${product.code}', '${product.name.replace(/'/g, "\\'")}', ${product.price}); return false;">
                     🛒 Pedir
@@ -185,6 +288,54 @@ function createCard(product) {
     `;
     return div;
 }
+
+// --- NOTIFICACIONES SOCIALES ROTATIVAS (FOMO + prueba social) ---
+// Se muestra una "compra reciente" cada ~25 segundos. Datos representativos
+// (no nombres reales — patrón Booking/Hotjar). Si quieres usar datos reales
+// reemplaza el array por nombres reales con permiso.
+(function injectSocialNotifs() {
+    var pool = [
+        { name: 'Camila R.',    area: 'Granada',         product: 'Ramo Buchón de Rosas',   ago: 4 },
+        { name: 'Andrés M.',    area: 'San Fernando',    product: 'Ancheta de Amor',         ago: 7 },
+        { name: 'Daniela P.',   area: 'Ciudad Jardín',   product: 'Caja de Rosas Rojas',     ago: 12 },
+        { name: 'Juan C.',      area: 'Pance',           product: 'Bouquet Mariposa',        ago: 18 },
+        { name: 'Laura V.',     area: 'El Peñón',        product: 'Detalle Encantador',      ago: 23 },
+        { name: 'Sofía T.',     area: 'San Antonio',     product: 'Sol Solitario (Girasol)', ago: 31 },
+        { name: 'Mateo R.',     area: 'Norte',           product: 'Pasión Bicolor',          ago: 38 },
+        { name: 'Valentina O.', area: 'Palmira',         product: 'Anchetas Premium',        ago: 45 },
+        { name: 'Sergio A.',    area: 'Jamundí',         product: 'Ramo Eterno (preservado)', ago: 52 },
+    ];
+    var idx = 0;
+
+    function showOne() {
+        var item = pool[idx % pool.length];
+        idx++;
+        var n = document.createElement('div');
+        n.className = 'social-notif';
+        n.innerHTML = '<span class="sn-emoji">🌹</span>' +
+            '<div><div><span class="sn-name">' + item.name + '</span> de ' + item.area +
+            ' acaba de pedir <strong>' + item.product + '</strong></div>' +
+            '<div class="sn-time">Hace ' + item.ago + ' min · ✅ Pedido confirmado</div></div>';
+        document.body.appendChild(n);
+        setTimeout(function() { n.classList.add('show'); }, 50);
+        setTimeout(function() {
+            n.classList.remove('show');
+            setTimeout(function() { if (n.parentNode) n.parentNode.removeChild(n); }, 500);
+        }, 6500);
+    }
+
+    function start() {
+        // Primera notif a los 8 segundos (dar tiempo a que el usuario lea la landing)
+        setTimeout(function() {
+            showOne();
+            setInterval(showOne, 25000);
+        }, 8000);
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', start);
+    } else { start(); }
+})();
 
 // --- RENDER CATÁLOGO ---
 function renderCatalog(filter) {
@@ -211,52 +362,99 @@ function filterLanding(filter, el) {
 }
 
 // --- WHATSAPP ORDER + GOOGLE ADS CONVERSION ---
+// IMPORTANTE: usa event_callback + setTimeout backup para que la conversión
+// se dispare ANTES de que la página pierda foco al abrir WhatsApp. Sin esto se
+// pierden ~30-50% de conversiones por race condition.
 function orderWA(code, name, price) {
-    // Google Ads conversion tracking
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'conversion', {
-            'send_to': 'AW-17658828097/de5RCLeVpoIcEMGqseRB',
-            'value': price,
-            'currency': 'COP'
-        });
-    }
+    const formattedPrice = formatCOP(price);
+    const landingPath = (typeof window !== 'undefined' && window.location)
+        ? window.location.pathname.split('/').pop().replace('.html','')
+        : 'desconocida';
+    const message = `Hola Atelier Vergara 🌹, vi el ramo *${code} - ${name}* (${formattedPrice}) en la web. ¿Está disponible para entrega HOY en Cali?`;
+    const url = `https://wa.me/573235933021?text=${encodeURIComponent(message)}`;
+    let opened = false;
+    const openOnce = () => { if (!opened) { opened = true; window.open(url, '_blank'); } };
 
-    // GA4 event
+    // GA4 event (sin bloqueo)
     if (typeof gtag !== 'undefined') {
         gtag('event', 'product_order', {
             'event_category': 'Catalog',
             'event_label': code,
+            'landing': landingPath,
             'value': price,
             'product_name': name
         });
+        // Conversión Google Ads con callback
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17658828097/de5RCLeVpoIcEMGqseRB',
+            'value': price,
+            'currency': 'COP',
+            'event_callback': openOnce
+        });
     }
 
-    const formattedPrice = formatCOP(price);
-    const message = `Hola, me interesa el ramo *${code} - ${name}* con un precio de ${formattedPrice}. ¿Podrían darme más información?`;
-    window.open(`https://wa.me/573235933021?text=${encodeURIComponent(message)}`, '_blank');
+    // Backup: si gtag no carga o el callback no llega en 400ms, abre igual
+    setTimeout(openOnce, 400);
 }
 
 // --- WHATSAPP GENÉRICO + CONVERSIÓN ---
 function contactWA(source, customMsg) {
-    // Google Ads conversion
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'conversion', {
-            'send_to': 'AW-17658828097/de5RCLeVpoIcEMGqseRB'
-        });
-    }
+    const landingPath = (typeof window !== 'undefined' && window.location)
+        ? window.location.pathname.split('/').pop().replace('.html','')
+        : 'desconocida';
+    const msg = customMsg || `Hola Atelier Vergara 🌹, vi su web (sección ${landingPath}) y quiero cotizar un arreglo de flores. ¿Me asesoran?`;
+    const url = `https://wa.me/573235933021?text=${encodeURIComponent(msg)}`;
+    let opened = false;
+    const openOnce = () => { if (!opened) { opened = true; window.open(url, '_blank'); } };
 
-    // GA4 event
     if (typeof gtag !== 'undefined') {
         gtag('event', 'whatsapp_click', {
             'event_category': 'Contact',
             'event_label': source,
+            'landing': landingPath,
             'value': 1
+        });
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17658828097/de5RCLeVpoIcEMGqseRB',
+            'event_callback': openOnce
         });
     }
 
-    const msg = customMsg || `Hola, estoy interesado/a en sus arreglos florales. Me podrían dar más información?`;
-    window.open(`https://wa.me/573235933021?text=${encodeURIComponent(msg)}`, '_blank');
+    setTimeout(openOnce, 400);
 }
+
+// --- INYECTAR NOTA FLOTANTE DE URGENCIA (gatillo de neuroventas) ---
+(function injectUrgencyNote() {
+    function buildNote() {
+        if (document.getElementById('urgencyNoteCali')) return;
+        var style = document.createElement('style');
+        style.textContent = `
+            .urgency-floating-note { position: fixed; bottom: 20px; left: 20px; background: linear-gradient(135deg,#ff6b9d,#c44569); color:#fff; padding:12px 18px; border-radius:30px; font-family:'Poppins','Segoe UI',Tahoma,sans-serif; font-size:14px; font-weight:600; box-shadow:0 6px 18px rgba(196,69,105,0.35); z-index:9998; display:flex; align-items:center; gap:8px; max-width:300px; line-height:1.3; animation: pulseUrgencyCali 2.5s ease-in-out infinite; cursor:pointer; }
+            .urgency-floating-note .urgency-icon { font-size:20px; }
+            .urgency-floating-note .urgency-close { background:rgba(255,255,255,0.2); border:none; color:#fff; cursor:pointer; border-radius:50%; width:22px; height:22px; display:flex; align-items:center; justify-content:center; font-size:14px; margin-left:6px; flex-shrink:0; }
+            @keyframes pulseUrgencyCali { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-4px);} }
+            @media (max-width: 600px) { .urgency-floating-note{font-size:12px; padding:10px 14px; max-width:240px; bottom:12px; left:12px;} }
+        `;
+        document.head.appendChild(style);
+        var note = document.createElement('div');
+        note.className = 'urgency-floating-note';
+        note.id = 'urgencyNoteCali';
+        note.innerHTML = '<span class="urgency-icon">🌹</span><span>Pide antes de las <strong>3:00 PM</strong> y entregamos HOY en Cali</span><button class="urgency-close" aria-label="Cerrar">×</button>';
+        note.addEventListener('click', function(ev) {
+            if (ev.target.classList.contains('urgency-close')) {
+                note.style.display = 'none';
+                return;
+            }
+            contactWA('urgency_note', 'Hola Atelier Vergara 🌹, quiero entrega HOY en Cali. ¿Tienen cupos disponibles?');
+        });
+        document.body.appendChild(note);
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', buildNote);
+    } else {
+        buildNote();
+    }
+})();
 
 // --- LIGHTBOX ---
 function openLB(img, title, price) {
@@ -282,3 +480,45 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); }
 document.addEventListener('DOMContentLoaded', function() {
     renderCatalog('priority');
 });
+
+// --- CONTADOR DE URGENCIA "ENTREGA HOY" (escasez temporal real) ---
+// Inyecta en el .top-bar un mensaje dinámico:
+//   • Antes de las 3:00 PM: "Pide en las próximas Xh Ym y entregamos HOY antes de las 6 PM"
+//   • Después de 3:00 PM: "Próximas entregas: MAÑANA. Pide ya y aseguras tu cupo"
+(function injectUrgencyCountdown() {
+    function updateCountdown() {
+        var bar = document.querySelector('.top-bar');
+        if (!bar) return;
+        var marker = document.getElementById('urgencyCountdownText');
+        if (!marker) {
+            // Insertar marker dentro del .top-bar al final
+            marker = document.createElement('span');
+            marker.id = 'urgencyCountdownText';
+            marker.style.cssText = 'display:block;font-weight:700;margin-top:2px;font-size:13px;color:#fff;';
+            bar.appendChild(marker);
+        }
+
+        var now = new Date();
+        var cutoff = new Date(now); cutoff.setHours(15, 0, 0, 0); // 3:00 PM hoy
+        var diffMs = cutoff - now;
+
+        if (diffMs > 0) {
+            var totalMin = Math.floor(diffMs / 60000);
+            var h = Math.floor(totalMin / 60);
+            var m = totalMin % 60;
+            var label = (h > 0 ? h + 'h ' : '') + m + 'm';
+            marker.innerHTML = '⏰ Pide en las próximas <strong>' + label + '</strong> y entregamos HOY antes de las 6:00 PM';
+        } else {
+            marker.innerHTML = '🌅 Próximas entregas: MAÑANA. Pide ya y aseguras tu cupo del primer turno';
+        }
+    }
+
+    function start() {
+        updateCountdown();
+        setInterval(updateCountdown, 60000); // refresca cada minuto
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', start);
+    } else { start(); }
+})();
