@@ -1,5 +1,5 @@
 // ===================================
-// LANDING PAGE JS - Atelier Vergara Cali
+// LANDING PAGE JS - Flowers Susi Lop Cali
 // Catálogo con prioridad por categoría + Conversiones Google Ads
 // ===================================
 
@@ -220,10 +220,10 @@ function _badgeForProduct(p) {
             font-size: 14px; color: #999; text-decoration: line-through; font-weight: 500;
         }
         .price-block-anchor .lbl-web {
-            font-size: 11px; color: #c44569; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px;
+            font-size: 11px; color: #B07F71; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px;
         }
         .price-block-anchor .price-web {
-            font-size: 22px; color: #c44569; font-weight: 800; line-height: 1;
+            font-size: 22px; color: #B07F71; font-weight: 800; line-height: 1;
         }
         .price-block-anchor .price-save {
             font-size: 11px; color: #16a34a; font-weight: 700; margin-top: 2px;
@@ -232,7 +232,7 @@ function _badgeForProduct(p) {
         /* Notificación social flotante (FOMO) */
         .social-notif {
             position: fixed; left: 20px; bottom: 90px; max-width: 310px;
-            background: #fff; color: #333; border-radius: 14px;
+            background: #fff; color: #404040; border-radius: 14px;
             padding: 12px 14px; display: flex; gap: 10px; align-items: flex-start;
             box-shadow: 0 10px 28px rgba(0,0,0,0.18); border-left: 4px solid #16a34a;
             z-index: 9990; font-size: 13px; line-height: 1.4;
@@ -370,8 +370,8 @@ function orderWA(code, name, price) {
     const landingPath = (typeof window !== 'undefined' && window.location)
         ? window.location.pathname.split('/').pop().replace('.html','')
         : 'desconocida';
-    const message = `Hola Atelier Vergara 🌹, vi el ramo *${code} - ${name}* (${formattedPrice}) en la web. ¿Está disponible para entrega HOY en Cali?`;
-    const url = `https://wa.me/573235933021?text=${encodeURIComponent(message)}`;
+    const message = `Hola Flowers Susi Lop 🌹, vi el ramo *${code} - ${name}* (${formattedPrice}) en la web. ¿Está disponible para entrega HOY en Cali?`;
+    const url = `https://wa.me/573228853129?text=${encodeURIComponent(message)}`;
     let opened = false;
     const openOnce = () => { if (!opened) { opened = true; window.open(url, '_blank'); } };
 
@@ -402,8 +402,8 @@ function contactWA(source, customMsg) {
     const landingPath = (typeof window !== 'undefined' && window.location)
         ? window.location.pathname.split('/').pop().replace('.html','')
         : 'desconocida';
-    const msg = customMsg || `Hola Atelier Vergara 🌹, vi su web (sección ${landingPath}) y quiero cotizar un arreglo de flores. ¿Me asesoran?`;
-    const url = `https://wa.me/573235933021?text=${encodeURIComponent(msg)}`;
+    const msg = customMsg || `Hola Flowers Susi Lop 🌹, vi su web (sección ${landingPath}) y quiero cotizar un arreglo de flores. ¿Me asesoran?`;
+    const url = `https://wa.me/573228853129?text=${encodeURIComponent(msg)}`;
     let opened = false;
     const openOnce = () => { if (!opened) { opened = true; window.open(url, '_blank'); } };
 
@@ -429,7 +429,7 @@ function contactWA(source, customMsg) {
         if (document.getElementById('urgencyNoteCali')) return;
         var style = document.createElement('style');
         style.textContent = `
-            .urgency-floating-note { position: fixed; bottom: 20px; left: 20px; background: linear-gradient(135deg,#ff6b9d,#c44569); color:#fff; padding:12px 18px; border-radius:30px; font-family:'Poppins','Segoe UI',Tahoma,sans-serif; font-size:14px; font-weight:600; box-shadow:0 6px 18px rgba(196,69,105,0.35); z-index:9998; display:flex; align-items:center; gap:8px; max-width:300px; line-height:1.3; animation: pulseUrgencyCali 2.5s ease-in-out infinite; cursor:pointer; }
+            .urgency-floating-note { position: fixed; bottom: 20px; left: 20px; background: linear-gradient(135deg,#D3A89D,#B07F71); color:#fff; padding:12px 18px; border-radius:30px; font-family:'Poppins','Segoe UI',Tahoma,sans-serif; font-size:14px; font-weight:600; box-shadow:0 6px 18px rgba(196,69,105,0.35); z-index:9998; display:flex; align-items:center; gap:8px; max-width:300px; line-height:1.3; animation: pulseUrgencyCali 2.5s ease-in-out infinite; cursor:pointer; }
             .urgency-floating-note .urgency-icon { font-size:20px; }
             .urgency-floating-note .urgency-close { background:rgba(255,255,255,0.2); border:none; color:#fff; cursor:pointer; border-radius:50%; width:22px; height:22px; display:flex; align-items:center; justify-content:center; font-size:14px; margin-left:6px; flex-shrink:0; }
             @keyframes pulseUrgencyCali { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-4px);} }
@@ -445,7 +445,7 @@ function contactWA(source, customMsg) {
                 note.style.display = 'none';
                 return;
             }
-            contactWA('urgency_note', 'Hola Atelier Vergara 🌹, quiero entrega HOY en Cali. ¿Tienen cupos disponibles?');
+            contactWA('urgency_note', 'Hola Flowers Susi Lop 🌹, quiero entrega HOY en Cali. ¿Tienen cupos disponibles?');
         });
         document.body.appendChild(note);
     }

@@ -1,5 +1,5 @@
 /* =====================================================
-   LANDING PAGES CSS - Atelier Vergara Cali
+   LANDING PAGES CSS - Flowers Susi Lop Cali
    Template compartido para las 7 landings
    ===================================================== */
 
@@ -7,18 +7,18 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-    --primary: #C1A874;
-    --primary-dark: #A08D5F;
-    --secondary: #D4BE8A;
-    --accent: #F5EBDD;
-    --accent-dark: #EDE3D3;
-    --dark: #0A0A0A;
+    --primary: #D3A89D;
+    --primary-dark: #B98A7C;
+    --secondary: #E2BDB3;
+    --accent: #FEFAF8;
+    --accent-dark: #F2E6E1;
+    --dark: #404040;
     --light: #ffffff;
-    --gray: #666;
-    --gray-light: #f9f7f4;
+    --gray: #7A6F6A;
+    --gray-light: #FEFAF8;
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
     --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
-    --shadow-lg: 0 12px 32px rgba(193,168,116,0.25);
+    --shadow-lg: 0 12px 32px rgba(211, 168, 157,0.25);
     --radius: 16px;
     --radius-full: 50px;
     --transition: all 0.3s ease;
@@ -210,7 +210,7 @@ button { border: none; cursor: pointer; font-family: var(--font-body); }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 24px rgba(64, 64, 64, 0.08);
 }
 
 .btn-secondary {
@@ -315,13 +315,13 @@ button { border: none; cursor: pointer; font-family: var(--font-body); }
     font-weight: 700;
     font-size: 1.1rem;
     transition: var(--transition);
-    box-shadow: 0 4px 16px rgba(193,168,116,0.4);
+    box-shadow: 0 4px 16px rgba(211, 168, 157,0.4);
 }
 
 .btn-cta-big:hover {
     background: var(--primary-dark);
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(193,168,116,0.5);
+    box-shadow: 0 8px 24px rgba(211, 168, 157,0.5);
 }
 
 /* === SECTION TITLES === */
@@ -381,7 +381,7 @@ button { border: none; cursor: pointer; font-family: var(--font-body); }
 .filter-btn-landing.active {
     background: var(--primary);
     color: white;
-    box-shadow: 0 4px 12px rgba(193,168,116,0.35);
+    box-shadow: 0 4px 12px rgba(211, 168, 157,0.35);
 }
 
 .products-grid-landing {
@@ -462,7 +462,7 @@ button { border: none; cursor: pointer; font-family: var(--font-body); }
     justify-content: space-between;
     align-items: center;
     padding-top: 0.75rem;
-    border-top: 2px solid #f0f0f0;
+    border-top: 2px solid #F3E9E5;
 }
 
 .price-block .label {
@@ -597,7 +597,7 @@ button { border: none; cursor: pointer; font-family: var(--font-body); }
 }
 
 .testimonial-stars {
-    color: #FFB800;
+    color: #C9A227;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
 }

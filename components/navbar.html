@@ -4,17 +4,17 @@
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(10, 10, 10, 0.95);
+    background: rgba(254, 250, 248, 0.94);
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(193, 168, 116, 0.2);
+    box-shadow: 0 1px 0 rgba(211, 168, 157, 0.35), 0 6px 24px rgba(64, 64, 64, 0.06);
     z-index: 1000;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(193, 168, 116, 0.1);
+    border-bottom: 1px solid rgba(211, 168, 157, 0.28);
 }
 
 .navbar-scrolled {
-    background: rgba(10, 10, 10, 0.98);
-    box-shadow: 0 2px 30px rgba(193, 168, 116, 0.3);
+    background: rgba(254, 250, 248, 0.98);
+    box-shadow: 0 1px 0 rgba(211, 168, 157, 0.45), 0 8px 28px rgba(64, 64, 64, 0.10);
 }
 
 .navbar-content {
@@ -39,7 +39,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 16px rgba(193, 168, 116, 0.3);
+    background: #FEFAF8;
+    border: 1px solid rgba(211, 168, 157, 0.45);
     transition: transform 0.3s ease;
 }
 
@@ -61,16 +62,18 @@
 
 .logo-text .brand-name {
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #F5EBDD;
+    font-size: 1.45rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #404040;
     line-height: 1;
     margin-bottom: 0.25rem;
 }
 
 .logo-text .brand-tagline {
-    font-size: 0.75rem;
-    color: #C1A874;
+    font-size: 0.7rem;
+    color: #9C6B5D;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
@@ -84,7 +87,7 @@
 }
 
 .navbar-menu a {
-    color: rgba(255, 255, 255, 0.9);
+    color: #404040;
     font-weight: 500;
     font-size: 0.95rem;
     position: relative;
@@ -98,12 +101,12 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #C1A874, #F5EBDD);
+    background: linear-gradient(90deg, #D3A89D, #FEFAF8);
     transition: width 0.3s ease;
 }
 
 .navbar-menu a:hover {
-    color: #C1A874;
+    color: #B07F71;
 }
 
 .navbar-menu a:hover::after {
@@ -121,23 +124,23 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
-    background: rgba(193, 168, 116, 0.1);
+    background: rgba(211, 168, 157, 0.16);
     border-radius: 50px;
-    color: #F5EBDD;
+    color: #404040;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 1px solid rgba(193, 168, 116, 0.3);
+    border: 1px solid rgba(211, 168, 157, 0.3);
 }
 
 .navbar-phone:hover {
-    background: #C1A874;
-    color: white;
+    background: #D3A89D;
+    color: #404040;
     transform: translateY(-2px);
 }
 
 .navbar-whatsapp {
     padding: 0.75rem 1.5rem;
-    background: #25D366;
+    background: #1EBE5D;
     color: white;
     border-radius: 50px;
     font-weight: 600;
@@ -165,7 +168,7 @@
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: #C1A874;
+    background: #FEFAF8;
     border-radius: 3px;
     transition: all 0.3s ease;
 }
@@ -204,16 +207,16 @@
         top: 80px;
         left: 0;
         right: 0;
-        background: rgba(10, 10, 10, 0.98);
+        background: rgba(254, 250, 248, 0.98);
         flex-direction: column;
         padding: 2rem;
         gap: 1.5rem;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 8px 24px rgba(64, 64, 64, 0.12);
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
-        border-bottom: 1px solid rgba(193, 168, 116, 0.2);
+        border-bottom: 1px solid rgba(211, 168, 157, 0.28);
     }
     
     .navbar-menu.active {
@@ -251,11 +254,11 @@
     <div class="navbar-content">
         <a href="/" class="navbar-logo">
             <div class="logo-circle">
-                <img src="/assets/logo.webp" alt="Atelier Vergara Logo" onerror="this.style.display='none'">
+                <img src="/assets/logo-mark.webp" alt="Flowers Susi Lop - Floristería en Cali" onerror="this.style.display='none'">
             </div>
             <div class="logo-text">
-                <span class="brand-name">Atelier Vergara</span>
-                <span class="brand-tagline">Florería Cali</span>
+                <span class="brand-name">Flowers Susi Lop</span>
+                <span class="brand-tagline">Flower Shop · Cali</span>
             </div>
         </a>
         
@@ -266,10 +269,10 @@
         </ul>
         
         <div class="navbar-cta">
-            <a href="tel:+573235933021" class="navbar-phone">
-                📞 323 593 3021
+            <a href="tel:+573228853129" class="navbar-phone">
+                📞 322 885 3129
             </a>
-            <a href="https://wa.me/573235933021?text=Hola,%20quisiera%20información" class="navbar-whatsapp" target="_blank" onclick="trackWhatsAppClick('navbar')">
+            <a href="https://wa.me/573228853129?text=Hola,%20quisiera%20información" class="navbar-whatsapp" target="_blank" onclick="trackWhatsAppClick('navbar')">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.5rem;">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                 </svg>

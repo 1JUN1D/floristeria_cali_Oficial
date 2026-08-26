@@ -14,7 +14,7 @@
     justify-content: center;
     overflow: hidden;
     margin-top: 80px;
-    background: linear-gradient(135deg, #0A0A0A 0%, #2B2B2B 100%);
+    background: linear-gradient(160deg, #FEFAF8 0%, #F7EFEB 100%);
 }
 
 .service-hero-bg {
@@ -44,25 +44,25 @@
     gap: 0.5rem;
     margin-bottom: 2rem;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: #8A807A;
 }
 
 .service-hero-content .breadcrumb a {
-    color: #C1A874;
+    color: #D3A89D;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .service-hero-content .breadcrumb a:hover {
-    color: #F5EBDD;
+    color: #404040;
 }
 
 .service-hero-content .breadcrumb .separator {
-    color: rgba(255, 255, 255, 0.4);
+    color: #A79E99;
 }
 
 .service-hero-content .breadcrumb .current {
-    color: #F5EBDD;
+    color: #404040;
     font-weight: 600;
 }
 
@@ -70,14 +70,14 @@
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     font-weight: 700;
-    color: #F5EBDD;
+    color: #404040;
     margin-bottom: 1.5rem;
     line-height: 1.2;
 }
 
 .service-hero-content .service-tagline {
     font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: #7A6F6A;
     font-weight: 300;
     margin-bottom: 2rem;
 }
@@ -94,7 +94,7 @@
    =================================== */
 .service-content-section {
     padding: 80px 0;
-    background: linear-gradient(135deg, #0A0A0A 0%, #2B2B2B 100%);
+    background: linear-gradient(160deg, #FEFAF8 0%, #F7EFEB 100%);
 }
 
 .service-content-grid {
@@ -107,7 +107,7 @@
 .service-main-content h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.25rem;
-    color: #F5EBDD;
+    color: #404040;
     margin-bottom: 1.5rem;
     margin-top: 2.5rem;
 }
@@ -119,13 +119,13 @@
 .service-main-content h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.75rem;
-    color: #C1A874;
+    color: #D3A89D;
     margin-bottom: 1rem;
     margin-top: 2rem;
 }
 
 .service-main-content p {
-    color: rgba(255, 255, 255, 0.7);
+    color: #7A6F6A;
     line-height: 1.8;
     margin-bottom: 1.5rem;
     font-size: 1.05rem;
@@ -133,7 +133,7 @@
 
 .service-main-content ul,
 .service-main-content ol {
-    color: rgba(255, 255, 255, 0.7);
+    color: #7A6F6A;
     line-height: 1.8;
     margin-bottom: 1.5rem;
     padding-left: 2rem;
@@ -144,8 +144,8 @@
 }
 
 .service-highlight-box {
-    background: linear-gradient(135deg, rgba(193, 168, 116, 0.1) 0%, rgba(245, 235, 221, 0.1) 100%);
-    border-left: 4px solid #C1A874;
+    background: linear-gradient(135deg, rgba(211, 168, 157, 0.1) 0%, rgba(254, 250, 248, 0.1) 100%);
+    border-left: 4px solid #D3A89D;
     padding: 2rem;
     border-radius: 12px;
     margin: 2rem 0;
@@ -156,8 +156,8 @@
 }
 
 .service-price-box {
-    background: linear-gradient(135deg, #2B2B2B 0%, #1a1a1a 100%);
-    border: 2px solid #C1A874;
+    background: #FFFFFF;
+    border: 2px solid #D3A89D;
     border-radius: 16px;
     padding: 2rem;
     margin: 2rem 0;
@@ -166,7 +166,7 @@
 
 .service-price-box .price-label {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: #8A807A;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 0.5rem;
@@ -175,14 +175,14 @@
 .service-price-box .price-range {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
-    color: #C1A874;
+    color: #D3A89D;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .service-price-box .price-note {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: #9A9184;
 }
 
 /* ===================================
@@ -194,18 +194,18 @@
 }
 
 .sidebar-card {
-    background: linear-gradient(135deg, #2B2B2B 0%, #1a1a1a 100%);
-    border: 1px solid rgba(193, 168, 116, 0.2);
+    background: #FFFFFF;
+    border: 1px solid rgba(211, 168, 157, 0.2);
     border-radius: 16px;
     padding: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(64, 64, 64, 0.10);
 }
 
 .sidebar-card h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
-    color: #F5EBDD;
+    color: #404040;
     margin-bottom: 1.5rem;
 }
 
@@ -216,11 +216,11 @@
 
 .sidebar-features-list li {
     padding: 0.75rem 0;
-    border-bottom: 1px solid rgba(193, 168, 116, 0.1);
+    border-bottom: 1px solid rgba(211, 168, 157, 0.1);
     display: flex;
     align-items: start;
     gap: 0.75rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: #7A6F6A;
 }
 
 .sidebar-features-list li:last-child {
@@ -229,14 +229,14 @@
 
 .sidebar-features-list li::before {
     content: '✓';
-    color: #C1A874;
+    color: #D3A89D;
     font-weight: bold;
     font-size: 1.2rem;
     flex-shrink: 0;
 }
 
 .sidebar-cta-card {
-    background: linear-gradient(135deg, #C1A874 0%, #A08D5F 100%);
+    background: linear-gradient(135deg, #D3A89D 0%, #B98A7C 100%);
     color: #ffffff;
     border: none;
 }
@@ -246,20 +246,20 @@
 }
 
 .sidebar-cta-card p {
-    color: rgba(255, 255, 255, 0.9);
+    color: #404040;
     margin-bottom: 1.5rem;
 }
 
 .sidebar-cta-card .btn {
     background: #ffffff;
-    color: #C1A874;
+    color: #D3A89D;
     width: 100%;
     justify-content: center;
 }
 
 .sidebar-cta-card .btn:hover {
-    background: #0A0A0A;
-    color: #F5EBDD;
+    background: #FEFAF8;
+    color: #404040;
 }
 
 /* ===================================
@@ -275,22 +275,22 @@
 .feature-item {
     text-align: center;
     padding: 2rem;
-    background: linear-gradient(135deg, #2B2B2B 0%, #1a1a1a 100%);
+    background: #FFFFFF;
     border-radius: 16px;
     transition: all 0.3s ease;
-    border: 1px solid rgba(193, 168, 116, 0.1);
+    border: 1px solid rgba(211, 168, 157, 0.1);
 }
 
 .feature-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(193, 168, 116, 0.25);
-    border-color: #C1A874;
+    box-shadow: 0 8px 24px rgba(211, 168, 157, 0.25);
+    border-color: #D3A89D;
 }
 
 .feature-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #C1A874 0%, #A08D5F 100%);
+    background: linear-gradient(135deg, #D3A89D 0%, #B98A7C 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -302,12 +302,12 @@
 .feature-item h4 {
     font-family: 'Playfair Display', serif;
     font-size: 1.25rem;
-    color: #F5EBDD;
+    color: #404040;
     margin-bottom: 0.75rem;
 }
 
 .feature-item p {
-    color: rgba(255, 255, 255, 0.7);
+    color: #7A6F6A;
     font-size: 0.95rem;
     line-height: 1.6;
 }
@@ -327,8 +327,8 @@
     border-radius: 16px;
     overflow: hidden;
     aspect-ratio: 1 / 1;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(193, 168, 116, 0.2);
+    box-shadow: 0 4px 12px rgba(64, 64, 64, 0.14);
+    border: 1px solid rgba(211, 168, 157, 0.2);
 }
 
 .gallery-item img {
@@ -346,23 +346,23 @@
    FAQ SECTION
    =================================== */
 .faq-item {
-    background: linear-gradient(135deg, #2B2B2B 0%, #1a1a1a 100%);
+    background: #FFFFFF;
     border-radius: 12px;
     padding: 1.5rem;
     margin-bottom: 1rem;
-    border: 1px solid rgba(193, 168, 116, 0.1);
+    border: 1px solid rgba(211, 168, 157, 0.1);
 }
 
 .faq-question {
     font-family: 'Playfair Display', serif;
     font-size: 1.25rem;
-    color: #F5EBDD;
+    color: #404040;
     font-weight: 600;
     margin-bottom: 0.75rem;
 }
 
 .faq-answer {
-    color: rgba(255, 255, 255, 0.7);
+    color: #7A6F6A;
     line-height: 1.7;
 }
 
@@ -371,7 +371,7 @@
    =================================== */
 .related-services-section {
     padding: 80px 0;
-    background: linear-gradient(135deg, #2B2B2B 0%, #0A0A0A 100%);
+    background: linear-gradient(160deg, #F7EFEB 0%, #FEFAF8 100%);
 }
 
 .related-services-grid {
@@ -382,18 +382,18 @@
 }
 
 .related-service-card {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2B2B2B 100%);
+    background: #FFFFFF;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 16px rgba(64, 64, 64, 0.10);
     transition: all 0.3s ease;
-    border: 1px solid rgba(193, 168, 116, 0.1);
+    border: 1px solid rgba(211, 168, 157, 0.1);
 }
 
 .related-service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 32px rgba(193, 168, 116, 0.25);
-    border-color: #C1A874;
+    box-shadow: 0 12px 32px rgba(211, 168, 157, 0.25);
+    border-color: #D3A89D;
 }
 
 .related-service-image {
@@ -409,12 +409,12 @@
 .related-service-content h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
-    color: #F5EBDD;
+    color: #404040;
     margin-bottom: 0.75rem;
 }
 
 .related-service-content p {
-    color: rgba(255, 255, 255, 0.7);
+    color: #7A6F6A;
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1.25rem;
