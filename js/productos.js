@@ -306,5 +306,5 @@ const categoryLabels = {
 };
 
 /* Número de WhatsApp de la floristería */
-const WHATSAPP_NUMBER = '573166152486';
+const WHATSAPP_NUMBER = '573044510598';
 const SITE_URL = 'http://floristeriacali.dondeseria.com/';
