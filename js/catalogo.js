@@ -1,5 +1,5 @@
 /* =====================================================
-   LÓGICA DEL CATÁLOGO — FLOWERS SUSI LOP
+   LÓGICA DEL CATÁLOGO — FLORES DEL ENCANTO
    Buscador, filtros, orden por precio en columnas y lightbox.
    Requiere js/productos.js cargado antes.
    ===================================================== */
@@ -29,9 +29,9 @@ function priceValue(p) {
 function matchesPriceFilter(p, filter) {
     const v = p.price;
     if (v === null || v === undefined) return false;
-    if (filter === 'precio-bajo') return v < 120000;
-    if (filter === 'precio-medio') return v >= 120000 && v <= 200000;
-    if (filter === 'precio-alto') return v > 200000;
+    if (filter === 'precio-bajo') return v < 200000;
+    if (filter === 'precio-medio') return v >= 200000 && v <= 300000;
+    if (filter === 'precio-alto') return v > 300000;
     return false;
 }
 
@@ -114,7 +114,7 @@ function renderProducts() {
             .map(c => '<span class="product-tag product-tag-cat">' + categoryLabels[c] + '</span>')
             .join('');
         const waText = encodeURIComponent(
-            'Hola Flowers Susi Lop, me interesa: ' + p.name +
+            'Hola Flores del Encanto, me interesa: ' + p.name +
             ' (Cod. ' + code + ') - ' + formatPrice(p.price) +
             ' | Foto: ' + productPhotoUrl(p)
         );

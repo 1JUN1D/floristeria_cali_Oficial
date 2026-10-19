@@ -1,5 +1,5 @@
 // ===================================
-// LANDING PAGE JS - Flowers Susi Lop Cali
+// LANDING PAGE JS - Flores del Encanto Cali
 // Catálogo con prioridad por categoría + Conversiones Google Ads
 // ===================================
 
@@ -370,8 +370,8 @@ function orderWA(code, name, price) {
     const landingPath = (typeof window !== 'undefined' && window.location)
         ? window.location.pathname.split('/').pop().replace('.html','')
         : 'desconocida';
-    const message = `Hola Flowers Susi Lop 🌹, vi el ramo *${code} - ${name}* (${formattedPrice}) en la web. ¿Está disponible para entrega HOY en Cali?`;
-    const url = `https://wa.me/573228853129?text=${encodeURIComponent(message)}`;
+    const message = `Hola Flores del Encanto 🌹, vi el ramo *${code} - ${name}* (${formattedPrice}) en la web. ¿Está disponible para entrega HOY en Cali?`;
+    const url = `https://wa.me/573166152486?text=${encodeURIComponent(message)}`;
     let opened = false;
     const openOnce = () => { if (!opened) { opened = true; window.open(url, '_blank'); } };
 
@@ -402,8 +402,8 @@ function contactWA(source, customMsg) {
     const landingPath = (typeof window !== 'undefined' && window.location)
         ? window.location.pathname.split('/').pop().replace('.html','')
         : 'desconocida';
-    const msg = customMsg || `Hola Flowers Susi Lop 🌹, vi su web (sección ${landingPath}) y quiero cotizar un arreglo de flores. ¿Me asesoran?`;
-    const url = `https://wa.me/573228853129?text=${encodeURIComponent(msg)}`;
+    const msg = customMsg || `Hola Flores del Encanto 🌹, vi su web (sección ${landingPath}) y quiero cotizar un arreglo de flores. ¿Me asesoran?`;
+    const url = `https://wa.me/573166152486?text=${encodeURIComponent(msg)}`;
     let opened = false;
     const openOnce = () => { if (!opened) { opened = true; window.open(url, '_blank'); } };
 
@@ -445,7 +445,7 @@ function contactWA(source, customMsg) {
                 note.style.display = 'none';
                 return;
             }
-            contactWA('urgency_note', 'Hola Flowers Susi Lop 🌹, quiero entrega HOY en Cali. ¿Tienen cupos disponibles?');
+            contactWA('urgency_note', 'Hola Flores del Encanto 🌹, quiero entrega HOY en Cali. ¿Tienen cupos disponibles?');
         });
         document.body.appendChild(note);
     }

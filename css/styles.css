@@ -2,7 +2,7 @@
    VARIABLES Y COLORES
    =================================== */
 :root {
-    /* Paleta Flowers Susi Lop */
+    /* Paleta Flores del Encanto */
     --color-primary: #D3A89D;      /* Rosa nude / empolvado (logo) */
     --color-primary-deep: #B07F71; /* Nude oscuro: texto y bordes sobre crema */
     --color-secondary: #B98A7C;    /* Nude medio */
@@ -12,7 +12,7 @@
     --color-cream: #FEFAF8;
     --color-cream-2: #F7EFEB;
     --color-cream-3: #F1E5E0;
-    --color-dark: #404040;         /* Gris carbón elegante (texto SUSI LOP) */
+    --color-dark: #404040;         /* Gris carbón elegante (texto FLORES DEL ENCANTO) */
     --color-gray-dark: #2E2E2E;
     --color-light: #ffffff;
     --color-gray: #F7EFEB;
@@ -657,7 +657,7 @@ a {
 
 
 /* ===================================
-   AJUSTES DE MARCA — FLOWERS SUSI LOP
+   AJUSTES DE MARCA — FLORES DEL ENCANTO
    Fondo crema, texto carbón, acento nude y salvia.
    =================================== */
 body {

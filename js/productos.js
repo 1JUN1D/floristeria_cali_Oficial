@@ -1,165 +1,310 @@
 /* =====================================================
-   CATÁLOGO FLOWERS SUSI LOP — CALI
+   CATÁLOGO FLORES DEL ENCANTO — CALI
    Fuente única de productos. La usan catalogo.html y las landing pages.
-   Precios en pesos colombianos.
+   Precios en pesos colombianos. La foto de cada producto es /assets/foto<id>.webp
+   (versión liviana de /assets/<id>.png).
    ===================================================== */
 
 const products = [
     {
         id: 1,
-        name: "Corona de Rosas Rojas",
-        price: 118750,
+        name: "Ramo Cumpleaños Feliz",
+        price: 160000,
         image: "/assets/foto1.webp",
-        description: "Rosas rojas de botón grande abiertas sobre nube blanca, montadas en una caja de cartón troquelada en forma de corona rosada con cintas de raso. Un detalle con aire de realeza: llega listo para poner sobre la mesa y es de los que se fotografían apenas se entregan.",
-        categories: ["rosas-rojas", "cajas", "amor"]
+        description: "Ramo de 15 rosas rojas con listón personalizado de «Feliz Cumpleaños», 2 mariposas, tarjeta personalizada y su decoración elegante, ideal para sorprender en su día.",
+        categories: ["rosas-rojas", "cumpleanos"]
     },
     {
         id: 2,
-        name: "Claveles Berenjena en Florero",
-        price: 162500,
+        name: "Ramo de 12 Rosas con Mariposas",
+        price: 123000,
         image: "/assets/foto2.webp",
-        description: "Claveles en tonos berenjena, fucsia y rosa pastel intercalados con ramas de nube blanca, dispuestos en florero de vidrio con lazo de raso al cuello. Los claveles son de las flores que más duran en agua: este arreglo sigue lindo una y dos semanas después.",
-        categories: ["claveles", "floreros", "mix"]
+        description: "Ramo de 12 rosas rojas con 2 mariposas y tarjeta personalizada, ideal para sorprender a tu persona favorita, y además está en oferta.",
+        categories: ["rosas-rojas", "amor", "oferta"]
     },
     {
         id: 3,
-        name: "Girasol en Blanco y Negro",
-        price: 156250,
+        name: "Amor y Ternura",
+        price: 248000,
         image: "/assets/foto3.webp",
-        description: "Un girasol grande y abierto rodeado de pompones blancos y amarillos, nube y hojas de eucalipto azul, envuelto en papel coreano negro con filo blanco. El contraste del papel oscuro con el amarillo lo vuelve un ramo moderno, elegante y muy vistoso.",
-        categories: ["girasoles", "mix"]
+        description: "Ramo de 12 rosas rojas con 3 chocolates Ferrero, peluche de Stitch, tarjeta personalizada y su decoración elegante, un detalle tierno ideal para sorprender.",
+        categories: ["rosas-rojas", "peluches", "chocolates", "amor"]
     },
     {
         id: 4,
-        name: "Campestre Sol y Fucsia",
-        price: 137500,
+        name: "Ramo Exclusivo Cumpleaños",
+        price: 358000,
         image: "/assets/foto4.webp",
-        description: "Dos girasoles abiertos acompañados de claveles fucsia y rosados, una rosa rosada, una rosa roja y nube blanca, envueltos en papel kraft y atados con cuerda de fique. Colorido, alegre y con ese aire de flores recién traídas del campo.",
-        categories: ["girasoles", "claveles", "mix"]
+        description: "Ramo de 50 rosas rojas con listón de cumpleaños, 2 mariposas, corona, tarjeta personalizada y su decoración elegante, el ramo más impactante para celebrar un cumpleaños.",
+        categories: ["rosas-rojas", "cumpleanos", "grandes"]
     },
     {
         id: 5,
-        name: "Ramo Rosado con Astromelias",
-        price: 106250,
+        name: "Corazón Lleno de Amor",
+        price: 373000,
         image: "/assets/foto5.webp",
-        description: "Claveles rosados en base, rosas fucsia, astromelias moteadas, margaritas blancas y ramas de eucalipto, en papel blanco y negro con lazo de raso. Una mezcla suave y femenina, del tamaño justo para llevar de visita o mandar a la oficina.",
-        categories: ["claveles", "mix", "rosas"]
+        description: "Corazón premium de 22 rosas rojas con 3 girasoles, 4 chocolates Ferrero y un osito de «Feliz Día», ideal para sorprender, enamorar o conquistar.",
+        categories: ["cajas", "rosas-rojas", "girasoles", "chocolates", "peluches", "amor"]
     },
     {
         id: 6,
-        name: "Docena Clásica de Rosas Rojas",
-        price: 81250,
+        name: "Amor y Alegría",
+        price: 223000,
         image: "/assets/foto6.webp",
-        description: "Doce rosas rojas de tallo largo con nube blanca y eucalipto, envueltas en papel blanco con filo dorado y cuerda de fique. La forma más directa de decir «te amo» y nuestra opción más económica dentro de las rosas: no falla en ningún aniversario.",
-        categories: ["rosas-rojas", "amor", "economico"]
+        description: "Bouquet de 5 girasoles con rusco verde, peluche de Stitch de 20 cm, papel coreano, moño y tarjeta personalizada, un ramo alegre que ilumina cualquier día.",
+        categories: ["girasoles", "peluches"]
     },
     {
         id: 7,
-        name: "Claveles Rosados en Papel Negro",
-        price: 106250,
+        name: "Ramo 15 Años",
+        price: 198000,
         image: "/assets/foto7.webp",
-        description: "Claveles rosados de flor ancha con acentos berenjena, pompones amarillos y eucalipto, envueltos en papel negro brillante y rematados con un lazo de raso blanco. Sobrio por fuera, muy dulce por dentro: perfecto para un cumpleaños o un agradecimiento.",
-        categories: ["claveles", "mix"]
+        description: "Ramo de 15 rosas rojas con listón personalizado de «Felices 15 Años», corona, mariposa, tarjeta personalizada y su decoración elegante, pensado para la quinceañera.",
+        categories: ["rosas-rojas", "quince"]
     },
     {
         id: 8,
-        name: "Florero Romántico Rojo y Rosa",
-        price: 118750,
+        name: "Directo al Cora",
+        price: 123000,
         image: "/assets/foto8.webp",
-        description: "Rosas rojas, claveles rosados y fucsia con nube blanca y hoja verde, ya montados en florero de vidrio con moño de raso blanco. Llega listo, sin necesidad de buscar dónde ponerlo, y es de los arreglos que más rinden por lo que cuestan.",
-        categories: ["floreros", "rosas-rojas", "claveles"]
+        description: "Ramo de 10 rosas con globo de corazón, mariposa, tarjeta personalizada y su decoración elegante, un detalle que llega directo al corazón.",
+        categories: ["rosas-rojas", "globos", "amor"]
     },
     {
         id: 9,
-        name: "Bolso Campestre en Kraft",
-        price: 143750,
+        name: "Detalle que No Puede Faltar",
+        price: 160000,
         image: "/assets/foto9.webp",
-        description: "Canasta tipo bolso en cartón kraft con base forrada en fique: adentro, rosas fucsia, claveles rosados, pompones amarillos, nube y eucalipto. Se entrega con manija, así que se lleva y se muestra sin despeinar ni una flor.",
-        categories: ["mix", "rosas", "claveles"]
+        description: "Ramo de 8 rosas con osito de «Feliz Día», papel coreano, moño, tarjeta y su decoración elegante, el detalle perfecto para cualquier ocasión.",
+        categories: ["rosas-rojas", "peluches"]
     },
     {
         id: 10,
-        name: "Ramo Blanco de Lirios y Rosas",
-        price: 156250,
+        name: "Dulce Amor",
+        price: 285000,
         image: "/assets/foto10.webp",
-        description: "Lirios orientales abiertos, rosas blancas y pompones blancos sobre follaje verde y eucalipto, envueltos en papel no tejido blanco con lazo de raso y tarjeta para la dedicatoria. La opción más apropiada para condolencias, agradecimientos formales y visitas de hospital.",
-        categories: ["blancos", "mix", "condolencias"]
+        description: "Caja de rosas con 3 chocolates, un osito, globo de corazón y globo de «Feliz Día», un regalo completo para sorprender a quien quieres.",
+        categories: ["cajas", "rosas-rojas", "peluches", "chocolates", "globos", "amor"]
     },
     {
         id: 11,
-        name: "Media Docena de Rosas Amarillas",
-        price: 93750,
+        name: "Ramo 50 Rosas Aniversario",
+        price: 323000,
         image: "/assets/foto11.webp",
-        description: "Seis rosas amarillas de botón grande con nube blanca y eucalipto, envueltas en papel amarillo texturizado con lazo de raso al tono. Alegres y luminosas: se regalan para celebrar la amistad, un logro o simplemente para levantarle el día a alguien.",
-        categories: ["rosas", "economico"]
+        description: "Ramo de 50 rosas con listón personalizado de «Feliz Aniversario», corona, mariposas y tarjeta con el mensaje que desees, para celebrar su historia juntos.",
+        categories: ["rosas-rojas", "amor", "grandes"]
     },
     {
         id: 12,
-        name: "Bouquet Sol de Girasoles y Gerberas",
-        price: 187500,
+        name: "Buchón Ternura 50 Rosas",
+        price: 335000,
         image: "/assets/foto12.webp",
-        description: "Girasoles, rosas color champán, gerberas amarillas y astromelias sobre follaje verde y una hoja de monstera, envueltos en tul amarillo con moño de raso. Un ramo grande y radiante, pensado para entradas triunfales y buenas noticias.",
-        categories: ["girasoles", "mix", "rosas"]
+        description: "Ramo buchón de 50 rosas rosadas con listón personalizado para la cumpleañera más hermosa, corona, mariposas y tarjeta personalizada.",
+        categories: ["rosas", "cumpleanos", "grandes"]
     },
     {
         id: 13,
-        name: "Quince Años en Rosa y Lila",
-        price: 237500,
+        name: "Rosas para la Más Hermosa",
+        price: 185000,
         image: "/assets/foto13.webp",
-        description: "Rosas rosadas y lilas entre abundante nube blanca y eucalipto, con un osito de peluche con corona y una tiara decorativa entre las flores, envuelto en papel rosado texturizado con lazo de raso y tarjeta personalizada. Nuestro diseño para quinceañeras y cumpleaños de princesa.",
-        categories: ["rosas", "peluches", "cumpleanos"]
+        description: "Ramo de 12 rosas con listón «Para la más hermosa», corona, moño y tarjeta, un ramo elegante para consentirla.",
+        categories: ["rosas-rojas", "amor"]
     },
     {
         id: 14,
-        name: "Jardín Silvestre en Kraft",
-        price: 181250,
+        name: "Ramo Exclusivo 24 Rosas",
+        price: 210000,
         image: "/assets/foto14.webp",
-        description: "Rosas rosadas, lisianthus lila, claveles rojos, margaritas blancas, helechos, eucalipto y hojas de monstera, en papel kraft con cuerda de fique. Un arreglo abundante y natural, como un jardín recogido esa misma mañana.",
-        categories: ["mix", "rosas", "claveles"]
+        description: "Ramo de 24 rosas rojas con corona, 3 mariposas doradas, papel coreano, moño y tarjeta personalizada, a súper precio.",
+        categories: ["rosas-rojas", "amor", "oferta"]
     },
     {
         id: 15,
-        name: "Sombrerera Negra Feliz Cumpleaños",
-        price: 287500,
+        name: "Ramo Propuesta de Amor",
+        price: 223000,
         image: "/assets/foto15.webp",
-        description: "Sombrerera negra rebosante de girasoles, gerberas fucsia, rosas naranjas, hortensias rosadas, lisianthus y margaritas, con eucalipto cayendo por los bordes y tarjeta de «Feliz Cumpleaños». La pieza más celebratoria del catálogo y la que más impacto causa al entregarla.",
-        categories: ["cajas", "mix", "cumpleanos", "girasoles"]
+        description: "Ramo de 14 rosas con perlita, listón personalizado, corona, mariposa, 5 chocolates y tarjeta personalizada, ideal para pedir el sí.",
+        categories: ["rosas-rojas", "chocolates", "amor"]
     },
     {
         id: 16,
-        name: "Florero Blanco de Lirios y Rosas",
-        price: 243750,
+        name: "Ramo Cumpleaños con Girasoles",
+        price: 73000,
         image: "/assets/foto16.webp",
-        description: "Lirios blancos, rosas marfil y pompones blancos abiertos entre eucalipto y follaje verde, montados en florero de vidrio con lazo de raso y tarjeta en kraft. Un arreglo alto, sereno y de mucha presencia: ideal para condolencias, oficinas y recepciones.",
-        categories: ["blancos", "floreros", "condolencias"]
+        description: "Ramo de 3 girasoles con perlita, papel coreano, globo de «Feliz Cumpleaños» y tarjeta, un detalle alegre para celebrar sin gastar de más.",
+        categories: ["girasoles", "globos", "cumpleanos"]
     },
     {
         id: 17,
-        name: "Sombrerera de Hortensias Pastel",
-        price: 300000,
+        name: "Cilindro Cumpleaños Feliz",
+        price: 233000,
         image: "/assets/foto17.webp",
-        description: "Sombrerera color champán con hortensias rosadas, blancas y azules acompañadas de rosas rosadas y ramas de eucalipto. La combinación pastel más pedida para bautizos, baby showers y aniversarios: delicada, abundante y de las que se recuerdan.",
-        categories: ["cajas", "rosas", "blancos"]
+        description: "Cilindro con 10 rosas, 3 chocolates Ferrero y su decoración, ideal para sorprender en su cumpleaños.",
+        categories: ["cajas", "rosas-rojas", "chocolates", "cumpleanos"]
+    },
+    {
+        id: 18,
+        name: "Ramo Primaveral",
+        price: 160000,
+        image: "/assets/foto18.webp",
+        description: "Ramo de 5 girasoles con su decoración, ideal para alegrar el día de alguien especial.",
+        categories: ["girasoles"]
+    },
+    {
+        id: 19,
+        name: "Para Mi Princesa",
+        price: 223000,
+        image: "/assets/foto19.webp",
+        description: "Ramo de 20 rosas con listón personalizado, corona, mariposa y su decoración, para la princesa de tu vida.",
+        categories: ["rosas-rojas", "quince", "amor"]
+    },
+    {
+        id: 20,
+        name: "Corazón Loco por Ti",
+        price: 608000,
+        image: "/assets/foto20.webp",
+        description: "Corazón de 16 rosas con 15 chocolates Ferrero, una botella pequeña de JP Chenet y tarjeta personalizada, ideal para conquistar.",
+        categories: ["cajas", "rosas-rojas", "chocolates", "amor", "grandes"]
+    },
+    {
+        id: 21,
+        name: "Cubito Ternura",
+        price: 223000,
+        image: "/assets/foto21.webp",
+        description: "Cubo de 18 rosas rosadas y blancas con chocolate Ferrero de 3 unidades y globo de cumpleaños, ideal para sorprender.",
+        categories: ["cajas", "rosas", "chocolates", "globos", "cumpleanos"]
+    },
+    {
+        id: 22,
+        name: "Amor Puro",
+        price: 233000,
+        image: "/assets/foto22.webp",
+        description: "Ramo de 14 rosas con chocolate corazón Ferrero de 8 unidades, su decoración elegante y tarjeta personalizada.",
+        categories: ["rosas-rojas", "chocolates", "amor"]
+    },
+    {
+        id: 23,
+        name: "La Graduada Más Hermosa",
+        price: 210000,
+        image: "/assets/foto23.webp",
+        description: "Ramo de 24 rosas rosadas y blancas con listón personalizado y birrete de graduación, para celebrar su gran logro.",
+        categories: ["rosas", "grados"]
+    },
+    {
+        id: 24,
+        name: "Ramo Feliz Grado",
+        price: 185000,
+        image: "/assets/foto24.webp",
+        description: "Ramo de 8 rosas con osito graduado de «Feliz Día» con birrete y su decoración, un detalle tierno para el día del grado.",
+        categories: ["rosas-rojas", "peluches", "grados"]
+    },
+    {
+        id: 25,
+        name: "Arreglo Exclusivo Feliz Grado",
+        price: 358000,
+        image: "/assets/foto25.webp",
+        description: "Arreglo redondo de rosas rosadas y blancas con globo burbuja, osito personalizado con birrete y tarjeta personalizada.",
+        categories: ["rosas", "peluches", "globos", "grados"]
+    },
+    {
+        id: 26,
+        name: "Ramo Ternura de Grado",
+        price: 248000,
+        image: "/assets/foto26.webp",
+        description: "Ramo de 12 rosas fucsia con 5 chocolates Ferrero, peluche especial con birrete y su decoración.",
+        categories: ["rosas", "chocolates", "peluches", "grados"]
+    },
+    {
+        id: 27,
+        name: "Ramo 12 Rosas de Grado",
+        price: 160000,
+        image: "/assets/foto27.webp",
+        description: "Ramo de 12 rosas personalizado con birrete, mariposas y su decoración, ideal para felicitar en su graduación.",
+        categories: ["rosas-rojas", "grados"]
+    },
+    {
+        id: 28,
+        name: "Ramo Graduada con Girasoles",
+        price: 233000,
+        image: "/assets/foto28.webp",
+        description: "Ramo de 6 girasoles con perlita blanca, oso personalizado con birrete y globo burbuja de «Feliz Grado».",
+        categories: ["girasoles", "peluches", "globos", "grados"]
+    },
+    {
+        id: 29,
+        name: "Ramo Exclusivo Graduación",
+        price: 373000,
+        image: "/assets/foto29.webp",
+        description: "Ramo de 40 rosas con 3 mariposas decorativas, globo burbuja para la graduada más hermosa, decoración elegante y tarjeta personalizada, para sorprender en este gran logro.",
+        categories: ["rosas-rojas", "globos", "grados", "grandes"]
+    },
+    {
+        id: 30,
+        name: "Ramo 15 Primaveras",
+        price: 185000,
+        image: "/assets/foto30.webp",
+        description: "Ramo de 15 rosas rosadas con listón personalizado de «Felices 15 Años», corona, mariposa y tarjeta personalizada.",
+        categories: ["rosas", "quince"]
+    },
+    {
+        id: 31,
+        name: "Ramo Exclusivo de Girasoles",
+        price: 475000,
+        image: "/assets/foto31.webp",
+        description: "Ramo buchón de 24 girasoles con su decoración, ideal para sorprender a esa persona que tanto amas.",
+        categories: ["girasoles", "grandes"]
+    },
+    {
+        id: 32,
+        name: "Cilindro de Rosas",
+        price: 210000,
+        image: "/assets/foto32.webp",
+        description: "Cilindro con 12 rosas rosadas, chocolate Ferrero de 3 unidades y su decoración.",
+        categories: ["cajas", "rosas", "chocolates"]
+    },
+    {
+        id: 33,
+        name: "Ramo Especial 12 Girasoles",
+        price: 298000,
+        image: "/assets/foto33.webp",
+        description: "Ramo de 12 girasoles con su decoración, ideal para sorprender y alegrar su día.",
+        categories: ["girasoles"]
+    },
+    {
+        id: 34,
+        name: "Ramo Dulce Amor Stitch",
+        price: 248000,
+        image: "/assets/foto34.webp",
+        description: "Ramo de 12 rosas y un girasol con perla, peluche pequeño de Stitch y chocolate corazón de 3 unidades, un combo completo para sorprender.",
+        categories: ["rosas-rojas", "girasoles", "peluches", "chocolates", "amor"]
+    },
+    {
+        id: 35,
+        name: "Cubo de Rosas Cumpleaños",
+        price: 198000,
+        image: "/assets/foto35.webp",
+        description: "Cubo de rosas rojas con un girasol al centro y globo de «Feliz Cumpleaños», ideal para sorprender en su día.",
+        categories: ["cajas", "rosas-rojas", "cumpleanos", "globos"]
     }
 ];
 
 /* Etiquetas legibles de cada categoría */
 const categoryLabels = {
     'rosas-rojas': 'Rosas Rojas',
-    'rosas': 'Rosas de Color',
+    'rosas': 'Rosas Rosadas y Blancas',
     'girasoles': 'Girasoles',
-    'claveles': 'Claveles',
-    'mix': 'Ramos Mix',
-    'cajas': 'Cajas y Sombrereras',
-    'floreros': 'Floreros',
-    'blancos': 'Flores Blancas',
-    'condolencias': 'Condolencias',
-    'cumpleanos': 'Cumpleaños y 15 Años',
-    'peluches': 'Con Peluche',
+    'cumpleanos': 'Cumpleaños',
+    'quince': '15 Años',
+    'grados': 'Grados',
     'amor': 'Amor y Aniversario',
-    'economico': 'Económicos'
+    'peluches': 'Con Peluche',
+    'chocolates': 'Con Chocolates',
+    'globos': 'Con Globo',
+    'cajas': 'Cajas, Cubos y Corazones',
+    'grandes': 'Ramos Grandes',
+    'oferta': 'En Oferta'
 };
 
 /* Número de WhatsApp de la floristería */
-const WHATSAPP_NUMBER = '573228853129';
+const WHATSAPP_NUMBER = '573166152486';
 const SITE_URL = 'http://floristeriacali.dondeseria.com/';
