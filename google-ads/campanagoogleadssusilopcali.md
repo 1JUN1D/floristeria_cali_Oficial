@@ -1,7 +1,7 @@
 # Campaña Google Ads — Flowers Susi Lop (Cali)
 
 **Estructura:** 1 campaña de Búsqueda · 6 grupos de anuncios · 1 RSA por grupo (15 títulos + 4 descripciones cada uno).
-**Dominio:** `floristeriacali.dondeseria.com` · **WhatsApp:** 322 885 3129
+**Dominio:** `floristeriacali.dondeseria.com` · **WhatsApp:** 301 363 8483
 
 > Réplica de la estructura de Floristería Luna Rosa (Pereira), reescrita para Cali: keywords locales por comuna y barrio, cementerios y salas de velación de la ciudad, competencia real de Cali en negativas y catálogo enfocado en **rosas, girasoles, lirios, margaritas y gerberas**. Tulipanes, orquídeas, anchetas y desayunos sorpresa quedan **fuera** de esta campaña (van en negativas).
 
@@ -578,7 +578,7 @@ Cada encabezado necesita mínimo 3 valores; carga los 3 encabezados. **Sin tulip
 
 **Otras extensiones que debes activar:**
 
-- **Llamada:** 322 885 3129, con la programación real de atención.
+- **Llamada:** 301 363 8483, con la programación real de atención.
 - **Ubicación:** vincula el perfil de Google Business (sube el CTR en búsquedas "cerca de mí", que en Cali son un volumen enorme).
 - **Precios:** en el grupo 06 usa el tipo *Servicios* con Corona fúnebre, Cruz fúnebre y Palma fúnebre. **Requiere publicar los precios en la landing primero** — hoy `arreglos-funebres-cali.html` no muestra ninguno.
 - **Mensajes/WhatsApp:** si la cuenta lo permite en Colombia, es la extensión con mejor conversión para este negocio.

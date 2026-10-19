@@ -371,7 +371,7 @@ function orderWA(code, name, price) {
         ? window.location.pathname.split('/').pop().replace('.html','')
         : 'desconocida';
     const message = `Hola Flores del Encanto 🌹, vi el ramo *${code} - ${name}* (${formattedPrice}) en la web. ¿Está disponible para entrega HOY en Cali?`;
-    const url = `https://wa.me/573044510598?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/573013638483?text=${encodeURIComponent(message)}`;
     let opened = false;
     const openOnce = () => { if (!opened) { opened = true; window.open(url, '_blank'); } };
 
@@ -403,7 +403,7 @@ function contactWA(source, customMsg) {
         ? window.location.pathname.split('/').pop().replace('.html','')
         : 'desconocida';
     const msg = customMsg || `Hola Flores del Encanto 🌹, vi su web (sección ${landingPath}) y quiero cotizar un arreglo de flores. ¿Me asesoran?`;
-    const url = `https://wa.me/573044510598?text=${encodeURIComponent(msg)}`;
+    const url = `https://wa.me/573013638483?text=${encodeURIComponent(msg)}`;
     let opened = false;
     const openOnce = () => { if (!opened) { opened = true; window.open(url, '_blank'); } };
 
