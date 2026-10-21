@@ -4,7 +4,8 @@
    Requiere js/productos.js cargado antes.
    ===================================================== */
 
-let currentFilter = 'todos';
+// Una landing puede abrir el catálogo ya filtrado (window.CATALOG_DEFAULT_FILTER = 'rosas-rojas')
+let currentFilter = (typeof window !== 'undefined' && window.CATALOG_DEFAULT_FILTER) || 'todos';
 let searchTerm = '';
 
 function productCode(p) { return String(p.id).padStart(3, '0'); }
@@ -138,7 +139,7 @@ function renderProducts() {
                         '<span class="price-label">Desde</span>' +
                         '<div class="product-price">' + formatPrice(p.price) + '</div>' +
                     '</div>' +
-                    '<a href="https://wa.me/' + WHATSAPP_NUMBER + '?text=' + waText + '" class="btn-order" target="_blank" rel="noopener" onclick="trackOrder(\'' + code + '\', \'' + safeName + '\')">' +
+                    '<a href="https://wa.me/' + WHATSAPP_NUMBER + '?text=' + waText + '" class="btn-order" target="_blank" rel="noopener" onclick="return trackOrder(event, this.href, \'' + code + '\', \'' + safeName + '\')">' +
                         WA_ICON + 'Pedir' +
                     '</a>' +
                 '</div>' +
@@ -153,6 +154,9 @@ function renderProducts() {
 
 /* ===== Eventos ===== */
 function initCatalog() {
+    document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.toggle('active', (b.dataset.filter || 'todos') === currentFilter);
+    });
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', function () {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -221,7 +225,7 @@ function closeLightbox() {
     document.body.style.overflow = '';
 }
 
-function trackOrder(code, name) {
+function trackOrder(ev, url, code, name) {
     try {
         if (typeof gtag === 'function') {
             gtag('event', 'product_order', {
@@ -230,6 +234,11 @@ function trackOrder(code, name) {
             });
         }
     } catch (e) { /* sin analytics, seguimos */ }
+    // En las landing pages de Google Ads el botón "Pedir" también cuenta como conversión
+    // (antes solo enviaba el evento de GA4 y Google Ads no se enteraba de estos pedidos).
+    if (typeof abrirWhatsApp === 'function') {
+        return abrirWhatsApp(ev, url, 'catalogo-' + code);
+    }
     return true;
 }
 
