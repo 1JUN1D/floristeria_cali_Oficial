@@ -27,12 +27,13 @@
     </script>
     
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="/assets/fonts/libre-caslon-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="/assets/logo.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <meta name="theme-color" content="#5a1424">
     
     <style>
         * {
@@ -58,7 +59,7 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Karla', Arial, sans-serif;
             font-weight: 300;
             color: var(--dark);
             line-height: 1.85;
@@ -99,7 +100,7 @@
         }
 
         .hero h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 3.4rem;
             margin-bottom: 1.5rem;
             font-weight: 500;
@@ -296,7 +297,7 @@
         }
 
         .collection-card h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 1.55rem;
             margin-bottom: 1rem;
             color: var(--dark);
@@ -359,7 +360,7 @@
         }
 
         .feature-card h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--elegant-gold);
@@ -382,7 +383,7 @@
         }
 
         .section-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 2.7rem;
             text-align: center;
             margin-bottom: 1.4rem;
@@ -487,7 +488,7 @@
         }
 
         .product-name {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 1.38rem;
             color: var(--dark);
             margin-bottom: 1rem;
@@ -521,7 +522,7 @@
         }
 
         .product-price {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 1.72rem;
             color: #8C6055;
             font-weight: 600;
@@ -611,7 +612,7 @@
         }
 
         .occasion-item h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 1.4rem;
             margin-bottom: 0.75rem;
             color: var(--dark);
@@ -657,7 +658,7 @@
             font-size: 5.5rem;
             color: var(--elegant-gold);
             opacity: 0.25;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
         }
 
         .testimonial-stars {
@@ -884,30 +885,38 @@
       .catalog-intro .section-subtitle { color: var(--catalog-ink); }
       .catalog-intro .section-subtitle { color: var(--catalog-gray); max-width: 720px; margin: 0 auto; }
     </style>
+    <link rel="stylesheet" href="/css/atelier.css">
 </head>
 <body>
+    <header class="lp-bar">
+        <div class="lp-bar-inner">
+            <a class="lp-brand" href="/"><span class="lp-brand-name">Atelier Vergara</span><span class="lp-brand-tag">Florería en Cali</span></a>
+            <div class="lp-bar-actions">
+                <a class="lp-bar-phone" href="tel:+573235933021"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 7.1 7.1l1.4-2.3L21 15.5V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><span>323 593 3021</span></a>
+                <a class="lp-bar-wa" href="https://wa.me/573235933021?text=Hola,%20quiero%20información%20sobre%20ramos%20de%20flores%20elegantes" target="_blank" rel="noopener" onclick="trackConversion()">Pedir por WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
 
 <section class="hero">
         <div class="container">
-            <div class="elegant-badge">
-                💐 Ramos de Flores Premium
+            <div class="elegant-badge">Ramos de Flores Premium
             </div>
             
             <h1>Ramos de Flores Elegantes</h1>
-            <p class="subtitle">BOUQUET DE FLORES Y ARREGLOS FLORALES CON ACABADO DE PRIMERA</p>
-            <p>En Cali preparamos ramos de flores, flores de regalo con estilo propio y bouquet de flores que no se parecen a ningún otro. Cada arreglo de flores lo armamos pensando en la ocasión que vas a celebrar, y los arreglos florales elegantes salen de nuestro taller cuidados hasta en la cinta que los cierra.</p>
+            <p class="subtitle">Bouquets y arreglos florales con un acabado impecable</p>
+            <p>En Cali armamos ramos de flores, flores de regalo con estilo propio y bouquets que no se parecen a ningún otro, cada arreglo lo pensamos para la ocasión que vas a celebrar y lo cuidamos hasta la cinta que lo cierra.</p>
             
             <div class="hero-keywords">
-                <span class="keyword-badge">💐 Ramos de Flores Premium</span>
-                <span class="keyword-badge">🎁 Flores de Regalo Elegantes</span>
-                <span class="keyword-badge">🌹 Bouquet de Flores Exclusivos</span>
-                <span class="keyword-badge">✨ Arreglos Florales Elegantes</span>
-                <span class="keyword-badge">🌸 Arreglo de Flores Personalizados</span>
+                <span class="keyword-badge">Ramos de Flores Premium</span>
+                <span class="keyword-badge">Flores de Regalo Elegantes</span>
+                <span class="keyword-badge">Bouquet de Flores Exclusivos</span>
+                <span class="keyword-badge">Arreglos Florales Elegantes</span>
+                <span class="keyword-badge">Arreglo de Flores Personalizados</span>
             </div>
             
-            <a href="https://wa.me/573013638483?text=Hola,%20quiero%20un%20ramo%20de%20flores%20elegante" class="cta-hero" onclick="trackConversion()">
-                Explorar Colección Premium
-            </a>
+            <a href="https://wa.me/573235933021?text=Hola,%20quiero%20un%20ramo%20de%20flores%20elegante" class="cta-hero" onclick="trackConversion()">Explorar Colección Premium</a>
         </div>
     </section>
 
@@ -915,34 +924,42 @@
     <section class="catalog-intro">
         <div class="container">
             <h2 class="section-title">Nuestro Catálogo Completo</h2>
-            <p class="section-subtitle">Recorre el catalogo de ramos y arreglos florales elegantes a tu ritmo. Puedes buscarlos por nombre o codigo, usar los filtros de categoria y quedarte con el que mas te guste.</p>
+            <p class="section-subtitle">Mira con calma el catálogo de ramos y arreglos florales elegantes, búscalos por nombre o código, usa los filtros y quédate con el que más te guste.</p>
         </div>
     </section>
 
     <section class="catalog-filters">
         <div class="container">
             <div class="catalog-search">
-                <input type="search" id="product-search" placeholder="Buscar por nombre o código (ej. girasoles o 003)" aria-label="Buscar producto por nombre o código">
+                <input type="search" id="product-search" placeholder="Buscar por nombre o código (ej. girasoles o 003)" aria-label="Buscar producto por nombre o código" autocomplete="off">
             </div>
-            <div class="filters-container">
-                <span class="filter-label">Filtrar por:</span>
-                <button class="filter-btn active" data-filter="todos">Todos los Productos</button>
-                <button class="filter-btn" data-filter="rosas-rojas">Rosas Rojas</button>
-                <button class="filter-btn" data-filter="rosas">Rosas Rosadas y Blancas</button>
-                <button class="filter-btn" data-filter="girasoles">Girasoles</button>
-                <button class="filter-btn" data-filter="cumpleanos">Cumpleaños</button>
-                <button class="filter-btn" data-filter="quince">15 Años</button>
-                <button class="filter-btn" data-filter="grados">Grados</button>
-                <button class="filter-btn" data-filter="amor">Amor y Aniversario</button>
-                <button class="filter-btn" data-filter="peluches">Con Peluche</button>
-                <button class="filter-btn" data-filter="chocolates">Con Chocolates</button>
-                <button class="filter-btn" data-filter="globos">Con Globo</button>
-                <button class="filter-btn" data-filter="cajas">Cajas, Cubos y Corazones</button>
-                <button class="filter-btn" data-filter="grandes">Ramos Grandes</button>
-                <button class="filter-btn" data-filter="oferta">Ofertas</button>
-                <button class="filter-btn" data-filter="precio-bajo">Menos de $200.000</button>
-                <button class="filter-btn" data-filter="precio-medio">$200.000 - $300.000</button>
-                <button class="filter-btn" data-filter="precio-alto">Más de $300.000</button>
+            <div class="filters-container filters-grouped">
+                <div class="filter-group" role="group" aria-label="Ocasión">
+                    <span class="filter-label">Ocasión</span>
+                    <button class="filter-btn active" data-filter="todos">Todos</button>
+                    <button class="filter-btn" data-filter="cumpleanos">Cumpleaños</button>
+                    <button class="filter-btn" data-filter="grados">Grados</button>
+                    <button class="filter-btn" data-filter="amor">Amor y Aniversario</button>
+                </div>
+                <div class="filter-group" role="group" aria-label="Tipo">
+                    <span class="filter-label">Tipo</span>
+                    <button class="filter-btn" data-filter="rosas-rojas">Rosas Rojas</button>
+                    <button class="filter-btn" data-filter="rosas">Rosas Rosadas y Blancas</button>
+                    <button class="filter-btn" data-filter="girasoles">Girasoles</button>
+                    <button class="filter-btn" data-filter="lirios">Lirios</button>
+                    <button class="filter-btn" data-filter="tulipanes">Tulipanes</button>
+                    <button class="filter-btn" data-filter="cajas">Cajas, Cubos y Corazones</button>
+                    <button class="filter-btn" data-filter="grandes">Ramos Grandes</button>
+                    <button class="filter-btn" data-filter="peluches">Con Peluche</button>
+                    <button class="filter-btn" data-filter="chocolates">Con Chocolates</button>
+                    <button class="filter-btn" data-filter="globos">Con Globo</button>
+                </div>
+                <div class="filter-group" role="group" aria-label="Precio">
+                    <span class="filter-label">Precio</span>
+                    <button class="filter-btn" data-filter="precio-bajo">Menos de $200.000</button>
+                    <button class="filter-btn" data-filter="precio-medio">$200.000 - $300.000</button>
+                    <button class="filter-btn" data-filter="precio-alto">Más de $300.000</button>
+                </div>
             </div>
         </div>
     </section>
@@ -958,7 +975,7 @@
             <div class="products-grid" id="products-grid"></div>
             <div class="empty-state" id="empty-state">
                 <h3>No se encontraron productos</h3>
-                <p>Prueba cambiando el filtro y apareceran otras opciones disponibles</p>
+                <p>Cambia el filtro y verás otras opciones disponibles</p>
             </div>
         </div>
     </section>
@@ -966,38 +983,34 @@
 <section class="collection-section">
         <div class="container">
             <h2 class="section-title">Nuestra Colección de Ramos de Flores</h2>
-            <p class="section-subtitle">Detrás de cada bouquet de flores y de cada arreglo de flores hay un trabajo artesanal hecho con calma y cariño</p>
+            <p class="section-subtitle">Cada bouquet y cada arreglo de flores es trabajo artesanal, hecho sin afán y con mucho cuidado</p>
             
             <div class="collection-grid">
                 <div class="collection-card">
                     <div class="collection-content">
-                        <div class="collection-icon">🌹</div>
                         <h3>Ramos de Flores Clásicos</h3>
-                        <p>Bouquet de flores que nunca pasan de moda, armados con rosas premium. Estos ramos de flores clásicos funcionan como flores de regalo cuando la fecha merece recordarse.</p>
+                        <p>Bouquets de rosas premium que no pasan de moda, ramos de flores clásicos ideales como flores de regalo para una fecha que merece recordarse.</p>
                     </div>
                 </div>
                 
                 <div class="collection-card">
                     <div class="collection-content">
-                        <div class="collection-icon">✨</div>
                         <h3>Arreglos Florales Elegantes</h3>
-                        <p>Arreglo de flores con diseño de autor y un aire refinado. Son arreglos florales elegantes que llaman la atención por lo bien pensados que están.</p>
+                        <p>Arreglos de flores con diseño de autor y aire refinado, arreglos florales elegantes que llaman la atención por lo bien pensados.</p>
                     </div>
                 </div>
                 
                 <div class="collection-card">
                     <div class="collection-content">
-                        <div class="collection-icon">💎</div>
                         <h3>Bouquet Premium</h3>
-                        <p>Bouquet de flores de gama alta, armados tallo por tallo con flores escogidas. Ramos de flores premium para esas flores de regalo que quedan en la memoria.</p>
+                        <p>Bouquets de flores armados tallo por tallo con flor escogida, ramos premium para regalos que se quedan en la memoria.</p>
                     </div>
                 </div>
                 
                 <div class="collection-card">
                     <div class="collection-content">
-                        <div class="collection-icon">🎨</div>
                         <h3>Arreglos Personalizados</h3>
-                        <p>Un arreglo de flores pensado solo para tu ocasión, con los colores y las flores que tú elijas. Ramos de flores personalizados que hablan de quien los regala.</p>
+                        <p>Un arreglo de flores hecho solo para tu ocasión con los colores y las flores que elijas, ramos personalizados que hablan de quien los regala.</p>
                     </div>
                 </div>
             </div>
@@ -1005,43 +1018,37 @@
     </section>
 <section class="features">
         <div class="container">
-            <h2 class="section-title" style="color: var(--elegant-gold);">¿Por Qué Elegir Nuestros Ramos de Flores?</h2>
+            <h2 class="section-title">¿Por Qué Elegir Nuestros Ramos de Flores?</h2>
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🌸</div>
                     <h3>Flores Selectas</h3>
-                    <p>Escogemos a mano las flores de cada ramo y de cada bouquet, y las mantenemos en cuarto frío hasta el momento de armarlas.</p>
+                    <p>Elegimos a mano las flores de cada ramo y cada bouquet, y las guardamos en cuarto frío hasta el momento de armarlas.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
                     <h3>Diseño Exclusivo</h3>
-                    <p>Ningún arreglo se repite: cada arreglo de flores nace de un diseño propio, hecho a mano en nuestro taller.</p>
+                    <p>No repetimos arreglos, cada arreglo de flores sale de un diseño propio hecho a mano en el taller.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">💝</div>
                     <h3>Flores de Regalo Perfectas</h3>
-                    <p>Si buscas flores de regalo para dar una sorpresa, nuestros ramos de flores hacen ese trabajo en cualquier fecha.</p>
+                    <p>Si buscas flores de regalo para sorprender, nuestros ramos cumplen esa tarea en cualquier fecha del año.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
                     <h3>Calidad Premium</h3>
-                    <p>Revisamos tallo por tallo antes de despachar. El bouquet de flores y el arreglo de flores salen solo cuando cumplen nuestro estándar.</p>
+                    <p>Revisamos tallo por tallo antes de despachar, y ningún bouquet sale si no cumple nuestro estándar.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
                     <h3>Entrega Elegante</h3>
-                    <p>Los ramos de flores viajan hidratados y bien protegidos, para que los arreglos florales elegantes lleguen tal como salieron del taller.</p>
+                    <p>Los ramos viajan hidratados y protegidos, para que lleguen igual que como salieron del taller.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">✍️</div>
                     <h3>Tarjeta Personalizada</h3>
-                    <p>Con tus flores de regalo va siempre una tarjeta elegante donde escribimos el mensaje que nos dictes.</p>
+                    <p>Tus flores de regalo siempre llevan una tarjeta elegante con el mensaje que nos dictes.</p>
                 </div>
             </div>
         </div>
@@ -1049,37 +1056,37 @@
 <section class="occasions-section">
         <div class="container">
             <h2 class="section-title">Flores de Regalo para Cada Ocasión</h2>
-            <p class="section-subtitle">Ramos de flores y arreglos florales elegantes pensados para las fechas que uno no quiere dejar pasar</p>
+            <p class="section-subtitle">Ramos y arreglos florales elegantes para esas fechas que no se pueden dejar pasar</p>
             
             <div class="occasions-grid">
-                <div class="occasion-item" data-icon="💕">
+                <div class="occasion-item">
                     <h3>Aniversarios</h3>
-                    <p>Bouquet de flores de acento romántico y arreglo de flores elegantes para decir lo que se siente</p>
+                    <p>Bouquets románticos y arreglos elegantes para decir lo que se siente sin rodeos</p>
                 </div>
                 
-                <div class="occasion-item" data-icon="🎂">
+                <div class="occasion-item">
                     <h3>Cumpleaños</h3>
-                    <p>Ramos de flores con mucho color y flores de regalo alegres para acompañar una celebración</p>
+                    <p>Ramos llenos de color y flores de regalo alegres para acompañar la celebración</p>
                 </div>
                 
-                <div class="occasion-item" data-icon="💼">
+                <div class="occasion-item">
                     <h3>Corporativos</h3>
-                    <p>Arreglos florales elegantes y bouquet de flores en línea sobria para reuniones y actos de empresa</p>
+                    <p>Arreglos florales sobrios y bouquets elegantes para reuniones y eventos de empresa</p>
                 </div>
                 
-                <div class="occasion-item" data-icon="🏠">
+                <div class="occasion-item">
                     <h3>Decoración</h3>
-                    <p>Arreglo de flores de línea refinada y ramos de flores premium para darle vida a un espacio</p>
+                    <p>Arreglos de línea refinada y ramos premium para darle vida a cualquier espacio</p>
                 </div>
                 
-                <div class="occasion-item" data-icon="🤝">
+                <div class="occasion-item">
                     <h3>Agradecimiento</h3>
-                    <p>Flores de regalo con un mensaje claro y bouquet de flores elegantes para dar las gracias</p>
+                    <p>Flores de regalo que dicen gracias sin rodeos y bouquets elegantes para agradecer como se debe</p>
                 </div>
                 
-                <div class="occasion-item" data-icon="🎉">
+                <div class="occasion-item">
                     <h3>Celebraciones</h3>
-                    <p>Ramos de flores en clave festiva y arreglos florales elegantes que sirven para cualquier fecha</p>
+                    <p>Ramos festivos y arreglos florales elegantes que funcionan para cualquier fecha</p>
                 </div>
             </div>
         </div>
@@ -1087,25 +1094,25 @@
 <section class="testimonials">
         <div class="container">
             <h2 class="section-title">Testimonios de Elegancia</h2>
-            <p class="section-subtitle">Lo que nos cuentan las personas que ya pidieron nuestros ramos de flores y arreglos florales elegantes</p>
+            <p class="section-subtitle">Esto cuentan quienes ya pidieron nuestros ramos y arreglos florales elegantes</p>
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-stars"><span aria-hidden="true">★★★★★</span><span class="lp-sr">Cinco estrellas</span></div>
                     <p class="testimonial-text">"Jamás me habían llegado ramos de flores así de lindos. Pedí el bouquet de flores como flores de regalo y quedó mucho mejor de lo que esperaba."</p>
                     <p class="testimonial-author">Daniela Mendoza</p>
                     <p class="testimonial-type">Bouquet de Flores de Lujo</p>
                 </div>
                 
                 <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-stars"><span aria-hidden="true">★★★★★</span><span class="lp-sr">Cinco estrellas</span></div>
                     <p class="testimonial-text">"Los arreglos florales elegantes son de otro nivel. Se nota el detalle en el que cuidan cada arreglo de flores, desde el armado hasta el empaque."</p>
                     <p class="testimonial-author">Roberto Silva</p>
                     <p class="testimonial-type">Arreglo Floral Elegante</p>
                 </div>
                 
                 <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-stars"><span aria-hidden="true">★★★★★</span><span class="lp-sr">Cinco estrellas</span></div>
                     <p class="testimonial-text">"Quedé feliz con las flores de regalo. Los ramos de flores llegan con una presentación preciosa y el bouquet de flores venía impecable."</p>
                     <p class="testimonial-author">Carolina Vargas</p>
                     <p class="testimonial-type">Flores de Regalo de Lujo</p>
@@ -1116,34 +1123,31 @@
 <section class="trust-section">
         <div class="container">
             <h2 class="section-title" style="color: white;">Excelencia en Ramos de Flores</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Una casa vallenata de bouquet de flores y arreglos florales elegantes</p>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Un taller caleño de bouquets y arreglos florales elegantes</p>
             
             <div class="trust-badges">
                 <div class="trust-badge">
-                    <div class="trust-badge-icon">⭐</div>
-                    <div class="trust-badge-text">Calificación 5 Estrellas</div>
+                    <div class="trust-badge-icon">4.9 ★</div>
+                    <div class="trust-badge-text">Calificación en Google, con 127 reseñas</div>
                 </div>
-                
                 <div class="trust-badge">
-                    <div class="trust-badge-icon">💐</div>
-                    <div class="trust-badge-text">+5000 Ramos Entregados</div>
+                    <div class="trust-badge-icon">+500</div>
+                    <div class="trust-badge-text">Entregas realizadas en Cali</div>
                 </div>
-                
                 <div class="trust-badge">
-                    <div class="trust-badge-icon">✨</div>
-                    <div class="trust-badge-text">Diseño Premium</div>
+                    <div class="trust-badge-icon">24 h</div>
+                    <div class="trust-badge-text">De atención, todos los días</div>
                 </div>
-                
                 <div class="trust-badge">
-                    <div class="trust-badge-icon">💯</div>
-                    <div class="trust-badge-text">Satisfacción Total</div>
+                    <div class="trust-badge-icon">Hoy</div>
+                    <div class="trust-badge-text">Entrega el mismo día si pides antes de las 3:00 p. m.</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Boton flotante WhatsApp -->
-    <a href="https://wa.me/573013638483?text=Hola,%20quiero%20información%20sobre%20ramos%20de%20flores%20elegantes" 
+    <a href="https://wa.me/573235933021?text=Hola,%20quiero%20información%20sobre%20ramos%20de%20flores%20elegantes" 
        class="whatsapp-float" 
        target="_blank"
        onclick="trackConversion()">

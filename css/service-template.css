@@ -14,7 +14,7 @@
     justify-content: center;
     overflow: hidden;
     margin-top: 80px;
-    background: linear-gradient(160deg, #FEFAF8 0%, #F7EFEB 100%);
+    background: #fbf7f3;
 }
 
 .service-hero-bg {
@@ -44,40 +44,40 @@
     gap: 0.5rem;
     margin-bottom: 2rem;
     font-size: 0.9rem;
-    color: #8A807A;
+    color: #6b575a;
 }
 
 .service-hero-content .breadcrumb a {
-    color: #D3A89D;
+    color: #6d1a2c;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .service-hero-content .breadcrumb a:hover {
-    color: #404040;
+    color: #2e1c20;
 }
 
 .service-hero-content .breadcrumb .separator {
-    color: #A79E99;
+    color: #8f7d80;
 }
 
 .service-hero-content .breadcrumb .current {
-    color: #404040;
+    color: #2e1c20;
     font-weight: 600;
 }
 
 .service-hero-content h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Libre Caslon Display', Georgia, serif;
     font-size: 3rem;
     font-weight: 700;
-    color: #404040;
+    color: #2e1c20;
     margin-bottom: 1.5rem;
     line-height: 1.2;
 }
 
 .service-hero-content .service-tagline {
     font-size: 1.25rem;
-    color: #7A6F6A;
+    color: #6b575a;
     font-weight: 300;
     margin-bottom: 2rem;
 }
@@ -94,7 +94,7 @@
    =================================== */
 .service-content-section {
     padding: 80px 0;
-    background: linear-gradient(160deg, #FEFAF8 0%, #F7EFEB 100%);
+    background: #fbf7f3;
 }
 
 .service-content-grid {
@@ -105,9 +105,9 @@
 }
 
 .service-main-content h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Libre Caslon Display', Georgia, serif;
     font-size: 2.25rem;
-    color: #404040;
+    color: #2e1c20;
     margin-bottom: 1.5rem;
     margin-top: 2.5rem;
 }
@@ -117,15 +117,15 @@
 }
 
 .service-main-content h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Libre Caslon Display', Georgia, serif;
     font-size: 1.75rem;
-    color: #D3A89D;
+    color: #6d1a2c;
     margin-bottom: 1rem;
     margin-top: 2rem;
 }
 
 .service-main-content p {
-    color: #7A6F6A;
+    color: #6b575a;
     line-height: 1.8;
     margin-bottom: 1.5rem;
     font-size: 1.05rem;
@@ -133,7 +133,7 @@
 
 .service-main-content ul,
 .service-main-content ol {
-    color: #7A6F6A;
+    color: #6b575a;
     line-height: 1.8;
     margin-bottom: 1.5rem;
     padding-left: 2rem;
@@ -144,10 +144,10 @@
 }
 
 .service-highlight-box {
-    background: linear-gradient(135deg, rgba(211, 168, 157, 0.1) 0%, rgba(254, 250, 248, 0.1) 100%);
-    border-left: 4px solid #D3A89D;
+    background: rgba(109, 26, 44, 0.1);
+    border-left: 4px solid #6d1a2c;
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 0;
     margin: 2rem 0;
 }
 
@@ -157,8 +157,8 @@
 
 .service-price-box {
     background: #FFFFFF;
-    border: 2px solid #D3A89D;
-    border-radius: 16px;
+    border: 2px solid #6d1a2c;
+    border-radius: 0;
     padding: 2rem;
     margin: 2rem 0;
     text-align: center;
@@ -166,23 +166,23 @@
 
 .service-price-box .price-label {
     font-size: 0.9rem;
-    color: #8A807A;
-    text-transform: uppercase;
+    color: #6b575a;
+    text-transform: none;
     letter-spacing: 1px;
     margin-bottom: 0.5rem;
 }
 
 .service-price-box .price-range {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Libre Caslon Display', Georgia, serif;
     font-size: 2.5rem;
-    color: #D3A89D;
+    color: #6d1a2c;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .service-price-box .price-note {
     font-size: 0.9rem;
-    color: #9A9184;
+    color: #6b575a;
 }
 
 /* ===================================
@@ -195,17 +195,17 @@
 
 .sidebar-card {
     background: #FFFFFF;
-    border: 1px solid rgba(211, 168, 157, 0.2);
-    border-radius: 16px;
+    border: 1px solid rgba(109, 26, 44, 0.2);
+    border-radius: 0;
     padding: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 12px rgba(64, 64, 64, 0.10);
+    box-shadow: none;
 }
 
 .sidebar-card h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Libre Caslon Display', Georgia, serif;
     font-size: 1.5rem;
-    color: #404040;
+    color: #2e1c20;
     margin-bottom: 1.5rem;
 }
 
@@ -216,11 +216,11 @@
 
 .sidebar-features-list li {
     padding: 0.75rem 0;
-    border-bottom: 1px solid rgba(211, 168, 157, 0.1);
+    border-bottom: 1px solid rgba(109, 26, 44, 0.1);
     display: flex;
     align-items: start;
     gap: 0.75rem;
-    color: #7A6F6A;
+    color: #6b575a;
 }
 
 .sidebar-features-list li:last-child {
@@ -229,14 +229,14 @@
 
 .sidebar-features-list li::before {
     content: '✓';
-    color: #D3A89D;
+    color: #6d1a2c;
     font-weight: bold;
     font-size: 1.2rem;
     flex-shrink: 0;
 }
 
 .sidebar-cta-card {
-    background: linear-gradient(135deg, #D3A89D 0%, #B98A7C 100%);
+    background: #6d1a2c;
     color: #ffffff;
     border: none;
 }
@@ -246,20 +246,20 @@
 }
 
 .sidebar-cta-card p {
-    color: #404040;
+    color: #2e1c20;
     margin-bottom: 1.5rem;
 }
 
 .sidebar-cta-card .btn {
     background: #ffffff;
-    color: #D3A89D;
+    color: #6d1a2c;
     width: 100%;
     justify-content: center;
 }
 
 .sidebar-cta-card .btn:hover {
-    background: #FEFAF8;
-    color: #404040;
+    background: #fbf7f3;
+    color: #2e1c20;
 }
 
 /* ===================================
@@ -276,22 +276,22 @@
     text-align: center;
     padding: 2rem;
     background: #FFFFFF;
-    border-radius: 16px;
+    border-radius: 0;
     transition: all 0.3s ease;
-    border: 1px solid rgba(211, 168, 157, 0.1);
+    border: 1px solid rgba(109, 26, 44, 0.1);
 }
 
 .feature-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(211, 168, 157, 0.25);
-    border-color: #D3A89D;
+    box-shadow: none;
+    border-color: #6d1a2c;
 }
 
 .feature-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #D3A89D 0%, #B98A7C 100%);
-    border-radius: 50%;
+    background: #6d1a2c;
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -300,14 +300,14 @@
 }
 
 .feature-item h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Libre Caslon Display', Georgia, serif;
     font-size: 1.25rem;
-    color: #404040;
+    color: #2e1c20;
     margin-bottom: 0.75rem;
 }
 
 .feature-item p {
-    color: #7A6F6A;
+    color: #6b575a;
     font-size: 0.95rem;
     line-height: 1.6;
 }
@@ -324,11 +324,11 @@
 
 .gallery-item {
     position: relative;
-    border-radius: 16px;
+    border-radius: 0;
     overflow: hidden;
     aspect-ratio: 1 / 1;
-    box-shadow: 0 4px 12px rgba(64, 64, 64, 0.14);
-    border: 1px solid rgba(211, 168, 157, 0.2);
+    box-shadow: none;
+    border: 1px solid rgba(109, 26, 44, 0.2);
 }
 
 .gallery-item img {
@@ -347,22 +347,22 @@
    =================================== */
 .faq-item {
     background: #FFFFFF;
-    border-radius: 12px;
+    border-radius: 0;
     padding: 1.5rem;
     margin-bottom: 1rem;
-    border: 1px solid rgba(211, 168, 157, 0.1);
+    border: 1px solid rgba(109, 26, 44, 0.1);
 }
 
 .faq-question {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Libre Caslon Display', Georgia, serif;
     font-size: 1.25rem;
-    color: #404040;
+    color: #2e1c20;
     font-weight: 600;
     margin-bottom: 0.75rem;
 }
 
 .faq-answer {
-    color: #7A6F6A;
+    color: #6b575a;
     line-height: 1.7;
 }
 
@@ -371,7 +371,7 @@
    =================================== */
 .related-services-section {
     padding: 80px 0;
-    background: linear-gradient(160deg, #F7EFEB 0%, #FEFAF8 100%);
+    background: #f3e7e1;
 }
 
 .related-services-grid {
@@ -383,17 +383,17 @@
 
 .related-service-card {
     background: #FFFFFF;
-    border-radius: 16px;
+    border-radius: 0;
     overflow: hidden;
-    box-shadow: 0 4px 16px rgba(64, 64, 64, 0.10);
+    box-shadow: none;
     transition: all 0.3s ease;
-    border: 1px solid rgba(211, 168, 157, 0.1);
+    border: 1px solid rgba(109, 26, 44, 0.1);
 }
 
 .related-service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 32px rgba(211, 168, 157, 0.25);
-    border-color: #D3A89D;
+    box-shadow: none;
+    border-color: #6d1a2c;
 }
 
 .related-service-image {
@@ -407,14 +407,14 @@
 }
 
 .related-service-content h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Libre Caslon Display', Georgia, serif;
     font-size: 1.5rem;
-    color: #404040;
+    color: #2e1c20;
     margin-bottom: 0.75rem;
 }
 
 .related-service-content p {
-    color: #7A6F6A;
+    color: #6b575a;
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1.25rem;

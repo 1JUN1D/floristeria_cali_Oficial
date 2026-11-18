@@ -1,5 +1,5 @@
 /* =====================================================
-   LANDING PAGES CSS - Flores del Encanto Cali
+   LANDING PAGES CSS - Atelier Vergara Cali
    Template compartido para las 7 landings
    ===================================================== */
 
@@ -22,8 +22,8 @@
     --radius: 16px;
     --radius-full: 50px;
     --transition: all 0.3s ease;
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Poppins', sans-serif;
+    --font-display: 'Libre Caslon Display', Georgia, serif;
+    --font-body: 'Karla', Arial, sans-serif;
 }
 
 html { scroll-behavior: smooth; }

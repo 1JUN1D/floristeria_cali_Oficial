@@ -2,7 +2,7 @@
    VARIABLES Y COLORES
    =================================== */
 :root {
-    /* Paleta Flores del Encanto */
+    /* Paleta Atelier Vergara */
     --color-primary: #D3A89D;      /* Rosa nude / empolvado (logo) */
     --color-primary-deep: #B07F71; /* Nude oscuro: texto y bordes sobre crema */
     --color-secondary: #B98A7C;    /* Nude medio */
@@ -12,7 +12,7 @@
     --color-cream: #FEFAF8;
     --color-cream-2: #F7EFEB;
     --color-cream-3: #F1E5E0;
-    --color-dark: #404040;         /* Gris carbón elegante (texto FLORES DEL ENCANTO) */
+    --color-dark: #404040;         /* Gris carbón elegante (texto ATELIER VERGARA) */
     --color-gray-dark: #2E2E2E;
     --color-light: #ffffff;
     --color-gray: #F7EFEB;
@@ -32,8 +32,8 @@
     --shadow-xl: 0 16px 48px rgba(64, 64, 64, 0.08);
     
     /* Tipografía */
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Poppins', sans-serif;
+    --font-heading: 'Libre Caslon Display', Georgia, serif;
+    --font-body: 'Karla', Arial, sans-serif;
     
     /* Transiciones */
     --transition-fast: 0.2s ease;
@@ -657,7 +657,7 @@ a {
 
 
 /* ===================================
-   AJUSTES DE MARCA — FLORES DEL ENCANTO
+   AJUSTES DE MARCA — ATELIER VERGARA
    Fondo crema, texto carbón, acento nude y salvia.
    =================================== */
 body {

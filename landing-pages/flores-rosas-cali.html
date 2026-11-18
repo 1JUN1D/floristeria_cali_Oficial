@@ -53,12 +53,13 @@
     </script>
     
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="/assets/fonts/libre-caslon-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="/assets/logo.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <meta name="theme-color" content="#5a1424">
     
     <style>
         * {
@@ -86,7 +87,7 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Karla', Arial, sans-serif;
             font-weight: 300;
             color: var(--dark);
             line-height: 1.85;
@@ -127,7 +128,7 @@
         }
 
         .hero h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 3rem;
             margin-bottom: 1rem;
             font-weight: 600;
@@ -248,7 +249,7 @@
         }
 
         .feature-card h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 1.5rem;
             font-weight: 500;
             letter-spacing: -0.01em;
@@ -271,7 +272,7 @@
         }
 
         .section-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 2.5rem;
             font-weight: 500;
             letter-spacing: -0.01em;
@@ -356,7 +357,7 @@
         }
 
         .product-name {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 1.38rem;
             letter-spacing: -0.01em;
             color: var(--dark);
@@ -371,7 +372,7 @@
             font-size: .8rem;
             letter-spacing: .4em;
             margin-top: .55rem;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
         }
 
         .product-description {
@@ -390,7 +391,7 @@
         }
 
         .product-price {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 1.72rem;
             color: #8C6055;
             font-weight: 500;
@@ -596,28 +597,37 @@
         .cta-hero { margin-top: .25rem; padding: 1rem 2rem; }
       }
     </style>
+    <link rel="stylesheet" href="/css/atelier.css">
 </head>
 <body>
+    <header class="lp-bar">
+        <div class="lp-bar-inner">
+            <a class="lp-brand" href="/"><span class="lp-brand-name">Atelier Vergara</span><span class="lp-brand-tag">Florería en Cali</span></a>
+            <div class="lp-bar-actions">
+                <a class="lp-bar-phone" href="tel:+573235933021"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 7.1 7.1l1.4-2.3L21 15.5V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><span>323 593 3021</span></a>
+                <a class="lp-bar-wa" href="https://wa.me/573235933021?text=Hola,%20quiero%20ordenar%20flores" target="_blank" rel="noopener" onclick="return abrirWhatsApp(event, this.href, 'barra')">Pedir por WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
 
 <section class="hero">
         <div class="container">
-            <h1>🌹 Ramos de Rosas Rojas en Cali 🌹</h1>
-            <p class="subtitle">Bouquets de Rosas de Otro Nivel, Entregados el Mismo Día</p>
-            <p>Ramos buchón, bouquets y cajas de rosas rojas armados con flor fresca del día y tarjeta personalizada, desde $123.000, escoge el tuyo en el catálogo y pídelo por WhatsApp para entrega hoy en Cali.</p>
+            <h1><span class="lp-emoji" aria-hidden="true">🌹 </span>Ramos de Rosas Rojas en Cali<span class="lp-emoji" aria-hidden="true"> 🌹</span></h1>
+            <p class="subtitle">Bouquets de rosas armados con calma y entregados hoy mismo</p>
+            <p>Ramos buchón, bouquets y cajas de rosas rojas hechos con flor del día y con tarjeta escrita a tu gusto, desde $100.000, eliges en el catálogo, nos escribes por WhatsApp y lo entregamos hoy en Cali.</p>
             
             <div class="hero-keywords">
-                <span class="keyword-badge">🌹 Ramo de Rosas Rojas</span>
-                <span class="keyword-badge">💐 Ramo Buchón de Rosas</span>
-                <span class="keyword-badge">📦 Caja de Rosas</span>
-                <span class="keyword-badge">💕 Bouquet de Rosas</span>
-                <span class="keyword-badge">🎁 Arreglos de Rosas</span>
-                <span class="keyword-badge">🌹 Ramos de 50 Rosas</span>
-                <span class="keyword-badge">🌻 Ramos con Girasoles</span>
+                <span class="keyword-badge">Ramo de Rosas Rojas</span>
+                <span class="keyword-badge">Ramo Buchón de Rosas</span>
+                <span class="keyword-badge">Caja de Rosas</span>
+                <span class="keyword-badge">Bouquet de Rosas</span>
+                <span class="keyword-badge">Arreglos de Rosas</span>
+                <span class="keyword-badge">Ramos de 50 Rosas</span>
+                <span class="keyword-badge">Ramos con Girasoles</span>
             </div>
             
-            <a href="https://wa.me/573013638483?text=Hola,%20quiero%20ordenar%20un%20hermoso%20ramo%20de%20rosas" class="cta-hero" target="_blank" rel="noopener" onclick="return abrirWhatsApp(event, this.href, 'hero')">
-                Pedir Mi Ramo Ahora 🛍️
-            </a>
+            <a href="https://wa.me/573235933021?text=Hola,%20quiero%20ordenar%20un%20hermoso%20ramo%20de%20rosas" class="cta-hero" target="_blank" rel="noopener" onclick="return abrirWhatsApp(event, this.href, 'hero')">Pedir Mi Ramo Ahora</a>
         </div>
     </section>
 
@@ -625,34 +635,42 @@
     <section class="catalog-intro">
         <div class="container">
             <h2 class="section-title">Ramos de Rosas Disponibles Hoy</h2>
-            <p class="section-subtitle">Te mostramos primero los ramos de rosas rojas con su precio, toca «Todos los Productos» para ver el catálogo completo o busca por nombre o código.</p>
+            <p class="section-subtitle">Primero ves los ramos de rosas rojas con su precio, si quieres el catálogo completo toca «Todos» o busca por nombre o código.</p>
         </div>
     </section>
 
     <section class="catalog-filters">
         <div class="container">
             <div class="catalog-search">
-                <input type="search" id="product-search" placeholder="Buscar por nombre o código (ej. girasoles o 003)" aria-label="Buscar producto por nombre o código">
+                <input type="search" id="product-search" placeholder="Buscar por nombre o código (ej. girasoles o 003)" aria-label="Buscar producto por nombre o código" autocomplete="off">
             </div>
-            <div class="filters-container">
-                <span class="filter-label">Filtrar por:</span>
-                <button class="filter-btn" data-filter="todos">Todos los Productos</button>
-                <button class="filter-btn active" data-filter="rosas-rojas">Rosas Rojas</button>
-                <button class="filter-btn" data-filter="rosas">Rosas Rosadas y Blancas</button>
-                <button class="filter-btn" data-filter="girasoles">Girasoles</button>
-                <button class="filter-btn" data-filter="cumpleanos">Cumpleaños</button>
-                <button class="filter-btn" data-filter="quince">15 Años</button>
-                <button class="filter-btn" data-filter="grados">Grados</button>
-                <button class="filter-btn" data-filter="amor">Amor y Aniversario</button>
-                <button class="filter-btn" data-filter="peluches">Con Peluche</button>
-                <button class="filter-btn" data-filter="chocolates">Con Chocolates</button>
-                <button class="filter-btn" data-filter="globos">Con Globo</button>
-                <button class="filter-btn" data-filter="cajas">Cajas, Cubos y Corazones</button>
-                <button class="filter-btn" data-filter="grandes">Ramos Grandes</button>
-                <button class="filter-btn" data-filter="oferta">Ofertas</button>
-                <button class="filter-btn" data-filter="precio-bajo">Menos de $200.000</button>
-                <button class="filter-btn" data-filter="precio-medio">$200.000 - $300.000</button>
-                <button class="filter-btn" data-filter="precio-alto">Más de $300.000</button>
+            <div class="filters-container filters-grouped">
+                <div class="filter-group" role="group" aria-label="Ocasión">
+                    <span class="filter-label">Ocasión</span>
+                    <button class="filter-btn" data-filter="todos">Todos</button>
+                    <button class="filter-btn" data-filter="cumpleanos">Cumpleaños</button>
+                    <button class="filter-btn" data-filter="grados">Grados</button>
+                    <button class="filter-btn" data-filter="amor">Amor y Aniversario</button>
+                </div>
+                <div class="filter-group" role="group" aria-label="Tipo">
+                    <span class="filter-label">Tipo</span>
+                    <button class="filter-btn active" data-filter="rosas-rojas">Rosas Rojas</button>
+                    <button class="filter-btn" data-filter="rosas">Rosas Rosadas y Blancas</button>
+                    <button class="filter-btn" data-filter="girasoles">Girasoles</button>
+                    <button class="filter-btn" data-filter="lirios">Lirios</button>
+                    <button class="filter-btn" data-filter="tulipanes">Tulipanes</button>
+                    <button class="filter-btn" data-filter="cajas">Cajas, Cubos y Corazones</button>
+                    <button class="filter-btn" data-filter="grandes">Ramos Grandes</button>
+                    <button class="filter-btn" data-filter="peluches">Con Peluche</button>
+                    <button class="filter-btn" data-filter="chocolates">Con Chocolates</button>
+                    <button class="filter-btn" data-filter="globos">Con Globo</button>
+                </div>
+                <div class="filter-group" role="group" aria-label="Precio">
+                    <span class="filter-label">Precio</span>
+                    <button class="filter-btn" data-filter="precio-bajo">Menos de $200.000</button>
+                    <button class="filter-btn" data-filter="precio-medio">$200.000 - $300.000</button>
+                    <button class="filter-btn" data-filter="precio-alto">Más de $300.000</button>
+                </div>
             </div>
         </div>
     </section>
@@ -668,7 +686,7 @@
             <div class="products-grid" id="products-grid"></div>
             <div class="empty-state" id="empty-state">
                 <h3>No se encontraron productos</h3>
-                <p>Cambia el filtro y te mostramos otras opciones disponibles</p>
+                <p>Prueba con otro filtro y te mostramos más arreglos disponibles</p>
             </div>
         </div>
     </section>
@@ -679,27 +697,23 @@
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🚚</div>
                     <h3>Entrega Inmediata</h3>
-                    <p>Llevamos tus rosas rojas y tus bouquets en muy poco tiempo a cualquier barrio de Cali</p>
+                    <p>Tus rosas rojas y tus bouquets salen rápido hacia cualquier barrio de Cali, y si pides antes de las 3:00 p. m. llegan hoy mismo</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🌹</div>
                     <h3>Flores Frescas</h3>
-                    <p>Armamos cada ramo y cada arreglo con la flor fresca que entró ese mismo día al taller</p>
+                    <p>Cada ramo se arma con la flor que llegó ese mismo día al taller, nada de flor guardada de la semana anterior</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">💯</div>
                     <h3>Calidad Garantizada</h3>
-                    <p>Nuestros ramos buchón y nuestras cajas de rosas salen revisados una por una antes de la entrega</p>
+                    <p>Antes de salir revisamos rosa por rosa cada ramo buchón y cada caja, y solo despachamos lo que pasa esa revisión</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
                     <h3>Diseños Únicos</h3>
-                    <p>Ramos de 12, 24 y 50 rosas, cajas, cubos y corazones, o mezclas de rosas con girasoles, chocolates y peluche</p>
+                    <p>Hay ramos de 12, 24 y 50 rosas, cajas, cubos y corazones, y también mezclas con girasoles, chocolates o peluche</p>
                 </div>
             </div>
         </div>
@@ -707,29 +721,27 @@
 <section class="trust-section">
         <div class="container">
             <h2 class="section-title">Miles de Clientes Satisfechos</h2>
-            <p class="section-subtitle">Miles de personas en Cali ya han recibido uno de nuestros ramos de rosas y bouquets</p>
+            <p class="section-subtitle">Llevamos más de 500 entregas en Cali y una calificación de 4.9 en Google con 127 reseñas</p>
             
             <div class="trust-badges">
                 <div class="trust-badge">
-                    <div class="trust-badge-icon">⭐⭐⭐⭐⭐</div>
-                    <div class="trust-badge-text">5 Estrellas en Google</div>
+                    <div class="trust-badge-icon">4.9 ★</div>
+                    <div class="trust-badge-text">Calificación en Google, con 127 reseñas</div>
                 </div>
-                
                 <div class="trust-badge">
-                    <div class="trust-badge-icon">🎉</div>
-                    <div class="trust-badge-text">+5000 Entregas Exitosas</div>
+                    <div class="trust-badge-icon">+500</div>
+                    <div class="trust-badge-text">Entregas realizadas en Cali</div>
                 </div>
-                
                 <div class="trust-badge">
-                    <div class="trust-badge-icon">💝</div>
-                    <div class="trust-badge-text">100% Satisfacción</div>
+                    <div class="trust-badge-icon">Hoy</div>
+                    <div class="trust-badge-text">Entrega el mismo día si pides antes de las 3:00 p. m.</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Boton flotante WhatsApp -->
-    <a href="https://wa.me/573013638483?text=Hola,%20quiero%20ordenar%20flores" 
+    <a href="https://wa.me/573235933021?text=Hola,%20quiero%20ordenar%20flores" 
        class="whatsapp-float" 
        target="_blank"
        onclick="return abrirWhatsApp(event, this.href, 'flotante')">

@@ -1,5 +1,5 @@
 /* =====================================================
-   CATÁLOGO — FLORES DEL ENCANTO
+   CATÁLOGO — ATELIER VERGARA
    Paleta: crema #FEFAF8 · carbón #404040 · nude #D3A89D · salvia #8C9180
    Este archivo lo usan catalogo.html y las landing pages.
    ===================================================== */
@@ -41,7 +41,7 @@
 }
 
 .catalog-hero h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Libre Caslon Display', Georgia, serif;
     font-size: 3.2rem;
     line-height: 1.15;
     margin-bottom: 1.1rem;
@@ -108,7 +108,7 @@
     border: 1px solid var(--catalog-nude-line);
     border-radius: 999px;
     background: #fff;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Karla', Arial, sans-serif;
     font-size: 0.92rem;
     font-weight: 300;
     color: var(--catalog-ink);
@@ -145,7 +145,7 @@
     background: #fff;
     color: var(--catalog-ink);
     border-radius: 999px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Karla', Arial, sans-serif;
     font-size: 0.8rem;
     font-weight: 400;
     cursor: pointer;
@@ -262,7 +262,7 @@
 }
 
 .product-name {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Libre Caslon Display', Georgia, serif;
     font-size: 1.34rem;
     color: var(--catalog-ink);
     margin-bottom: 0.9rem;
@@ -317,7 +317,7 @@
 }
 
 .product-price {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Libre Caslon Display', Georgia, serif;
     font-size: 1.62rem;
     color: var(--catalog-ink);
     font-weight: 500;
@@ -395,7 +395,7 @@
 .empty-state.active { display: block; }
 
 .empty-state h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Libre Caslon Display', Georgia, serif;
     font-size: 1.6rem;
     color: var(--catalog-ink);
     margin-bottom: 0.6rem;
@@ -444,7 +444,7 @@
 }
 
 .lightbox-info h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Libre Caslon Display', Georgia, serif;
     font-size: 1.4rem;
     color: var(--catalog-ink);
     margin-bottom: 0.4rem;

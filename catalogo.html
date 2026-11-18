@@ -13,27 +13,29 @@
       gtag('config', 'G-BWQCB2P36K');
     </script>
 
-    <meta name="description" content="Catálogo de Flores del Encanto, floristería en Cali: ramos de rosas y girasoles, detalles con peluche y chocolates, cajas y corazones de rosas para cumpleaños, 15 años, grados y aniversarios. Precios claros y pedidos por WhatsApp con entrega a domicilio en toda Cali.">
+    <meta name="description" content="Catálogo de Atelier Vergara, floristería en Cali: ramos de rosas y girasoles, detalles con peluche y chocolates, cajas y corazones de rosas para cumpleaños, 15 años, grados y aniversarios. Precios claros y pedidos por WhatsApp con entrega a domicilio en toda Cali.">
     <meta name="keywords" content="catálogo flores Cali, floristería Cali, ramos de rosas Cali, girasoles Cali, arreglos florales Cali, flores a domicilio Cali">
-    <title>Catálogo de Flores en Cali | Flores del Encanto</title>
+    <title>Catálogo de Flores en Cali | Atelier Vergara</title>
     <link rel="canonical" href="http://floristeriacali.dondeseria.com/catalogo.html">
 
-    <meta property="og:title" content="Catálogo de Flores en Cali | Flores del Encanto">
+    <meta property="og:title" content="Catálogo de Flores en Cali | Atelier Vergara">
     <meta property="og:description" content="Ramos de rosas y girasoles, cajas, corazones y detalles con peluche y chocolates. Pedidos por WhatsApp y entrega a domicilio en toda Cali.">
-    <meta property="og:image" content="http://floristeriacali.dondeseria.com/assets/logo.webp">
+    <meta property="og:image" content="http://floristeriacali.dondeseria.com/assets/og-atelier-vergara.jpg">
     <meta property="og:type" content="website">
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="/assets/fonts/libre-caslon-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/catalog.css">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="assets/logo.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <meta name="theme-color" content="#5a1424">
+    <link rel="stylesheet" href="/css/atelier.css">
 </head>
 <body>
 
@@ -43,13 +45,9 @@
     <!-- Hero -->
     <section class="catalog-hero">
         <div class="container">
-            <span class="eyebrow">Flores del Encanto · Cali</span>
+            <span class="eyebrow">Atelier Vergara · Cali</span>
             <h1>Nuestro Catálogo</h1>
-            <p>
-                Estos son todos los arreglos que armamos en el taller con flor fresca seleccionada cada mañana.
-                Búscalos por nombre o por código, fíltralos por tipo de flor o por precio, y haz tu pedido
-                por WhatsApp. Entregamos a domicilio en toda Cali.
-            </p>
+            <p>Aquí están todos los arreglos que armamos en el taller con flor fresca escogida cada mañana. Encuéntralos por nombre o por código, fíltralos por ocasión, tipo de flor o precio, y pídelos por WhatsApp con entrega a domicilio en cualquier barrio de Cali.</p>
         </div>
     </section>
 
@@ -59,27 +57,35 @@
             <div class="catalog-search">
                 <input type="search" id="product-search"
                        placeholder="Buscar por nombre o código (ej. girasoles o 003)"
-                       aria-label="Buscar producto por nombre o código">
+                       aria-label="Buscar producto por nombre o código" autocomplete="off">
             </div>
-            <div class="filters-container">
-                <span class="filter-label">Filtrar por:</span>
-                <button class="filter-btn active" data-filter="todos">Todos</button>
-                <button class="filter-btn" data-filter="rosas-rojas">Rosas Rojas</button>
-                <button class="filter-btn" data-filter="rosas">Rosas Rosadas y Blancas</button>
-                <button class="filter-btn" data-filter="girasoles">Girasoles</button>
-                <button class="filter-btn" data-filter="cumpleanos">Cumpleaños</button>
-                <button class="filter-btn" data-filter="quince">15 Años</button>
-                <button class="filter-btn" data-filter="grados">Grados</button>
-                <button class="filter-btn" data-filter="amor">Amor y Aniversario</button>
-                <button class="filter-btn" data-filter="peluches">Con Peluche</button>
-                <button class="filter-btn" data-filter="chocolates">Con Chocolates</button>
-                <button class="filter-btn" data-filter="globos">Con Globo</button>
-                <button class="filter-btn" data-filter="cajas">Cajas, Cubos y Corazones</button>
-                <button class="filter-btn" data-filter="grandes">Ramos Grandes</button>
-                <button class="filter-btn" data-filter="oferta">Ofertas</button>
-                <button class="filter-btn" data-filter="precio-bajo">Menos de $200.000</button>
-                <button class="filter-btn" data-filter="precio-medio">$200.000 - $300.000</button>
-                <button class="filter-btn" data-filter="precio-alto">Más de $300.000</button>
+            <div class="filters-container filters-grouped">
+                <div class="filter-group" role="group" aria-label="Ocasión">
+                    <span class="filter-label">Ocasión</span>
+                    <button class="filter-btn active" data-filter="todos">Todos</button>
+                    <button class="filter-btn" data-filter="cumpleanos">Cumpleaños</button>
+                    <button class="filter-btn" data-filter="grados">Grados</button>
+                    <button class="filter-btn" data-filter="amor">Amor y Aniversario</button>
+                </div>
+                <div class="filter-group" role="group" aria-label="Tipo">
+                    <span class="filter-label">Tipo</span>
+                    <button class="filter-btn" data-filter="rosas-rojas">Rosas Rojas</button>
+                    <button class="filter-btn" data-filter="rosas">Rosas Rosadas y Blancas</button>
+                    <button class="filter-btn" data-filter="girasoles">Girasoles</button>
+                    <button class="filter-btn" data-filter="lirios">Lirios</button>
+                    <button class="filter-btn" data-filter="tulipanes">Tulipanes</button>
+                    <button class="filter-btn" data-filter="cajas">Cajas, Cubos y Corazones</button>
+                    <button class="filter-btn" data-filter="grandes">Ramos Grandes</button>
+                    <button class="filter-btn" data-filter="peluches">Con Peluche</button>
+                    <button class="filter-btn" data-filter="chocolates">Con Chocolates</button>
+                    <button class="filter-btn" data-filter="globos">Con Globo</button>
+                </div>
+                <div class="filter-group" role="group" aria-label="Precio">
+                    <span class="filter-label">Precio</span>
+                    <button class="filter-btn" data-filter="precio-bajo">Menos de $200.000</button>
+                    <button class="filter-btn" data-filter="precio-medio">$200.000 - $300.000</button>
+                    <button class="filter-btn" data-filter="precio-alto">Más de $300.000</button>
+                </div>
             </div>
         </div>
     </section>
@@ -97,7 +103,7 @@
             <div class="products-grid" id="products-grid"></div>
             <div class="empty-state" id="empty-state">
                 <h3>No se encontraron productos</h3>
-                <p>Cambia el filtro o borra la búsqueda y te aparecerán otras opciones.</p>
+                <p>Prueba con otro filtro o borra lo que escribiste en el buscador para ver más opciones.</p>
             </div>
         </div>
     </section>

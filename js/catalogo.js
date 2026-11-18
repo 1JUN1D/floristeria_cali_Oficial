@@ -1,5 +1,5 @@
 /* =====================================================
-   LÓGICA DEL CATÁLOGO — FLORES DEL ENCANTO
+   LÓGICA DEL CATÁLOGO — ATELIER VERGARA
    Buscador, filtros, orden por precio en columnas y lightbox.
    Requiere js/productos.js cargado antes.
    ===================================================== */
@@ -115,7 +115,7 @@ function renderProducts() {
             .map(c => '<span class="product-tag product-tag-cat">' + categoryLabels[c] + '</span>')
             .join('');
         const waText = encodeURIComponent(
-            'Hola Flores del Encanto, me interesa: ' + p.name +
+            'Hola Atelier Vergara, me interesa: ' + p.name +
             ' (Cod. ' + code + ') - ' + formatPrice(p.price) +
             ' | Foto: ' + productPhotoUrl(p)
         );

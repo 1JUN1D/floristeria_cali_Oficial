@@ -27,12 +27,13 @@
     </script>
     
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="/assets/fonts/libre-caslon-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="/assets/logo.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <meta name="theme-color" content="#5a1424">
     
     <style>
         * {
@@ -62,7 +63,7 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Karla', Arial, sans-serif;
             font-weight: 300;
             color: var(--dark);
             line-height: 1.85;
@@ -110,7 +111,7 @@
         }
 
         .hero h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 3rem;
             margin-bottom: 1rem;
             font-weight: 600;
@@ -295,7 +296,7 @@
         }
 
         .occasion-card h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 1.75rem;
             font-weight: 500;
             letter-spacing: -0.01em;
@@ -353,7 +354,7 @@
         }
 
         .feature-card h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 1.5rem;
             font-weight: 500;
             letter-spacing: -0.01em;
@@ -376,7 +377,7 @@
         }
 
         .section-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 2.5rem;
             font-weight: 500;
             letter-spacing: -0.01em;
@@ -478,7 +479,7 @@
         }
 
         .product-name {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 1.38rem;
             letter-spacing: -0.01em;
             color: var(--dark);
@@ -493,7 +494,7 @@
             font-size: .8rem;
             letter-spacing: .4em;
             margin-top: .55rem;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
         }
 
         .product-description {
@@ -512,7 +513,7 @@
         }
 
         .product-price {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 1.72rem;
             color: #8C6055;
             font-weight: 500;
@@ -600,7 +601,7 @@
         }
 
         .idea-card h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
             font-size: 1.5rem;
             font-weight: 500;
             letter-spacing: -0.01em;
@@ -660,7 +661,7 @@
             font-size: 5rem;
             color: #B07F71;
             opacity: 0.35;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Libre Caslon Display', Georgia, serif;
         }
 
         .testimonial-stars {
@@ -873,31 +874,39 @@
       .catalog-intro .section-subtitle { color: var(--catalog-ink); }
       .catalog-intro .section-subtitle { color: var(--catalog-gray); max-width: 720px; margin: 0 auto; }
     </style>
+    <link rel="stylesheet" href="/css/atelier.css">
 </head>
 <body>
+    <header class="lp-bar">
+        <div class="lp-bar-inner">
+            <a class="lp-brand" href="/"><span class="lp-brand-name">Atelier Vergara</span><span class="lp-brand-tag">Florería en Cali</span></a>
+            <div class="lp-bar-actions">
+                <a class="lp-bar-phone" href="tel:+573235933021"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 7.1 7.1l1.4-2.3L21 15.5V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><span>323 593 3021</span></a>
+                <a class="lp-bar-wa" href="https://wa.me/573235933021?text=Hola,%20quiero%20ramos%20de%20flores%20para%20cumpleaños" target="_blank" rel="noopener" onclick="trackConversion()">Pedir por WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
 
 <section class="hero">
         <div class="container">
-            <div class="birthday-badge">
-                🎂 Flores para Cumpleaños
+            <div class="birthday-badge">Flores para Cumpleaños
             </div>
             
-            <h1>🌹 Ramos de Flores para Cumpleaños de Mujer 🌹</h1>
-            <p class="subtitle">Haz de esa fecha algo inolvidable con flores y arreglos que enamoran</p>
-            <p>¿Todavía no encuentras el ramo indicado para ese cumpleaños? Aquí tenemos flores pensadas justo para esa fecha. Hay opciones para todos los gustos, desde bouquets sobrios y muy elegantes hasta combinaciones alegres de flores con globos. Armamos cada arreglo a la medida de quien lo va a recibir, para que la celebración le quede grabada.</p>
+            <h1><span class="lp-emoji" aria-hidden="true">🌹 </span>Ramos de Flores para Cumpleaños de Mujer<span class="lp-emoji" aria-hidden="true"> 🌹</span></h1>
+            <p class="subtitle">Flores y arreglos para que ese día se recuerde por mucho tiempo</p>
+            <p>¿Aún no das con el ramo para ese cumpleaños? Aquí hay flores pensadas para esa fecha, desde bouquets sobrios y elegantes hasta combinaciones alegres con globos, y cada arreglo lo ajustamos a la persona que lo recibe.</p>
             
             <div class="hero-keywords">
-                <span class="keyword-badge">💐 Ramos de Flores para Cumpleaños</span>
-                <span class="keyword-badge">👩 Flores para Mujer</span>
-                <span class="keyword-badge">🎂 Flores de Cumpleaños</span>
-                <span class="keyword-badge">🎈 Con Globos</span>
-                <span class="keyword-badge">🌸 Arreglos Florales</span>
-                <span class="keyword-badge">🎉 Feliz Cumpleaños</span>
+                <span class="keyword-badge">Ramos de Flores para Cumpleaños</span>
+                <span class="keyword-badge">Flores para Mujer</span>
+                <span class="keyword-badge">Flores de Cumpleaños</span>
+                <span class="keyword-badge">Con Globos</span>
+                <span class="keyword-badge">Arreglos Florales</span>
+                <span class="keyword-badge">Feliz Cumpleaños</span>
             </div>
             
-            <a href="https://wa.me/573013638483?text=Hola,%20quiero%20ramos%20de%20flores%20para%20cumpleaños" class="cta-hero" onclick="trackConversion()">
-                Pedir Flores de Cumpleaños 🎂
-            </a>
+            <a href="https://wa.me/573235933021?text=Hola,%20quiero%20ramos%20de%20flores%20para%20cumpleaños" class="cta-hero" onclick="trackConversion()">Pedir Flores de Cumpleaños</a>
         </div>
     </section>
 
@@ -905,34 +914,42 @@
     <section class="catalog-intro">
         <div class="container">
             <h2 class="section-title">Nuestro Catálogo Completo</h2>
-            <p class="section-subtitle">Aqui encuentras el detalle de cumpleanos que buscas entre bouquets, cajas y arreglos florales. Busca por nombre o por codigo y usa los filtros por categoria.</p>
+            <p class="section-subtitle">Entre bouquets, cajas y arreglos florales está el detalle de cumpleaños que buscas, puedes encontrarlo por nombre o código y afinar con los filtros.</p>
         </div>
     </section>
 
     <section class="catalog-filters">
         <div class="container">
             <div class="catalog-search">
-                <input type="search" id="product-search" placeholder="Buscar por nombre o código (ej. girasoles o 003)" aria-label="Buscar producto por nombre o código">
+                <input type="search" id="product-search" placeholder="Buscar por nombre o código (ej. girasoles o 003)" aria-label="Buscar producto por nombre o código" autocomplete="off">
             </div>
-            <div class="filters-container">
-                <span class="filter-label">Filtrar por:</span>
-                <button class="filter-btn active" data-filter="todos">Todos los Productos</button>
-                <button class="filter-btn" data-filter="rosas-rojas">Rosas Rojas</button>
-                <button class="filter-btn" data-filter="rosas">Rosas Rosadas y Blancas</button>
-                <button class="filter-btn" data-filter="girasoles">Girasoles</button>
-                <button class="filter-btn" data-filter="cumpleanos">Cumpleaños</button>
-                <button class="filter-btn" data-filter="quince">15 Años</button>
-                <button class="filter-btn" data-filter="grados">Grados</button>
-                <button class="filter-btn" data-filter="amor">Amor y Aniversario</button>
-                <button class="filter-btn" data-filter="peluches">Con Peluche</button>
-                <button class="filter-btn" data-filter="chocolates">Con Chocolates</button>
-                <button class="filter-btn" data-filter="globos">Con Globo</button>
-                <button class="filter-btn" data-filter="cajas">Cajas, Cubos y Corazones</button>
-                <button class="filter-btn" data-filter="grandes">Ramos Grandes</button>
-                <button class="filter-btn" data-filter="oferta">Ofertas</button>
-                <button class="filter-btn" data-filter="precio-bajo">Menos de $200.000</button>
-                <button class="filter-btn" data-filter="precio-medio">$200.000 - $300.000</button>
-                <button class="filter-btn" data-filter="precio-alto">Más de $300.000</button>
+            <div class="filters-container filters-grouped">
+                <div class="filter-group" role="group" aria-label="Ocasión">
+                    <span class="filter-label">Ocasión</span>
+                    <button class="filter-btn active" data-filter="todos">Todos</button>
+                    <button class="filter-btn" data-filter="cumpleanos">Cumpleaños</button>
+                    <button class="filter-btn" data-filter="grados">Grados</button>
+                    <button class="filter-btn" data-filter="amor">Amor y Aniversario</button>
+                </div>
+                <div class="filter-group" role="group" aria-label="Tipo">
+                    <span class="filter-label">Tipo</span>
+                    <button class="filter-btn" data-filter="rosas-rojas">Rosas Rojas</button>
+                    <button class="filter-btn" data-filter="rosas">Rosas Rosadas y Blancas</button>
+                    <button class="filter-btn" data-filter="girasoles">Girasoles</button>
+                    <button class="filter-btn" data-filter="lirios">Lirios</button>
+                    <button class="filter-btn" data-filter="tulipanes">Tulipanes</button>
+                    <button class="filter-btn" data-filter="cajas">Cajas, Cubos y Corazones</button>
+                    <button class="filter-btn" data-filter="grandes">Ramos Grandes</button>
+                    <button class="filter-btn" data-filter="peluches">Con Peluche</button>
+                    <button class="filter-btn" data-filter="chocolates">Con Chocolates</button>
+                    <button class="filter-btn" data-filter="globos">Con Globo</button>
+                </div>
+                <div class="filter-group" role="group" aria-label="Precio">
+                    <span class="filter-label">Precio</span>
+                    <button class="filter-btn" data-filter="precio-bajo">Menos de $200.000</button>
+                    <button class="filter-btn" data-filter="precio-medio">$200.000 - $300.000</button>
+                    <button class="filter-btn" data-filter="precio-alto">Más de $300.000</button>
+                </div>
             </div>
         </div>
     </section>
@@ -948,7 +965,7 @@
             <div class="products-grid" id="products-grid"></div>
             <div class="empty-state" id="empty-state">
                 <h3>No se encontraron productos</h3>
-                <p>Cambia el filtro y te mostramos otras opciones disponibles</p>
+                <p>Prueba con otro filtro y te mostramos más arreglos disponibles</p>
             </div>
         </div>
     </section>
@@ -956,43 +973,37 @@
 <section class="occasions-section">
         <div class="container">
             <h2 class="section-title">Flores para Cumpleaños Perfectas para Cada Mujer</h2>
-            <p class="section-subtitle">Cada ramo de cumpleaños para mujer lo diseñamos con una idea clara: que ella se emocione al recibirlo</p>
+            <p class="section-subtitle">Diseñamos cada ramo de cumpleaños con una sola meta, que ella se emocione en el momento en que lo recibe</p>
             
             <div class="occasions-grid">
                 <div class="occasion-card">
-                    <div class="occasion-icon">👩</div>
                     <h3>Cumpleaños de Mujer</h3>
-                    <p>Bouquets de cumpleaños con un aire elegante y muy femenino. Escogemos las flores pensando en ella y en lo que la hace sonreír.</p>
+                    <p>Bouquets de cumpleaños elegantes y femeninos, con flores escogidas según su estilo y lo que la hace sonreír.</p>
                 </div>
                 
                 <div class="occasion-card">
-                    <div class="occasion-icon">💕</div>
                     <h3>Cumpleaños de Esposa</h3>
-                    <p>El romanticismo se nota en cada detalle. Arreglos de cumpleaños que le dicen a tu esposa cuánto la quieres sin necesidad de palabras.</p>
+                    <p>Arreglos románticos hasta el último detalle, para decirle a tu esposa cuánto la quieres sin tener que decirlo.</p>
                 </div>
                 
                 <div class="occasion-card">
-                    <div class="occasion-icon">👩‍👧</div>
                     <h3>Cumpleaños de Mamá</h3>
-                    <p>Para mamá preparamos ramos con flores suaves y cálidas. Un regalo de cumpleaños que habla de gratitud y de cariño de toda la vida.</p>
+                    <p>Ramos de flores suaves y cálidas para mamá, un regalo que dice gracias y te quiero al mismo tiempo.</p>
                 </div>
                 
                 <div class="occasion-card">
-                    <div class="occasion-icon">👭</div>
                     <h3>Cumpleaños de Amiga</h3>
-                    <p>Colores vivos y mucha alegría para el cumpleaños de tu amiga. Si quieres, le sumamos globos y la sorpresa queda todavía más divertida.</p>
+                    <p>Colores vivos y mucha alegría para tu amiga, y si quieres le sumamos globos para que la sorpresa sea más divertida.</p>
                 </div>
                 
                 <div class="occasion-card">
-                    <div class="occasion-icon">💼</div>
                     <h3>Cumpleaños Corporativo</h3>
-                    <p>Un arreglo sobrio y bien presentado, del estilo que funciona en la oficina. Ideal para felicitar a un compañero de trabajo o a un cliente.</p>
+                    <p>Arreglos sobrios y bien presentados que encajan en la oficina, perfectos para felicitar a un compañero o a un cliente.</p>
                 </div>
                 
                 <div class="occasion-card">
-                    <div class="occasion-icon">🎉</div>
                     <h3>Cumpleaños Sorpresa</h3>
-                    <p>Ramos de buen tamaño para sorpresas que se roban toda la atención. Arreglos pensados para dejar a cualquiera sin palabras.</p>
+                    <p>Ramos grandes para sorpresas que se roban la atención y dejan a cualquiera sin palabras.</p>
                 </div>
             </div>
         </div>
@@ -1003,39 +1014,33 @@
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🎂</div>
                     <h3>Especializados en Cumpleaños</h3>
-                    <p>Los cumpleaños son lo nuestro. Armamos cada arreglo desde cero, así que ningún ramo que sale de aquí se parece a otro.</p>
+                    <p>Los cumpleaños son nuestro fuerte, armamos cada arreglo desde cero y por eso ningún ramo sale igual a otro.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🎈</div>
                     <h3>Con Globos Disponibles</h3>
-                    <p>¿Quieres sumarle globos al ramo? Los combinamos contigo para que la celebración se vea completa.</p>
+                    <p>Si quieres globos con el ramo, los escogemos contigo para que la celebración se vea completa.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🎁</div>
                     <h3>Tarjeta Personalizada</h3>
-                    <p>Todos los pedidos salen con su tarjeta y ahí escribimos el mensaje de cumpleaños que nos dictes.</p>
+                    <p>Cada pedido lleva su tarjeta, y en ella escribimos el mensaje de cumpleaños que nos dictes.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
                     <h3>Entrega el Mismo Día</h3>
-                    <p>Entregamos rápido en Cali. Si nos escribes temprano, el ramo llega a su destino en cuestión de horas.</p>
+                    <p>Entregamos el mismo día en Cali, y si nos escribes antes de las 3:00 p. m. el ramo llega en pocas horas.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🌹</div>
                     <h3>Flores Frescas</h3>
-                    <p>Trabajamos con la flor fresca del día y la guardamos en cuarto frío hasta que sale, para que aguante el calor de la ciudad.</p>
+                    <p>Usamos flor fresca del día guardada en cuarto frío hasta la salida, así aguanta bien el calor de Cali.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">💯</div>
                     <h3>Satisfacción Total</h3>
-                    <p>Miles de cumpleaños celebrados con nuestros ramos y clientes que vuelven a buscarnos.</p>
+                    <p>Llevamos más de 500 entregas en Cali y una calificación de 4.9 en Google, con clientes que vuelven a escribirnos.</p>
                 </div>
             </div>
         </div>
@@ -1043,11 +1048,10 @@
 <section class="ideas-section">
         <div class="container">
             <h2 class="section-title">Ideas para Ramos de Flores para Cumpleaños</h2>
-            <p class="section-subtitle">Toma ideas de estas propuestas antes de escoger tu ramo de cumpleaños</p>
+            <p class="section-subtitle">Antes de escoger tu ramo, mira estas propuestas y quédate con las ideas que más te sirvan</p>
             
             <div class="ideas-grid">
                 <div class="idea-card">
-                    <span class="idea-emoji">🌹</span>
                     <h3>Rosas Clásicas</h3>
                     <ul>
                         <li>Rosas rojas para cumpleaños romántico</li>
@@ -1058,7 +1062,6 @@
                 </div>
                 
                 <div class="idea-card">
-                    <span class="idea-emoji">🌻</span>
                     <h3>Girasoles Radiantes</h3>
                     <ul>
                         <li>Girasoles para cumpleaños alegre</li>
@@ -1069,7 +1072,6 @@
                 </div>
                 
                 <div class="idea-card">
-                    <span class="idea-emoji">🎈</span>
                     <h3>Con Globos</h3>
                     <ul>
                         <li>Feliz cumpleaños con flores y globos</li>
@@ -1080,7 +1082,6 @@
                 </div>
                 
                 <div class="idea-card">
-                    <span class="idea-emoji">🎁</span>
                     <h3>Con Obsequios</h3>
                     <ul>
                         <li>Flores + Chocolates para cumpleaños</li>
@@ -1095,25 +1096,25 @@
 <section class="testimonials">
         <div class="container">
             <h2 class="section-title">Testimonios - Flores para Cumpleaños</h2>
-            <p class="section-subtitle">Esto nos cuentan quienes ya pidieron con nosotros su ramo de cumpleaños</p>
+            <p class="section-subtitle">Lo que cuentan las personas que ya nos pidieron su ramo de cumpleaños</p>
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-stars"><span aria-hidden="true">★★★★★</span><span class="lp-sr">Cinco estrellas</span></div>
                     <p class="testimonial-text">"El ramo quedó precioso, mucho mejor de lo que yo esperaba. Mi esposa se emocionó hasta las lágrimas cuando lo recibió. Fue el regalo perfecto."</p>
                     <p class="testimonial-author">Juan Pérez</p>
                     <p class="testimonial-occasion">Cumpleaños de Esposa</p>
                 </div>
                 
                 <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-stars"><span aria-hidden="true">★★★★★</span><span class="lp-sr">Cinco estrellas</span></div>
                     <p class="testimonial-text">"Le mandé flores a mi mamá por su cumpleaños y quedó feliz. El arreglo llegó impecable y se veía igual de bonito que en las fotos."</p>
                     <p class="testimonial-author">Andrea López</p>
                     <p class="testimonial-occasion">Cumpleaños de Mamá</p>
                 </div>
                 
                 <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-stars"><span aria-hidden="true">★★★★★</span><span class="lp-sr">Cinco estrellas</span></div>
                     <p class="testimonial-text">"Pedí el arreglo con globos para una sorpresa y quedó espectacular. Superó por mucho lo que yo tenía en la cabeza."</p>
                     <p class="testimonial-author">Sofía Ramírez</p>
                     <p class="testimonial-occasion">Cumpleaños Sorpresa</p>
@@ -1124,34 +1125,31 @@
 <section class="trust-section">
         <div class="container">
             <h2 class="section-title">Expertos en Flores para Cumpleaños</h2>
-            <p class="section-subtitle">Ramos de cumpleaños hechos en Cali, con el cuidado que la ocasión merece</p>
+            <p class="section-subtitle">Hacemos ramos de cumpleaños en Cali con todo el cuidado que pide una fecha así</p>
             
             <div class="trust-badges">
                 <div class="trust-badge">
-                    <div class="trust-badge-icon">⭐⭐⭐⭐⭐</div>
-                    <div class="trust-badge-text">5 Estrellas en Google</div>
+                    <div class="trust-badge-icon">4.9 ★</div>
+                    <div class="trust-badge-text">Calificación en Google, con 127 reseñas</div>
                 </div>
-                
                 <div class="trust-badge">
-                    <div class="trust-badge-icon">🎂</div>
-                    <div class="trust-badge-text">+3000 Cumpleaños Celebrados</div>
+                    <div class="trust-badge-icon">+500</div>
+                    <div class="trust-badge-text">Entregas realizadas en Cali</div>
                 </div>
-                
                 <div class="trust-badge">
-                    <div class="trust-badge-icon">🎈</div>
-                    <div class="trust-badge-text">Globos Disponibles</div>
+                    <div class="trust-badge-icon">24 h</div>
+                    <div class="trust-badge-text">De atención, todos los días</div>
                 </div>
-                
                 <div class="trust-badge">
-                    <div class="trust-badge-icon">💝</div>
-                    <div class="trust-badge-text">100% Satisfacción</div>
+                    <div class="trust-badge-icon">Hoy</div>
+                    <div class="trust-badge-text">Entrega el mismo día si pides antes de las 3:00 p. m.</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Boton flotante WhatsApp -->
-    <a href="https://wa.me/573013638483?text=Hola,%20quiero%20ramos%20de%20flores%20para%20cumpleaños" 
+    <a href="https://wa.me/573235933021?text=Hola,%20quiero%20ramos%20de%20flores%20para%20cumpleaños" 
        class="whatsapp-float" 
        target="_blank"
        onclick="trackConversion()">

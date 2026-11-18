@@ -1,0 +1,366 @@
+/* =====================================================
+   ATELIER VERGARA — tema vino y dorado
+   Capa de estilo sobre la estructura de siempre: blanco
+   cálido, vino tinto para las acciones y franjas, dorado
+   para lo que se destaca. Esquinas rectas en todo (solo
+   el botón flotante de WhatsApp es redondo).
+   Se carga al final del <head> en todas las páginas.
+   Los selectores llevan "html body" para ganarle a los
+   estilos internos de componentes y landings.
+   ===================================================== */
+
+/* ---------- Fuentes (autoalojadas) ---------- */
+@font-face { font-family: "Libre Caslon Display"; font-style: normal; font-weight: 400; font-display: swap;
+    src: url(/assets/fonts/libre-caslon-display-latin.woff2) format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Libre Caslon Display"; font-style: normal; font-weight: 400; font-display: swap;
+    src: url(/assets/fonts/libre-caslon-display-latin-ext.woff2) format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Karla"; font-style: normal; font-weight: 300 700; font-display: swap;
+    src: url(/assets/fonts/karla-latin.woff2) format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Karla"; font-style: normal; font-weight: 300 700; font-display: swap;
+    src: url(/assets/fonts/karla-latin-ext.woff2) format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/* ---------- Colores y variables ---------- */
+html:root {
+    --av-bg: #fbf7f3; --av-alt: #f3e7e1; --av-card: #ffffff; --av-ink: #2e1c20; --av-muted: #6b575a; --av-head: #4a1220;
+    --av-vino: #6d1a2c; --av-vino-hover: #521322; --av-on-vino: #fbf3ee;
+    --av-gold: #c9a45c; --av-gold-hover: #ddbf82; --av-gold-text: #7f5f22; --av-on-gold: #2a0b13;
+    --av-band: #5a1424; --av-on-band: #fbf3ee; --av-on-band-muted: #ecd6d6;
+    --av-footer: #3e0e19; --av-footer-muted: #d9c3c4;
+    --av-line: #e6d6cf; --av-hairline: #eee2dc; --av-focus: #b08a4a;
+    --av-display: "Libre Caslon Display", Georgia, serif; --av-text: "Karla", Arial, sans-serif;
+
+    /* styles.css */
+    --color-primary: #6d1a2c; --color-primary-deep: #6d1a2c; --color-secondary: #7f5f22; --color-sage: #6d1a2c; --color-sage-deep: #521322;
+    --color-accent: #fbf7f3; --color-cream: #fbf7f3; --color-cream-2: #f3e7e1; --color-cream-3: #eadbd3;
+    --color-dark: #2e1c20; --color-gray-dark: #2e1c20; --color-light: #ffffff; --color-gray: #f3e7e1; --color-text: #2e1c20; --color-text-light: #6b575a;
+    --gradient-primary: #6d1a2c; --gradient-accent: #f3e7e1; --gradient-sage: #6d1a2c; --gradient-dark: #fbf7f3;
+    --shadow-sm: none; --shadow-md: none; --shadow-lg: none; --shadow-xl: none;
+    --font-heading: "Libre Caslon Display", Georgia, serif; --font-body: "Karla", Arial, sans-serif;
+    /* catalog.css */
+    --catalog-primary: #6d1a2c; --catalog-primary-deep: #6d1a2c; --catalog-sage: #6d1a2c; --catalog-sage-deep: #521322;
+    --catalog-cream: #fbf7f3; --catalog-cream-2: #f3e7e1; --catalog-ink: #2e1c20; --catalog-gray: #6b575a; --catalog-light: #ffffff;
+    --catalog-hairline: #eee2dc; --catalog-nude-line: #e6d6cf;
+    /* landing pages */
+    --primary: #6d1a2c; --secondary: #521322; --accent: #6d1a2c; --gold: #c9a45c; --gold-dark: #7f5f22;
+    --ink: #2e1c20; --ink-2: #2e1c20; --cream: #f3e7e1; --lavender: #fbf7f3; --hairline: #eee2dc;
+    --dark: #2e1c20; --light: #fbf7f3; --gray: #6b575a; --whatsapp: #6d1a2c; --whatsapp-dark: #521322;
+    --birthday-gold: #c9a45c; --birthday-purple: #6d1a2c; --elegant-gold: #7f5f22; --elegant-silver: #6d1a2c;
+    --solemn: #4a1220; --solemn-dark: #2e1c20;
+}
+
+/* ---------- Base ---------- */
+html { font-synthesis: none; }
+html body { background: var(--av-bg); color: var(--av-ink); font-family: var(--av-text); -webkit-font-smoothing: antialiased; }
+html body h1, html body h2, html body h3, html body h4,
+html body .product-title, html body .product-name, html body .product-price, html body .section-title {
+    font-family: var(--av-display); font-weight: 400; color: var(--av-head); letter-spacing: 0;
+}
+html body ::selection { background: var(--av-vino); color: var(--av-on-vino); }
+html body :focus-visible { outline: 3px solid var(--av-focus); outline-offset: 3px; }
+html body .lp-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Botones: rectos, vino; el secundario va con contorno ---------- */
+html body .btn, html body .product-cta, html body .contact-btn, html body .btn-order, html body .navbar-whatsapp, html body .navbar-phone,
+html body .cta-hero, html body .btn-service {
+    border-radius: 0 !important; box-shadow: none !important; text-transform: none; letter-spacing: 0.02em;
+    font-family: var(--av-text); font-weight: 600; transition: background-color .2s ease, color .2s ease, transform .15s ease;
+}
+html body .btn:hover, html body .product-cta:hover, html body .contact-btn:hover, html body .btn-order:hover,
+html body .navbar-whatsapp:hover, html body .navbar-phone:hover, html body .cta-hero:hover { transform: none; filter: none; }
+html body .btn:active, html body .product-cta:active, html body .btn-order:active, html body .cta-hero:active { transform: scale(0.97); }
+html body .btn-primary, html body .btn.btn-primary, html body .btn-whatsapp, html body .product-cta,
+html body .contact-btn-whatsapp, html body .btn-order, html body .navbar-whatsapp, html body .cta-hero {
+    background: var(--av-vino) !important; color: var(--av-on-vino) !important;
+}
+html body .btn-primary:hover, html body .btn-whatsapp:hover, html body .product-cta:hover,
+html body .contact-btn-whatsapp:hover, html body .btn-order:hover, html body .navbar-whatsapp:hover, html body .cta-hero:hover {
+    background: var(--av-vino-hover) !important; color: var(--av-on-vino) !important;
+}
+html body .hero-buttons .btn-primary, html body .btn-secondary, html body .contact-btn-primary, html body .navbar-phone {
+    background: transparent !important; color: var(--av-ink) !important; box-shadow: inset 0 0 0 1.5px var(--av-vino) !important;
+}
+html body .hero-buttons .btn-primary:hover, html body .btn-secondary:hover, html body .contact-btn-primary:hover, html body .navbar-phone:hover {
+    background: rgba(109, 26, 44, 0.07) !important; color: var(--av-ink) !important;
+}
+html body .hero-buttons .btn-whatsapp { order: -1; }
+
+/* ---------- Barra de navegación ---------- */
+html body .navbar, html body .navbar-scrolled { background: var(--av-bg); backdrop-filter: none; box-shadow: 0 1px 0 var(--av-hairline); border-bottom: 0; }
+html body .logo-text .brand-name { font-family: var(--av-display); font-weight: 400; color: var(--av-head); text-transform: none; letter-spacing: 0.01em; font-size: 1.65rem; }
+html body .logo-text .brand-tagline { color: var(--av-muted); text-transform: none; letter-spacing: 0.02em; font-size: 0.82rem; font-weight: 400; }
+html body .navbar-menu a { color: var(--av-ink); font-weight: 500; }
+html body .navbar-menu a:hover { color: var(--av-vino); }
+html body .navbar-menu a::after { background: var(--av-vino); height: 1px; }
+html body .navbar-phone { color: var(--av-ink) !important; }
+html body .navbar-phone svg { width: 18px; height: 18px; }
+html body .hamburger span { background: var(--av-head); border-radius: 0; }
+@media (max-width: 768px) {
+    html body .navbar-menu { background: var(--av-bg); box-shadow: 0 12px 24px rgba(46, 28, 32, 0.12); }
+}
+
+/* ---------- Hero del inicio ---------- */
+html body .hero-section { background: var(--av-bg); }
+html body .hero-section::before, html body .hero-section::after { display: none; }
+html body .hero-left h1 {
+    background: none; -webkit-text-fill-color: currentColor; color: var(--av-head); font-family: var(--av-display);
+    font-size: clamp(2.4rem, 5vw, 4.8rem); line-height: 1.06; font-weight: 400;
+}
+html body .breadcrumb, html body .breadcrumb a { color: var(--av-muted); }
+html body .hero-description { color: var(--av-ink); font-weight: 400; }
+html body .hero-description strong { font-weight: 600; color: var(--av-ink); }
+html body .hero-badges { list-style: none; display: flex; flex-wrap: wrap; gap: 12px 36px; margin: 0 0 2.2rem; color: var(--av-muted); font-size: 0.95rem; }
+html body .hero-badges strong { display: block; font-family: var(--av-display); font-weight: 400; font-size: 1.7rem; line-height: 1.15; color: var(--av-gold-text); }
+html body .video-container { border-radius: 0; box-shadow: none; background: var(--av-alt); }
+html body .video-overlay { display: none; }
+
+/* ---------- Destacados del inicio ---------- */
+html body .featured-products, html body .testimonials-carousel { background: var(--av-alt); }
+html body .featured-products .product-card { background: var(--av-card); border: 0; border-radius: 0; box-shadow: none; }
+html body .featured-products .product-card:hover { transform: none; box-shadow: none; }
+html body .featured-products .product-image { border-radius: 0; }
+html body .featured-products .product-card:hover .product-image img { transform: scale(1.04); }
+html body .product-title { font-size: 1.75rem; }
+html body .featured-products .product-description { color: var(--av-ink); }
+
+/* ---------- Entregas reales ---------- */
+html body .testimonial-card { border-radius: 0; border: 0; backdrop-filter: none; background: var(--av-card); }
+html body .testimonial-card:hover { transform: none; }
+
+/* ---------- Servicios ---------- */
+html body .categories-section { background: var(--av-bg); }
+html body .section-header h2, html body .service-areas-header h2, html body .contact-header h2,
+html body .contact-card-header h3, html body .category-content h2, html body .cta-content h2 { font-family: var(--av-display); font-weight: 400; color: var(--av-head); }
+html body .section-header p, html body .service-areas-header p, html body .contact-header p { color: var(--av-muted); }
+html body .category-card { background: var(--av-card); border-radius: 0; box-shadow: none; }
+html body .category-card:hover { transform: none; box-shadow: none; }
+html body .category-content h2 { font-size: 1.75rem; }
+html body .category-content p { color: var(--av-ink); }
+
+/* ---------- Zonas ---------- */
+html body .service-areas-section { background: var(--av-alt); }
+html body .city-name { color: var(--av-gold-text); font-family: var(--av-display); font-weight: 400; }
+html body .locality-item { background: var(--av-card); border: 0; border-radius: 0; box-shadow: none; }
+html body .locality-item:hover { transform: none; box-shadow: none; }
+html body .locality-icon { background: transparent; color: var(--av-vino); width: 28px; height: 28px; border-radius: 0; }
+html body .locality-info h3 { color: var(--av-head); font-family: var(--av-text); font-weight: 600; }
+html body .locality-info p { color: var(--av-muted); }
+html body .coverage-badge { background: transparent; color: var(--av-gold-text); box-shadow: none; padding: 0; font-weight: 600; }
+
+/* ---------- Llamado ---------- */
+html body .cta-section { background: var(--av-band); }
+html body .cta-content h2 { color: var(--av-on-band); }
+html body .cta-content p { color: var(--av-on-band-muted); }
+html body .cta-section .btn-primary { background: var(--av-gold) !important; color: var(--av-on-gold) !important; box-shadow: none !important; }
+html body .cta-section .btn-primary:hover { background: var(--av-gold-hover) !important; color: var(--av-on-gold) !important; }
+
+/* ---------- Contacto ---------- */
+html body .contact-info-section { background: var(--av-bg); }
+html body .contact-card { background: var(--av-card); border-radius: 0; box-shadow: none; border-left: 0; }
+html body .contact-card:hover { transform: none; box-shadow: none; }
+html body .contact-icon { background: transparent; box-shadow: none; color: var(--av-vino); width: 32px; height: 32px; border-radius: 0; }
+html body .contact-card-content { color: var(--av-ink); }
+html body .contact-card-content a { color: var(--av-vino); }
+html body .map-container { border-radius: 0; box-shadow: none; background: var(--av-alt); }
+
+/* ---------- Pie ---------- */
+html body .footer { background: var(--av-footer); color: var(--av-on-band); border-top: 0; margin-top: 0; }
+html body .footer-section h3 { color: var(--av-on-band); font-family: var(--av-display); font-weight: 400; }
+html body .footer-about p, html body .footer-links a, html body .footer-contact-item, html body .footer-bottom p { color: var(--av-footer-muted); }
+html body .footer-links a:hover, html body .footer-bottom a, html body .footer-contact-item .icon { color: var(--av-gold); }
+html body .footer-bottom strong { color: var(--av-on-band); font-weight: 600; }
+html body .social-link { background: transparent; border: 1.5px solid var(--av-gold); color: var(--av-gold); border-radius: 0; }
+html body .social-link:hover { background: var(--av-gold); color: var(--av-on-gold); }
+html body .footer-bottom { border-top-color: rgba(251, 243, 238, 0.12); }
+
+/* ---------- WhatsApp flotante (el único elemento redondo) ---------- */
+html body .whatsapp-button { background: var(--av-vino); box-shadow: 0 6px 18px rgba(46, 28, 32, 0.28); }
+html body .whatsapp-button:hover { background: var(--av-vino-hover); transform: scale(1.05); }
+html body .whatsapp-button::after { border-color: var(--av-vino); }
+html body .whatsapp-badge { display: none; }
+html body .whatsapp-tooltip { background: var(--av-head); color: var(--av-on-vino); border-radius: 0; }
+html body .whatsapp-tooltip::after { border-left-color: var(--av-head); }
+html body .whatsapp-float:not(:has(.whatsapp-button)) { background: var(--av-vino); box-shadow: 0 6px 18px rgba(46, 28, 32, 0.28); }
+html body .whatsapp-float:not(:has(.whatsapp-button)):hover { background: var(--av-vino-hover); }
+html body .whatsapp-pulse { display: none; }
+
+/* ---------- Catálogo ---------- */
+html body .catalog-hero { background: var(--av-bg); border-bottom: 0; }
+html body .catalog-hero .eyebrow { display: none; }
+html body .catalog-hero h1 { color: var(--av-head); font-family: var(--av-display); font-weight: 400; font-size: clamp(2.6rem, 5vw, 4.2rem); }
+html body .catalog-hero h1::after, html body .catalog-intro .section-title::after { background: var(--av-gold); }
+html body .catalog-hero p { color: var(--av-ink); font-weight: 400; }
+html body .catalog-filters { background: var(--av-bg); backdrop-filter: none; border-bottom: 0; box-shadow: 0 1px 0 var(--av-hairline); }
+html body .catalog-search input { background: var(--av-card); color: var(--av-ink); border: 1.5px solid var(--av-line); border-radius: 0; font-family: var(--av-text); font-weight: 400; }
+html body .catalog-search input::placeholder { color: var(--av-muted); }
+html body .catalog-search input:focus { border-color: var(--av-vino); box-shadow: none; }
+
+/* Filtros en tres filas con nombre: Ocasión, Tipo y Precio */
+html body .filters-container.filters-grouped { display: grid; gap: 10px; justify-content: center; max-width: 1080px; margin: 0 auto; }
+html body .filters-grouped .filter-group { position: relative; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 8px; padding-left: 92px; }
+html body .filters-grouped .filter-label {
+    position: absolute; left: 0; top: 12px; margin: 0; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; text-transform: none; color: var(--av-gold-text);
+}
+html body .filter-btn {
+    background: var(--av-card); color: var(--av-ink); border: 1.5px solid var(--av-line); border-radius: 0;
+    font-family: var(--av-text); font-size: 0.88rem; font-weight: 500; min-height: 42px; padding: 0 16px;
+}
+html body .filter-btn:hover { border-color: var(--av-vino); color: var(--av-vino); transform: none; }
+html body .filter-btn.active { background: var(--av-vino); border-color: var(--av-vino); color: var(--av-on-vino); }
+html body .results-counter { color: var(--av-muted); }
+html body .results-counter strong { color: var(--av-vino); }
+
+/* Tarjetas de producto: foto recta, nombre, precio y pedido */
+html body .catalog-section { background: var(--av-bg); }
+html body .products-grid .product-card { background: var(--av-card); border: 0; box-shadow: none; border-radius: 0; padding: 0; }
+html body .products-grid .product-card:hover { transform: none; box-shadow: 0 0 0 1px var(--av-line); }
+html body .product-image-container { border-radius: 0; box-shadow: none; background: #e8c2c0; }
+html body .product-name { color: var(--av-head); font-size: 1.5rem; line-height: 1.2; }
+html body .product-name::after { content: none; }
+html body .products-grid .product-description { color: var(--av-ink); font-weight: 400; }
+html body .product-footer { border-top-color: var(--av-hairline); }
+html body .price-label { color: var(--av-muted); }
+html body .product-price { color: var(--av-vino); font-size: 1.8rem; }
+html body .product-tags .product-tag-cat { display: none; }
+html body .product-tag { background: var(--av-alt); color: var(--av-muted); border: 0; border-radius: 0; }
+html body .zoom-icon { background: var(--av-card); border: 0; border-radius: 0; }
+html body .zoom-icon svg { color: var(--av-ink); }
+html body .scroll-top { background: var(--av-vino); color: var(--av-on-vino); border-radius: 0; box-shadow: none; }
+html body .lightbox-content { border-radius: 0; }
+html body .lightbox-info h3 { color: var(--av-head); }
+html body .lightbox-info p { color: var(--av-vino); }
+html body .lightbox-close { border-radius: 0; }
+html body .empty-state h3 { color: var(--av-head); }
+
+@media (max-width: 768px) {
+    html body .filters-container.filters-grouped { display: grid; justify-content: stretch; }
+    html body .filters-grouped .filter-group { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding: 0 0 2px; }
+    html body .filters-grouped .filter-group::-webkit-scrollbar { display: none; }
+    html body .filters-grouped .filter-label { display: block; position: static; flex: 0 0 auto; padding-right: 4px; }
+    html body .catalog-filters { position: static; }
+    html body .catalog-search { margin-right: 20px; }
+    html body .filter-btn { flex: none; }
+}
+
+/* =====================================================
+   LANDING PAGES
+   ===================================================== */
+html body .lp-bar { background: var(--av-bg); box-shadow: 0 1px 0 var(--av-hairline); }
+html body .lp-bar-inner { max-width: 1400px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+html body .lp-brand { display: flex; flex-direction: column; text-decoration: none; line-height: 1; }
+html body .lp-brand-name { font-family: var(--av-display); font-size: 1.55rem; color: var(--av-head); }
+html body .lp-brand-tag { font-size: 0.8rem; color: var(--av-muted); margin-top: 5px; }
+html body .lp-bar-actions { display: flex; align-items: center; gap: 12px; }
+html body .lp-bar-phone { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; color: var(--av-ink); text-decoration: none; font-weight: 600; box-shadow: inset 0 0 0 1.5px var(--av-vino); }
+html body .lp-bar-phone svg { width: 18px; height: 18px; }
+html body .lp-bar-wa { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; background: var(--av-vino); color: var(--av-on-vino); text-decoration: none; font-weight: 600; }
+html body .lp-bar-wa:hover { background: var(--av-vino-hover); }
+@media (max-width: 640px) {
+    html body .lp-bar-phone span { display: none; }
+    html body .lp-bar-phone { padding: 0 12px; }
+    html body .lp-brand-name { font-size: 1.3rem; }
+}
+
+/* Hero centrado de siempre, sin marco ni degradado */
+html body .hero { background: var(--av-bg); color: var(--av-ink); }
+html body .hero::before, html body .hero::after { display: none; }
+html body .hero h1 { color: var(--av-head); font-family: var(--av-display); font-weight: 400; line-height: 1.08; }
+html body .hero h1::after, html body .section-title::after, html body .final-cta h2::after, html body .content-block h2::after { display: none; }
+html body .lp-emoji { display: none; }
+html body .hero .subtitle {
+    font-family: var(--av-display); text-transform: none; letter-spacing: 0; font-size: clamp(1.25rem, 2vw, 1.6rem);
+    color: var(--av-gold-text); line-height: 1.35;
+}
+html body .hero p { color: var(--av-ink); font-weight: 400; }
+html body .hero-keywords { gap: 6px 0; }
+html body .keyword-badge {
+    background: transparent; border: 0; border-radius: 0; box-shadow: none; padding: 4px 0; text-transform: none; letter-spacing: 0.01em;
+    color: var(--av-muted); font-size: 0.95rem; font-weight: 500;
+}
+html body .keyword-badge:hover { transform: none; background: transparent; color: var(--av-vino); }
+html body .keyword-badge + .keyword-badge::before { content: "·"; margin: 0 12px; color: var(--av-gold); }
+html body .birthday-badge, html body .delivery-badge, html body .location-badge, html body .elegant-badge {
+    background: transparent; border: 0; border-radius: 0; box-shadow: none; color: var(--av-gold-text); text-transform: none; letter-spacing: 0.02em; font-weight: 600;
+}
+html body .cta-hero { text-transform: none; letter-spacing: 0.02em; min-height: 52px; font-size: 1rem; display: inline-flex; align-items: center; justify-content: center; }
+
+/* Títulos de sección */
+html body .section-title { color: var(--av-head); }
+html body .section-subtitle { color: var(--av-muted); font-weight: 400; }
+
+/* Fondos de sección: claro y rubor, franjas vino para cifras y cierre */
+html body .features, html body .testimonials, html body .guarantee-section, html body .coverage-section, html body .ideas-section, html body .faq-section { background: var(--av-alt); }
+html body .occasions-section, html body .collection-section, html body .delivery-process, html body .location-section,
+html body .content-section, html body .products-section, html body .catalog-intro { background: var(--av-bg); }
+html body .features::before, html body .trust-section::before, html body .final-cta::before { display: none; }
+
+/* Tarjetas de texto: blancas, rectas, sin sombra ni íconos */
+html body .feature-card, html body .occasion-card, html body .occasion-item, html body .idea-card, html body .collection-card,
+html body .guarantee-item, html body .location-card, html body .process-step, html body .testimonial-card, html body .step-card,
+html body .coverage-item, html body .faq-item, html body .highlight-box, html body .products-section .product-card {
+    background: var(--av-card); border: 0; border-radius: 0; box-shadow: none;
+}
+html body .feature-card:hover, html body .occasion-card:hover, html body .occasion-item:hover, html body .idea-card:hover,
+html body .collection-card:hover, html body .guarantee-item:hover, html body .location-card:hover, html body .process-step:hover,
+html body .coverage-item:hover, html body .products-section .product-card:hover { transform: none; box-shadow: none; }
+html body .occasion-card::before, html body .occasion-item::before, html body .collection-card::before, html body .testimonial-card::before,
+html body .coverage-item::before { display: none; }
+html body .feature-card h3, html body .occasion-card h3, html body .occasion-item h3, html body .idea-card h3, html body .collection-card h3,
+html body .guarantee-item h3, html body .location-card h3, html body .process-step h3, html body .step-card h3 {
+    font-family: var(--av-display); font-weight: 400; color: var(--av-head);
+}
+html body .feature-card p, html body .occasion-card p, html body .occasion-item p, html body .collection-card p, html body .guarantee-item p,
+html body .location-card p, html body .process-step p, html body .step-card p, html body .idea-card li { color: var(--av-ink); font-weight: 400; }
+html body .idea-card li::before { color: var(--av-gold-text); }
+html body .process-step::before, html body .step-num { background: transparent; color: var(--av-gold-text); border-radius: 0; box-shadow: none; font-family: var(--av-display); }
+html body .coverage-item p { color: var(--av-head); font-weight: 600; }
+
+/* Testimonios */
+html body .testimonial-stars { color: var(--av-gold); letter-spacing: 0.12em; }
+html body .testimonial-text { color: var(--av-ink); font-family: var(--av-display); font-style: normal; font-size: 1.2rem; line-height: 1.5; }
+html body .testimonial-author { color: var(--av-head); font-weight: 600; }
+html body .testimonial-occasion, html body .testimonial-service, html body .testimonial-type { color: var(--av-muted); }
+
+/* Cifras de confianza: franja vino con números en dorado */
+html body .trust-section { background: var(--av-band); }
+html body .trust-section .section-title { color: var(--av-on-band); }
+html body .trust-section .section-subtitle { color: var(--av-on-band-muted); }
+html body .trust-badge { background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+html body .trust-badge-icon {
+    background: transparent; border: 0; border-radius: 0; box-shadow: none; width: auto; height: auto;
+    font-family: var(--av-display); font-size: clamp(2.2rem, 3.6vw, 3.2rem); line-height: 1; color: var(--av-gold);
+}
+html body .trust-badge-text { color: var(--av-on-band); font-weight: 500; }
+
+/* Línea fúnebre */
+html body .products-section .product-name { color: var(--av-head); }
+html body .products-section .product-price { color: var(--av-vino); }
+html body .price-note { color: var(--av-muted); }
+html body .faq-question { font-family: var(--av-display); font-weight: 400; color: var(--av-head); }
+html body .faq-answer { color: var(--av-ink); }
+html body .content-block h2, html body .content-block h3 { color: var(--av-head); }
+html body .content-block p, html body .content-block ul li { color: var(--av-ink); }
+html body .content-block strong, html body .highlight-box strong { color: var(--av-vino); }
+html body .final-cta { background: var(--av-band); }
+html body .final-cta h2 { color: var(--av-on-band); }
+html body .final-cta p { color: var(--av-on-band-muted); }
+html body .final-cta .cta-hero { background: var(--av-gold) !important; color: var(--av-on-gold) !important; }
+html body .final-cta .cta-hero:hover { background: var(--av-gold-hover) !important; }
+
+/* =====================================================
+   PÁGINAS DE SERVICIO (solo nombre y colores)
+   ===================================================== */
+html body .sidebar-cta-card { background: var(--av-band); }
+html body .sidebar-cta-card h3 { color: var(--av-on-band); }
+html body .sidebar-cta-card p { color: var(--av-on-band-muted) !important; }
+html body .sidebar-cta-card .btn, html body .sidebar-cta-card .btn-primary, html body .sidebar-cta-card .btn-whatsapp { background: var(--av-gold) !important; color: var(--av-on-gold) !important; }
+html body .sidebar-cta-card .btn:hover { background: var(--av-gold-hover) !important; }
+html body .category-cta .btn-primary, html body .category-cta .btn { background: var(--av-gold) !important; color: var(--av-on-gold) !important; }
+html body .trust-badges { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+html body .trust-badges:has(> :nth-child(4)) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 768px) {
+    html body .trust-badges, html body .trust-badges:has(> :nth-child(4)) { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; }
+}

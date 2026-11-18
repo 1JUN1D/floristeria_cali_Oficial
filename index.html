@@ -65,27 +65,29 @@ principal de que la campaña de Cali rinda peor en conversiones.
   }
 </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Floristería Flores del Encanto en Cali - Bouquets frescos, diseños florales sofisticados, obsequios especiales y preservados eternos. Domicilios en todos los barrios de Cali.">
+    <meta name="description" content="Atelier Vergara en Cali - Bouquets frescos, diseños florales sofisticados, obsequios especiales y preservados eternos. Domicilios en todos los barrios de Cali.">
     <meta name="keywords" content="florería Cali, flores Cali, entrega de flores, arreglos florales, regalos, flores secas">
-    <title>Florería en Cali - Flores del Encanto | Flores Frescas y Arreglos Elegantes</title>
+    <title>Florería en Cali - Atelier Vergara | Flores Frescas y Arreglos Elegantes</title>
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Florería en Cali - Flores del Encanto">
+    <meta property="og:title" content="Florería en Cali - Atelier Vergara">
     <meta property="og:description" content="Bouquets frescos y diseños florales sofisticados con domicilio en Cali">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://floristeriacali.dondeseria.com/">
-    <meta property="og:image" content="http://floristeriacali.dondeseria.com/assets/logo.webp">
+    <meta property="og:image" content="http://floristeriacali.dondeseria.com/assets/og-atelier-vergara.jpg">
     
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="/assets/fonts/libre-caslon-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="assets/logo.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <meta name="theme-color" content="#5a1424">
+    <link rel="stylesheet" href="/css/atelier.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -100,21 +102,19 @@ principal de que la campaña de Cali rinda peor en conversiones.
                         <a href="/">Inicio</a>
                     </div>
                     <h1>Florería en Cali · Entrega el mismo día</h1>
-                    <p class="hero-description">
-                        Floristería Flores del Encanto: bouquets frescos, anchetas y flores preservadas con <strong>entrega a domicilio en todos los barrios de Cali</strong>. Pide antes de las 3:00 PM y lo recibe HOY. Más de 500 entregas felices y reseñas 4.9 ★.
-                    </p>
+                    <p class="hero-description">En Atelier Vergara armamos ramos frescos, anchetas y flores preservadas y los llevamos a domicilio a <strong>cualquier barrio de Cali</strong>: si haces el pedido antes de las 3:00&nbsp;p.&nbsp;m., llega hoy mismo, como en las más de 500 entregas que nos tienen en 4,9&nbsp;★.</p>
                     <!-- Trust badges -->
-                    <div style="display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 20px;">
-                        <span style="background:#F7EFEB; color:#9C6B5D; padding:6px 14px; border-radius:30px; font-size:13px; font-weight:600;">⭐ 4.9 / 127 reseñas</span>
-                        <span style="background:#F7EFEB; color:#9C6B5D; padding:6px 14px; border-radius:30px; font-size:13px; font-weight:600;">🚚 Entrega el mismo día</span>
-                        <span style="background:#F7EFEB; color:#9C6B5D; padding:6px 14px; border-radius:30px; font-size:13px; font-weight:600;">🌹 Frescura garantizada</span>
-                    </div>
+                    <ul class="hero-badges">
+                        <li><strong>4.9 ★</strong> 127 reseñas en Google</li>
+                        <li><strong>Hoy</strong> pidiendo antes de las 3:00 p. m.</li>
+                        <li><strong>+500</strong> entregas en Cali</li>
+                    </ul>
                     <div class="hero-buttons">
                         <a href="/catalogo.html" class="btn btn-primary">
                             Ver Catálogo
                         </a>
                         <a href="#" class="btn btn-whatsapp"
-                           onclick="return trackWhatsAppLead('https://wa.me/573013638483?text=Hola%20Flores%20del%20Encanto%20%F0%9F%8C%B9%2C%20vi%20su%20web%20y%20quiero%20cotizar%20un%20arreglo%20de%20flores%20en%20Cali.%20%C2%BFMe%20asesoran%3F', 'hero_whatsapp_btn')">
+                           onclick="return trackWhatsAppLead('https://wa.me/573235933021?text=Hola%20Atelier%20Vergara%20%F0%9F%8C%B9%2C%20vi%20su%20web%20y%20quiero%20cotizar%20un%20arreglo%20de%20flores%20en%20Cali.%20%C2%BFMe%20asesoran%3F', 'hero_whatsapp_btn')">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                             </svg>
@@ -141,15 +141,13 @@ principal de que la campaña de Cali rinda peor en conversiones.
                 <!-- Producto 1: Ramos Románticos -->
                 <article class="product-card">
                     <div class="product-image">
-                        <img src="/assets/foto2.webp" alt="Ramo de 12 rosas rojas de Flores del Encanto en Cali" loading="lazy">
+                        <img src="/assets/foto22.webp" alt="Ramo buchón de rosas rojas con gypsophila y mariposas plateadas, Atelier Vergara en Cali" loading="lazy">
                     </div>
                     <div class="product-content">
-                        <p class="product-title">Ramos de Rosas</p>
-                        <p class="product-description">
-                            Ramos de 10, 12, 24 y hasta 50 rosas rojas con mariposas, corona, listón personalizado y tarjeta, armados con flor fresca del día. Desde $123.000.
-                        </p>
+                        <p class="product-title">Ramos de rosas rojas</p>
+                        <p class="product-description">Ramos clásicos y buchones de rosas rojas con gypsophila, mariposas, listón con tu frase y tarjeta, armados con la flor fresca que llega cada día. Desde $100.000.</p>
                         <a href="#" class="product-cta"
-                           onclick="return trackWhatsAppLead('https://wa.me/573013638483?text=Hola%20Flores%20del%20Encanto%20%F0%9F%8C%B9%2C%20vi%20los%20*Ramos%20de%20Rosas*%20en%20su%20web.%20%C2%BFEst%C3%A1n%20disponibles%20para%20entrega%20HOY%20en%20Cali%3F', 'card_ramo_romantico')">
+                           onclick="return trackWhatsAppLead('https://wa.me/573235933021?text=Hola%20Atelier%20Vergara%20%F0%9F%8C%B9%2C%20vi%20los%20*Ramos%20de%20Rosas*%20en%20su%20web.%20%C2%BFEst%C3%A1n%20disponibles%20para%20entrega%20HOY%20en%20Cali%3F', 'card_ramo_romantico')">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                             </svg>
@@ -161,15 +159,13 @@ principal de que la campaña de Cali rinda peor en conversiones.
                 <!-- Producto 2: Anchetas Premium -->
                 <article class="product-card">
                     <div class="product-image">
-                        <img src="/assets/foto3.webp" alt="Ramo de rosas con peluche y chocolates Ferrero - Cali" loading="lazy">
+                        <img src="/assets/foto32.webp" alt="Corazón de rosas amarillas con peluche de abeja y chocolates Ferrero Rocher en Cali" loading="lazy">
                     </div>
                     <div class="product-content">
-                        <p class="product-title">Detalles con Peluche y Chocolates</p>
-                        <p class="product-description">
-                            Ramos con peluche de Stitch u osito de «Feliz Día», chocolates Ferrero y globos, el combo completo para sorprender en un cumpleaños, un grado o un aniversario.
-                        </p>
+                        <p class="product-title">Peluches y chocolates con flores</p>
+                        <p class="product-description">Flores acompañadas de peluche, chocolates Ferrero Rocher, fresas con chocolate o vino, todo listo para sorprender en cumpleaños, grados y aniversarios.</p>
                         <a href="#" class="product-cta"
-                           onclick="return trackWhatsAppLead('https://wa.me/573013638483?text=Hola%20Flores%20del%20Encanto%20%E2%9D%A4%EF%B8%8F%2C%20me%20interesa%20un%20%2Adetalle%20con%20peluche%20y%20chocolates%2A.%20%C2%BFEntregan%20HOY%20en%20Cali%3F', 'card_ancheta_amor')">
+                           onclick="return trackWhatsAppLead('https://wa.me/573235933021?text=Hola%20Atelier%20Vergara%20%E2%9D%A4%EF%B8%8F%2C%20me%20interesa%20un%20%2Adetalle%20con%20peluche%20y%20chocolates%2A.%20%C2%BFEntregan%20HOY%20en%20Cali%3F', 'card_ancheta_amor')">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                             </svg>
@@ -181,15 +177,13 @@ principal de que la campaña de Cali rinda peor en conversiones.
                 <!-- Producto 3: Flores Secas -->
                 <article class="product-card">
                     <div class="product-image">
-                        <img src="/assets/foto20.webp" alt="Corazón de rosas con chocolates Ferrero en Cali" loading="lazy">
+                        <img src="/assets/foto19.webp" alt="Caja en forma de corazón con rosas rosadas, fotos y carta en Cali" loading="lazy">
                     </div>
                     <div class="product-content">
-                        <p class="product-title">Cajas y Corazones de Rosas</p>
-                        <p class="product-description">
-                            Corazones de rosas con chocolates Ferrero, cubos y cilindros de rosas con globo y tarjeta personalizada, la pieza que más impacto causa al entregarla.
-                        </p>
+                        <p class="product-title">Corazones y cajas de rosas</p>
+                        <p class="product-description">Rosas en cajas con forma de corazón, con tus fotos, carta, fresas con chocolate o licor, y hasta un oso hecho de rosas, los regalos que más sorprenden al llegar.</p>
                         <a href="#" class="product-cta"
-                           onclick="return trackWhatsAppLead('https://wa.me/573013638483?text=Hola%20Flores%20del%20Encanto%20%F0%9F%8C%B8%2C%20me%20interesan%20las%20%2Acajas%20y%20corazones%20de%20rosas%2A.%20%C2%BFQu%C3%A9%20opciones%20tienen%20disponibles%3F', 'card_flores_preservadas')">
+                           onclick="return trackWhatsAppLead('https://wa.me/573235933021?text=Hola%20Atelier%20Vergara%20%F0%9F%8C%B8%2C%20me%20interesan%20las%20%2Acajas%20y%20corazones%20de%20rosas%2A.%20%C2%BFQu%C3%A9%20opciones%20tienen%20disponibles%3F', 'card_flores_preservadas')">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                             </svg>
@@ -249,7 +243,7 @@ principal de que la campaña de Cali rinda peor en conversiones.
         <div class="container">
             <div class="section-header">
                 <h2>Nuestros Servicios</h2>
-                <p>Explora nuestra extensa gama de opciones florales creadas para cada momento memorable</p>
+                <p>Además de los ramos del catálogo, preparamos regalos, entregas especiales y pedidos grandes para cada ocasión.</p>
             </div>
 
             <div class="categories-grid">
@@ -260,7 +254,7 @@ principal de que la campaña de Cali rinda peor en conversiones.
                     </div>
                     <div class="category-content">
                         <h2>Tienda de Regalos</h2>
-                        <p>Descubre el obsequio ideal para ese ser querido. Disponemos de una colección meticulosamente seleccionada de presentes únicos que fusionan bouquets recién cortados con complementos exclusivos: bombones de alta gama, licores selectos, peluches de excelente manufactura y tarjetería hecha a medida. Cada obsequio se presenta con distinción y se transporta con profesionalismo en toda Cali.</p>
+                        <p>Si buscas un regalo completo, combinamos flores recién cortadas con chocolates finos, licores, peluches y tarjetas hechas a tu gusto, y lo entregamos bien presentado en cualquier punto de Cali.</p>
                         <a href="/tienda-de-regalos-cali.html" class="btn btn-secondary">Ver más</a>
                     </div>
                 </article>
@@ -272,7 +266,7 @@ principal de que la campaña de Cali rinda peor en conversiones.
                     </div>
                     <div class="category-content">
                         <h2>Entrega de Flores</h2>
-                        <p>Transportamos emociones directamente a tu destino. Nuestro servicio de entrega profesional garantiza que tus bouquets lleguen en estado óptimo a cualquier sector de Cali. Con entregas puntuales, coordinadas según tu conveniencia, y soporte dedicado que garantiza cada detalle sea impecable. Sorprende a tus seres apreciados con una entrega que manifiesta consideración y afecto genuino.</p>
+                        <p>Llevamos tus flores en perfecto estado a cualquier sector de Cali, a la hora que acordemos contigo, y te acompañamos por WhatsApp hasta que el pedido llega a su destino.</p>
                         <a href="/entrega-de-flores-cali.html" class="btn btn-secondary">Ver más</a>
                     </div>
                 </article>
@@ -284,7 +278,7 @@ principal de que la campaña de Cali rinda peor en conversiones.
                     </div>
                     <div class="category-content">
                         <h2>Flores Secas</h2>
-                        <p>La magnificencia eterna de la naturaleza en composiciones que perduran indefinidamente. Nuestros bouquets de especímenes deshidratados son ideales para quienes estiman la hermosura duradera. Sin necesidad de cuidados, conservan su esplendor durante años, siendo óptimos para ornamentación de interiores, obsequios perdurables o recuerdos especiales. Diseños contemporáneos y delicados que perpetúan recuerdos excepcionales.</p>
+                        <p>Las flores secas y preservadas mantienen su forma y su color durante años sin agua ni cuidados, por eso sirven como decoración para la casa o como un regalo que se queda.</p>
                         <a href="/flores-secas-cali.html" class="btn btn-secondary">Ver más</a>
                     </div>
                 </article>
@@ -292,11 +286,11 @@ principal de que la campaña de Cali rinda peor en conversiones.
                 <!-- Canastas de regalos -->
                 <article class="category-card">
                     <div class="category-image">
-                        <img src="/assets/foto9.webp" alt="Canastas de regalos Cali" loading="lazy">
+                        <img src="/assets/foto33.webp" alt="Canasta de regalo con rosas rojas, vino y chocolates en Cali" loading="lazy">
                     </div>
                     <div class="category-content">
                         <h2>Canastas de Regalos</h2>
-                        <p>Recipientes decorativos repletos de productos selectos y elegantemente confeccionados. Combinamos bouquets recién cortados con productos comestibles gourmet, delicadezas artesanales, vinificaciones de calidad superior y obsequios distinguidos. Ideales para celebraciones corporativas, manifestaciones de reconocimiento o acontecimientos especiales. Cada recipiente es personalizable según tus preferencias, garantizando un presente único y refinado.</p>
+                        <p>Armamos canastas con flores frescas, productos gourmet, dulces artesanales y vino para celebraciones de empresa, agradecimientos o fechas especiales, y cada una se ajusta a lo que quieras incluir.</p>
                         <a href="/canastas-de-regalos-cali.html" class="btn btn-secondary">Ver más</a>
                     </div>
                 </article>
@@ -308,7 +302,7 @@ principal de que la campaña de Cali rinda peor en conversiones.
                     </div>
                     <div class="category-content">
                         <h2>Florería Mayorista</h2>
-                        <p>Distribuidor profesional de flores en grandes cantidades para celebraciones, florerías y compañías en Cali. Proporcionamos las tarifas más competitivas del sector con flores de calidad superior directamente desde los productores. Óptimo para matrimonios de gran escala, actividades empresariales y comerciantes. Disponemos de extensa variedad de especies, entregas coordinadas y orientación personalizada para pedidos voluminosos.</p>
+                        <p>Vendemos flores por cantidad para bodas, eventos de empresa, otras florerías y comerciantes de Cali, con precio de mayorista, flor de buena calidad comprada al cultivador, entregas programadas y asesoría en cada pedido.</p>
                         <a href="/floreria-mayorista-cali.html" class="btn btn-secondary">Ver más</a>
                     </div>
                 </article>
@@ -324,9 +318,9 @@ principal de que la campaña de Cali rinda peor en conversiones.
         <div class="container">
             <div class="cta-content">
                 <h2>¿Preparado para iluminar la jornada de alguien importante?</h2>
-                <p>Comunícate con nosotros ahora y construye un instante memorable con nuestros diseños florales exclusivos</p>
+                <p>Escríbenos ahora y armamos juntos el detalle que esa persona va a recordar.</p>
                 <a href="#" class="btn btn-primary btn-large"
-                   onclick="return trackWhatsAppLead('https://wa.me/573013638483?text=Hola%20Flores%20del%20Encanto%20%F0%9F%8C%B9%2C%20vi%20su%20web%20y%20quiero%20hacer%20un%20pedido.%20%C2%BFMe%20asesoran%20con%20opciones%20y%20entrega%3F', 'cta_section_principal')">
+                   onclick="return trackWhatsAppLead('https://wa.me/573235933021?text=Hola%20Atelier%20Vergara%20%F0%9F%8C%B9%2C%20vi%20su%20web%20y%20quiero%20hacer%20un%20pedido.%20%C2%BFMe%20asesoran%20con%20opciones%20y%20entrega%3F', 'cta_section_principal')">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                     </svg>
@@ -350,11 +344,11 @@ principal de que la campaña de Cali rinda peor en conversiones.
     {
         "@context": "https://schema.org",
         "@type": "Florist",
-        "name": "Floristería Flores del Encanto",
-        "image": "http://floristeriacali.dondeseria.com/assets/logo.webp",
+        "name": "Atelier Vergara",
+        "image": "http://floristeriacali.dondeseria.com/assets/icon-512.png",
         "@id": "http://floristeriacali.dondeseria.com/",
         "url": "http://floristeriacali.dondeseria.com/",
-        "telephone": "+573013638483",
+        "telephone": "+573235933021",
         "priceRange": "$$",
         "address": {
             "@type": "PostalAddress",
